@@ -1,0 +1,194 @@
+interactions:
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzo1azY3N2ljZzM0b3dvZ3d3MHdvY29vd3M4ZzQwMDRzbzQwc2trMHMwczg4ZzR3czhnZw==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"ZmIyMDQ4NDgzZThlZTZmMzhlYzgyNmJhNjcwN2I0OTk2ZDRlMWIyMTdmMWM3NDM2ZDdlZTQ5ZWRlMTQ1NTVmNQ","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"ZWUxOTdhZjdhNzcxYmJkZWM0MjJlMThhOGZlMTZlMjkwZWUzNjhiOTY5MGRjZmNmOGIzNjJlYTI1NDBkNWZkNw"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:35:39 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=o2lgcq5mi6dt6uf8f9lfhpjo4r; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzo1azY3N2ljZzM0b3dvZ3d3MHdvY29vd3M4ZzQwMDRzbzQwc2trMHMwczg4ZzR3czhnZw==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"OTYxZWE3YWEzYjdhZGIzNDQ0ODM1NmQ3MGI5YzZiMDUxYTI5YTc1MDAzMzVhZmVlYzM2ZjNkYThkNTM3ODM2NQ","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"YmMwN2VjMWQ4MTNjMmVlMzliMDA4OGM1YjQ0Yzk2NmVkMWEwOTI2MWExNTM0NmRmZmU1OTEyZTM4N2MyMzUwMg"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:36:15 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=okfd9oqrb7c9n4fmo20ljqonea; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzo1azY3N2ljZzM0b3dvZ3d3MHdvY29vd3M4ZzQwMDRzbzQwc2trMHMwczg4ZzR3czhnZw==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"NGI2NWJhYjUwODM0ZjNjYTk0ZGEwZTk4NTU0OTc2YzYyNThlNzBkODM0ODE2ZjNlZjEyYTlkMTFjNDIwZGFjMg","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"MWVjMzhhZmQ3NWFlNzM1ZDA2MjI3M2M2ZmMxNGM0ZDkxNTYwNjQ5YzlhOWMzNzkzOGU5ZmIwNDcyYjM3ZGZiNw"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:36:24 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=qem1bhsml4h2n81imemtqqqf58; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzo1azY3N2ljZzM0b3dvZ3d3MHdvY29vd3M4ZzQwMDRzbzQwc2trMHMwczg4ZzR3czhnZw==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"ZTRhYjhjMWJlMTgyNzg0ZDlhMzc3ZWYyMjdhYjYwZDRiZWU4YzEwMmI5ODRiMDBkMzE4MjIxMzQ4MWUyY2ZlNw","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"NDU2ZTdhYzQ1NmE1NDc0NWQ5ZGZlOWIwMzU5MGE3YTZkY2JkYmIxYjMyYzZiNGNlYjVjMDRjMGUyZDI4ZThiMw"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:37:23 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=psq3n6p6crtmskmtan7cb0ufv0; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzo1azY3N2ljZzM0b3dvZ3d3MHdvY29vd3M4ZzQwMDRzbzQwc2trMHMwczg4ZzR3czhnZw==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"OTVhNTQzMWEyNDNmZGY5MmUyZmQyMzgwMTUyYzE5ZmM1NmY0Yjg3MDI2NjlhYjkyZTBkODYzNGNhZDA0MTQwNw","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"ZTg2YmU0NTcxMmY4NGRhYTQxNzRiYjU1ZWZhNmIwNzMyNWFlZWE5M2MyNzllOGI0M2IwNWExOWQ4MTU5NmE3Zg"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:38:18 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=rv1rsfdc542la4er9haisq2h22; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzo1azY3N2ljZzM0b3dvZ3d3MHdvY29vd3M4ZzQwMDRzbzQwc2trMHMwczg4ZzR3czhnZw==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"ODBkMTI0ZTEzYTVhN2FmNWYxZjc5OTUwMmFlYTBkM2U3MjI2YjMwMjJmOTcyNzUzOGE0NmVlNWU0YzUwYjljZQ","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"NWE1NzgwZDZjNTJkMzE3OWJkOTExOWNmNjk2MjczYWViMjk1MzFkM2YzZjI4ZjA5NWI5YTk5ODEwMTc5NDAxNQ"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:38:40 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=acju0i9uq6k2gu8c085p2mkdrj; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzo1azY3N2ljZzM0b3dvZ3d3MHdvY29vd3M4ZzQwMDRzbzQwc2trMHMwczg4ZzR3czhnZw==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"NTYyYTgwYTQyNDdmYWQ4YTgwOGQzOTE4NWU0NzEyZmQwMzJjZTE2MDliYzJjZWM1MDgzMzAyZTdlZDIyOGE3MA","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"ZDExZWY5YzczMTg1NjhiMjJjYWNmYmFmMGY4ZjcxMmJhZTllZGI1M2E4ZmU0MzRkOWFkM2M3ODE0OTFmNGE0Yg"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:38:52 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=ckp1lk19pfv3o5t6arpummbl3q; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzo1azY3N2ljZzM0b3dvZ3d3MHdvY29vd3M4ZzQwMDRzbzQwc2trMHMwczg4ZzR3czhnZw==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"M2RkYjRjMjljYjI5OWNhODU5ZTQ4ZjljMjk4Yjg2NWI1ZmZjNGU4Y2NmNjU3NTE4NWEwMGRlYzgxOWFiMzI4ZQ","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"NTA3YTQxMDI1MzYzM2E5M2M4NTQ1NWIzYWY5N2JjYzY2ODFjOWU2NDE2ZDA1MjRjNGE2ODFjNjJjZjhlMTY4Yw"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:40:50 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=phkmhmpecs78ghb2322si5b6ff; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+version: 1

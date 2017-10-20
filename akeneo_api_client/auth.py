@@ -13,7 +13,9 @@ import logging
 import logzero
 from logzero import logger
 
-class AkeneoAuth(AuthBase):
+from vcr_unittest import VCRTestCase
+
+class Auth(AuthBase):
     TOKEN_PATH = "api/oauth/v1/token"
     TOKEN_EXPIRY_SECURITY = 60 * 2
 
@@ -111,78 +113,4 @@ class AkeneoAuth(AuthBase):
             self._refresh_the_token()
         
         r.headers['Authorization'] = self.authorization
-        # r.headers[] = 
         return r
-
-
-class TestAuthIntegration(unittest.TestCase):
-    client_id = 'xxx'
-    secret = 'xxx'
-    username = 'admin'
-    password = 'admin'
-    base_url = 'http://localhost:8080'
-
-    def setUp(self):
-        pass
-
-    def test_valid(self):
-        auth = AkeneoAuth(self.base_url,
-            self.client_id, self.secret, self.username, self.password)
-        auth._request_a_token()
-        auth._refresh_the_token()
-
-    def test_invalid_request(self):
-        auth = AkeneoAuth(self.base_url,
-            self.client_id, "fake secret", self.username, self.password)
-        with self.assertRaises(requests.exceptions.HTTPError):
-            auth._request_a_token()
-
-    def test_invalid_refresh(self):
-        auth = AkeneoAuth(self.base_url,
-            self.client_id, self.secret, self.username, self.password)
-        auth._request_a_token()
-        with self.assertRaises(requests.exceptions.HTTPError):
-            auth._refresh_token = "coucou"
-            auth._refresh_the_token()
-
-    def test_should_refresh_request(self):
-        auth = AkeneoAuth(self.base_url,
-            self.client_id, self.secret, self.username, self.password)
-        auth._request_a_token()
-        logger.debug(int(time()))
-        logger.debug(auth._expiry_date)
-        self.assertFalse(auth._should_refresh_token())
-        auth._expiry_date = time() - 100
-        self.assertTrue(auth._should_refresh_token())
-
-    def test_query_products_with_auth(self):
-        auth = AkeneoAuth(self.base_url,
-            self.client_id, self.secret, self.username, self.password)
-        r = requests.get(urljoin(self.base_url, "/api/rest/v1/products"), auth=auth)
-        logger.debug(r)
-        logger.debug(r.status_code)
-        json_data = json.loads(r.text)
-        logger.debug(json.dumps(json_data, indent=4, sort_keys=True))
-
-# """
-# {
-#     "access_token": "ZGM1NTVjNzZlZWQ5Yzc0MWM5NGU1NDhjMzEyZjliZTcwYThlYjAxMTIxMmNiOTUxM2JkMTVlODM4YjZjMjNlNA",
-#     "expires_in": 3600,
-#     "refresh_token": "Y2E4YWRlNzgwNjY4ZDVkY2ZiOGRmOTc4YmQwZTE5ZGRmYjE5YWIyZDM3YzhiODUxZWI3MTljMWMzOGFiNDMwYw",
-#     "scope": null,
-#     "token_type": "bearer"
-# }"""
-        # self.assertEqual(, second)
-        # res = self.c.parseFile("examples/validExample.txt")
-        # self.assertEqual(res, "")
-
-        # res = self.c.convert()
-
-        # res = self.c.formatOutput(res)
-        # self.assertEqual(res, "23.70")
-
-
-if __name__ == '__main__':
-    logzero.loglevel(logging.INFO)
-    unittest.main()
-

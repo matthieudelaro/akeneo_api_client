@@ -1,0 +1,194 @@
+interactions:
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzpmYWtlIHNlY3JldA==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"code":422,"message":"Parameter \"client_id\" is missing or does
+        not match any client, or secret is invalid"}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:35:36 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=hqhprv8agattr91im84jdoddpj; path=/; HttpOnly]
+    status: {code: 422, message: Unprocessable Entity}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzpmYWtlIHNlY3JldA==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"code":422,"message":"Parameter \"client_id\" is missing or does
+        not match any client, or secret is invalid"}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:36:13 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=qckvvs1cfjn264jjg759nllleo; path=/; HttpOnly]
+    status: {code: 422, message: Unprocessable Entity}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzpmYWtlIHNlY3JldA==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"code":422,"message":"Parameter \"client_id\" is missing or does
+        not match any client, or secret is invalid"}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:36:22 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=gf9hc6i1d8cn36uqvhultljddc; path=/; HttpOnly]
+    status: {code: 422, message: Unprocessable Entity}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzpmYWtlIHNlY3JldA==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"code":422,"message":"Parameter \"client_id\" is missing or does
+        not match any client, or secret is invalid"}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:37:20 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=sn9jkjigsb5jqe4ulvnekn9djh; path=/; HttpOnly]
+    status: {code: 422, message: Unprocessable Entity}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzpmYWtlIHNlY3JldA==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"code":422,"message":"Parameter \"client_id\" is missing or does
+        not match any client, or secret is invalid"}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:38:16 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=981658an0hqaqqjuom3m01iv4u; path=/; HttpOnly]
+    status: {code: 422, message: Unprocessable Entity}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzpmYWtlIHNlY3JldA==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"code":422,"message":"Parameter \"client_id\" is missing or does
+        not match any client, or secret is invalid"}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:38:37 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=6fkrp2rhp5kuvq2h9i61qsdkfl; path=/; HttpOnly]
+    status: {code: 422, message: Unprocessable Entity}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzpmYWtlIHNlY3JldA==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"code":422,"message":"Parameter \"client_id\" is missing or does
+        not match any client, or secret is invalid"}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:38:50 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=k2fvnir729tml5vrucl3i9e2n2; path=/; HttpOnly]
+    status: {code: 422, message: Unprocessable Entity}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV81aG9vZG52cjY5a3drdzBjZ2trd2d3d29vOHNrd29nNGs4d3NzY2djMG8wY3NzOGdnbzpmYWtlIHNlY3JldA==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"code":422,"message":"Parameter \"client_id\" is missing or does
+        not match any client, or secret is invalid"}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Fri, 20 Oct 2017 16:40:48 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=v1mq7afcfhh5jdmp4n4k4rqks5; path=/; HttpOnly]
+    status: {code: 422, message: Unprocessable Entity}
+version: 1
