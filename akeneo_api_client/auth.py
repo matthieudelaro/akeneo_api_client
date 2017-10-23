@@ -1,9 +1,6 @@
 import requests
 from requests.auth import AuthBase
-try:
-    from urllib.parse import urljoin
-except ImportError:
-    from urlparse import urljoin
+from akeneo_api_client.utils import urljoin
 import unittest
 import base64
 import json
