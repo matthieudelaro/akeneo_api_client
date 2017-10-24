@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from akeneo_api_client.collection import *
+from akeneo_api_client.resources import *
 from akeneo_api_client.auth import Auth
 from akeneo_api_client.utils import urljoin
 
@@ -18,16 +19,20 @@ from logzero import logger
 from vcr_unittest import VCRTestCase
 
 
-class TestCollection(unittest.TestCase):
+class TestCollectionMock(VCRTestCase):
     client_id = '1_ovvscbaj0pwwg8sookkgkc8ck4kog8gscg8g44sc88c8w48ww'
     secret = 'rpi0wuiusa8okok4cw8kkkc4s488gc0sggkc0480wskkgkwo0'
     username = 'admin'
     password = 'admin'
     base_url = 'http://localhost:8080'
 
-    def setUp(self):
-        logzero.loglevel(logging.DEBUG)
-    
+    def _get_vcr(self, **kwargs):
+        logzero.loglevel(logging.INFO)
+        myvcr = super(TestCollectionMock, self)._get_vcr(**kwargs)
+        myvcr.match_on = ['method', 'path', 'query', 'body', 'headers']
+        myvcr.record_mode='none'
+        return myvcr
+        
     def test_valid_json_text(self):
         c = Collection(requests.Session(), json_text=self.json_text)
 
@@ -44,25 +49,25 @@ class TestCollection(unittest.TestCase):
         self.assertEqual(len(c._items), 10)
         self.assertEqual(c._items[0].identifier, 'Biker-jacket-polyester-xl')
 
-    def test_get_item(self):
+    def test_fetch_item(self):
         session = requests.Session()
         session.auth = Auth(self.base_url,
             self.client_id, self.secret, self.username, self.password)
         session.headers.update({'Content-Type': 'application/json'})
         pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
-        item = pool.get_item('1111111137')
+        item = pool.fetch_item('1111111137')
         logger.debug(item)
         self.assertEqual(item.identifier, '1111111137')
         self.assertEqual(len(item.categories), 3)
 
-    def test_get_item_from_invalid_pool(self):
+    def test_fetch_item_from_invalid_pool(self):
         session = requests.Session()
         session.auth = Auth(self.base_url,
             self.client_id, self.secret, self.username, self.password)
         session.headers.update({'Content-Type': 'application/json'})
         pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products_invalid/'), session)
         with self.assertRaises(requests.HTTPError):
-            item = pool.get_item('1111111137')
+            item = pool.fetch_item('1111111137')
 
     def test_get_invalide_item(self):
         session = requests.Session()
@@ -71,19 +76,19 @@ class TestCollection(unittest.TestCase):
         session.headers.update({'Content-Type': 'application/json'})
         pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
         with self.assertRaises(requests.HTTPError):
-            item = pool.get_item('1111111137asdfsdfgsdf')
+            item = pool.fetch_item('1111111137asdfsdfgsdf')
 
-    def test_loading_fetch_more_items(self):
+    def test_loading_fetch_next_page(self):
         session = requests.Session()
         session.auth = Auth(self.base_url,
             self.client_id, self.secret, self.username, self.password)
         session.headers.update({'Content-Type': 'application/json'})
         pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
-        c = pool.get_list()
+        c = pool.fetch_list()
         self.assertEqual(len(c._items), 10)
-        c.fetch_more_items()
+        c.fetch_next_page()
         self.assertEqual(len(c._items), 20)
-        c.fetch_more_items()
+        c.fetch_next_page()
         self.assertEqual(len(c._items), 30)
 
     def test_auto_loading(self):
@@ -92,7 +97,7 @@ class TestCollection(unittest.TestCase):
             self.client_id, self.secret, self.username, self.password)
         session.headers.update({'Content-Type': 'application/json'})
         pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
-        c = pool.get_list()
+        c = pool.fetch_list()
         self.assertEqual(len(c._items), 10)
         iterator = iter(c)
         for i in range(15):

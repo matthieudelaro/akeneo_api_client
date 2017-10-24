@@ -17,25 +17,6 @@ from logzero import logger
 from vcr_unittest import VCRTestCase
 
 
-# class TestAuthIntegration(unittest.TestCase):
-#     client_id = '1_ovvscbaj0pwwg8sookkgkc8ck4kog8gscg8g44sc88c8w48ww'
-#     secret = 'rpi0wuiusa8okok4cw8kkkc4s488gc0sggkc0480wskkgkwo0'
-#     username = 'admin'
-#     password = 'admin'
-#     base_url = 'http://localhost:8080'
-
-    
-#     def test_query_products_with_auth(self):
-#         auth = Auth(self.base_url,
-#             self.client_id, self.secret, self.username, self.password)
-#         r = requests.get(urljoin(self.base_url, '/api/rest/v1/products?search={"enabled":[{"operator":"=","value":true}],"completeness":[{"operator":">","value":70,"scope":"ecommerce"}]}'), auth=auth)
-#         logger.debug(r)
-#         logger.debug(r.status_code)
-#         json_data = json.loads(r.text)
-#         logger.debug(json.dumps(json_data, indent=4, sort_keys=True))
-
-
-
 class TestAuthIntegrationMock(VCRTestCase):
     client_id = '1_5hoodnvr69kwkw0cgkkwgwwoo8skwog4k8wsscgc0o0css8ggo'
     secret = '5k677icg34owogww0wocoows8g4004so40skk0s0s88g4ws8gg'
@@ -88,10 +69,4 @@ class TestAuthIntegrationMock(VCRTestCase):
         logger.debug(r.status_code)
         json_data = json.loads(r.text)
         logger.debug(json.dumps(json_data, indent=4, sort_keys=True))
-
-
-# or run with > python-api-client$ pipenv run nosetests
-if __name__ == '__main__':
-    logzero.loglevel(logging.INFO)
-    unittest.main()
 

@@ -1,0 +1,787 @@
+interactions:
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV9vdnZzY2JhajBwd3dnOHNvb2trZ2tjOGNrNGtvZzhnc2NnOGc0NHNjODhjOHc0OHd3OnJwaTB3dWl1c2E4b2tvazRjdzhra2tjNHM0ODhnYzBzZ2drYzA0ODB3c2trZ2t3bzA=]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"YmEyNDNiMzAyZjU0ZjExZTRlNmY1MDRmN2JlODlmMWEwNThiYWRhZDg5ZDVmNGE3YzVhZmI5MjJiZGRmNTU4Ng","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"MDVmYTMxOTVhOWNhNDIyMTlkMjFlMTJiZDFjN2U0NTY4ZTU2YzU2OGFmOTkzODEzNmNhZGU3M2YxNjM2YTBkZA"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 07:16:39 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=u3hli6a0l6h4fif4v0koevndfo; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YmEyNDNiMzAyZjU0ZjExZTRlNmY1MDRmN2JlODlmMWEwNThiYWRhZDg5ZDVmNGE3YzVhZmI5MjJiZGRmNTU4Ng]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/products
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=2\u0026with_count=false\u0026pagination_type=page\u0026limit=10"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/Biker-jacket-polyester-xl"}},"identifier":"Biker-jacket-polyester-xl","family":"clothing","parent":"model-biker-jacket-polyester","groups":[],"categories":["master_men_blazers"],"enabled":true,"values":{"ean":[{"locale":null,"scope":null,"data":"1234567890367"}],"size":[{"locale":null,"scope":null,"data":"xl"}],"color":[{"locale":null,"scope":null,"data":"white"}],"material":[{"locale":null,"scope":null,"data":"polyester"}],"variation_name":[{"locale":"en_US","scope":null,"data":"Biker
+        jacket polyester"}],"name":[{"locale":null,"scope":null,"data":"Biker jacket"}],"price":[{"locale":null,"scope":null,"data":[{"amount":null,"currency":"EUR"},{"amount":null,"currency":"USD"}]}],"collection":[{"locale":null,"scope":null,"data":["summer_2017"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Biker
+        jacket"}]},"created":"2017-10-23T07:50:17+00:00","updated":"2017-10-23T07:50:25+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/1111111115"}},"identifier":"1111111115","family":"clothing","parent":"aphrodite","groups":[],"categories":["master_women_blouses","print_clothing","supplier_zaro"],"enabled":true,"values":{"size":[{"locale":null,"scope":null,"data":"xl"}],"color":[{"locale":null,"scope":null,"data":"blue"}],"name":[{"locale":null,"scope":null,"data":"Top
+        Layered Sleeveless gauze snake print"}],"price":[{"locale":null,"scope":null,"data":[{"amount":"299.00","currency":"EUR"},{"amount":null,"currency":"USD"}]}],"erp_name":[{"locale":"en_US","scope":null,"data":"Aphrodite"}],"supplier":[{"locale":null,"scope":null,"data":"zaro"}],"collection":[{"locale":null,"scope":null,"data":["summer_2016"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Top
+        Layered Sleeveless gauze snake print. Pleated round neck and drop back closure.
+        \u00b7 Back length 55.2 cmCes measures are calculated for a size M."}],"wash_temperature":[{"locale":null,"scope":null,"data":"700"}]},"created":"2017-10-23T07:50:17+00:00","updated":"2017-10-23T07:50:26+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/17851719"}},"identifier":"17851719","family":"scanners","parent":null,"groups":[],"categories":["avision","print_scan_sales","scanners"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Avision
+        @V2800"}],"description":[{"locale":"de_DE","scope":"print","data":"Der @V2800
+        ist eine innovative Scanl\u00f6sung, der Scan-to-E-Mail, Scan-to-Server und
+        digitale Kopie-F\u00e4higkeiten beinhaltet. Die Scan-to-E-Mail-Funktion erm\u00f6glicht
+        das Scannen in Farbe von Dokumenten und sendet sie per E-Mail (PDF, JPEG,
+        TIFF) direkt vom @V2800 ohne einen PC.Mit der der Scan-to-Server-Funktion
+        k\u00f6nnen Sie Dokumente scannen und sie auf einem bestimmten Serverpfad
+        speichern.\\nWenn der @ V2800 an Ihrem kompatiblen Laser-Drucker angeschlossen
+        ist, k\u00f6nnen sie qualitativ hochwertig digitale Kopien anfertigen und
+        somit viele f\u00fcr den B\u00fcroalltag unentbehrliche Funktionen mit nur
+        einem Ger\u00e4t durchf\u00fchren.\\n\\nDurch das integrierte Faxmodem ersetzt
+        der Avision @V2800 das alte Faxger\u00e4t und druckt beim Anschlu\u00df eines
+        kompatiblen Druckers eingehende Faxe sofort aus."},{"locale":"en_US","scope":"print","data":"The
+        product offers an unprecedented document delivery technology, transmitting
+        paper documents electronically over the internet.  With @V2800, you can instantly
+        scan single-sided or double-sided paper-based document and deliver the electronics
+        image to various destinations including e-mail addresses, printer, fax machine,
+        ftp servers, web site, or someone else\u0027s computer on the network.\\n\\nThe
+        new way to distribute documents is faster, more cost effective, and safer
+        than any traditional methods such as mail, or copier."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2013-03-01T00:00:00+00:00"}],"color_scanning":[{"locale":null,"scope":null,"data":true}]},"created":"2017-10-23T07:50:17+00:00","updated":"2017-10-23T07:50:25+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/12249740"}},"identifier":"12249740","family":"scanners","parent":null,"groups":[],"categories":["avision","print_scan_sales","scanners"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Avision
+        AV36"}],"picture":[{"locale":null,"scope":null,"data":"2\/e\/4\/a\/2e4a92cd3aeef5814d4b79153f6daa303921123a_12249740_4511.jpg","_links":{"download":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/media-files\/2\/e\/4\/a\/2e4a92cd3aeef5814d4b79153f6daa303921123a_12249740_4511.jpg\/download"}}}],"description":[{"locale":"de_DE","scope":"print","data":"Sammeln
+        sich unterwegs zu viele Dokumente an?\\nEntscheiden sie sich f\u00fcr den
+        Avision AV36 Scanner.\\n\\nDieser vollst\u00e4ndig portable Scanner erlaubt
+        ihnen das Einscannen von allen ihren Dokumenten, Fotos, Visitenkarten, Ausweisen,
+        Kreditkarten und Bl\u00e4ttern bis\\nzu einer Gr\u00f6\u00dfe von 216 x 356mm.\\nDieser
+        handliche und vielseitige Scanner kommt mit der Stromversorgung eines USB
+        2.0 Anschlusses aus.\\nDer Avision AV36 Scanner l\u00e4\u00dft sich bequem
+        transportieren und ben\u00f6tigt nur ein Minimum an Platz auf dem Schreibtisch.\\nDurch
+        die Verwendung der CIS Technik (Contact Image Sensor) entgegen der CCD Technik,
+        kann der Scanner kleiner und portabler sowie stromsparender gebaut werden.\\n\\nSomit
+        ist der Avision AV36 Scanner die perfekte L\u00f6sung f\u00fcr alle, die f\u00fcr
+        unterwegs eine effiziente und leicht verst\u00e4ndliche Scannl\u00f6sung ben\u00f6tigen.\\n\\nEin
+        einfacher Druck auf die Scanntaste und das Dokument wird mit bis zu 24bit
+        Farbtiefe und 600dpi optischer Aufl\u00f6sung gescannt. Die gerade Papierf\u00fchrung
+        erlaubt es dem AV36 Ausweise und sogar Kreditkarten problemlos zu scannen,
+        ohne diese zu besch\u00e4digen.\\n\\nDer brandneue AV36 ist nicht nur f\u00fcr
+        den portablen Einsatz entwickelt worden sondern auch mit der Absicht das Ger\u00e4t
+        frei von einer externen Stromquelle nutzen zu k\u00f6nnen.Es reicht ein USB
+        Anschlu\u00df aus um das Ger\u00e4t mit Strom zu versorgen und das Bild zu
+        \u00fcbertragen.\\n\\n\u003Cb\u003EMobile Stromversorgung via USB\u003C\/b\u003E\\nTragen
+        sie das Ger\u00e4t nicht von einem Standort zum n\u00e4chsten sondern nutzen
+        sie es unterwegs! Diese Vision wurde mit dem AV36 Scanner realisiert, der
+        unabh\u00e4ngig vom Stromnetz, nur \u00fcber den USB-Anschluss mit Strom versorgt
+        wird. Somit scannen sie ihre Dokumente \u00fcberall wo ein Notebook genutzt
+        werden kann, praktisch \u00fcberall.\\n\\n\u003Cb\u003EPortabel\u003C\/b\u003E\\nDer
+        AV36 ist sehr leicht (nur 0.7kg) und sehr klein mit 290mm x 77mm x 52mm. Die
+        geringe Gr\u00f6\u00dfe erlaubt es dem Nutzer das Ger\u00e4t problemlos mitzuf\u00fchren
+        ohne zus\u00e4tzllichen Ballast zu tragen. Aufgrund der Tatsache das kein
+        Netzteil ben\u00f6tigt wird ist der Avision AV36 der ideale Begleiter f\u00fcr
+        unterwegs und setzt einen neuen Standard in der Welt der portablen Scanner
+        ohne auf Qualit\u00e4t verzichten zu m\u00fcssen.\\n\\n\u003Cb\u003EDuplex
+        Scanner\u003C\/b\u003E\\nDer AV36 ist ein Duplex Scannermit einer optischen
+        Aufl\u00f6sung von 600dpi. Sparen sie Zeit und M\u00fche indem sie ihre doppelseitigen
+        Dokumente oder ID-Karten in einem Scannvorgang einlesen. Das Scannen eines
+        Dokuments dauert in Farbe bei 300 dpi Aufl\u00f6sung nur 12 Sekunden im Simplex
+        Modus, sowie 15 Sekunden im Duplex Modus.\\n\\n\u003Cb\u003EKompatibel mit
+        Plastik Karten(EC)\u003C\/b\u003E\\nUnterst\u00fctzt Dokumente von A8 bis
+        A4, und kann dabei Plastik Karten(z.B EC Karten\/P\u00e4sse) bis zu einer
+        H\u00f6he von 1.25mm einscannen.\\n\\n\u003Cb\u003ESoftware Umfang\u003C\/b\u003E\\nDer
+        Avision AV36 Scanner wird mit Twain und ISIS Treibern ausgeliefert, der Vollversion
+        des exklusiven Avision Button Manager, AVScan, ScanSoft PaperPort 11SE , NewSoft
+        Presto! BizCard\\n\\n\u003Cb\u003ENewSoft Presto! BizCard Presto!\u003C\/b\u003E\\nPresto!
+        BizCard ist eine umfassende Kontaktverwaltungs Software mit der Sie ihre Visitenkarten
+        scannen , bearbeiten und mit einer Vielzahl an Anwendungen synchronisieren
+        k\u00f6nnen.Das ideale Werkzeug um ihre Kontakte zu pflegen und sprach\u00fcbergreifend
+        zu organisieren.\\nPresto! BizCard erfasst und konvertiert ihre Visitenkarten
+        in eine durchsuchbare und editierbare Datenbank. Diese Informationen lassen
+        sich somit einfach und m\u00fchelos mit dem AV36 zu ihrem\\nComputer\/Laptop
+        \u00fcbertragen."},{"locale":"en_US","scope":"print","data":"\u003Cb\u003EMobile
+        power by USB\u003C\/b\u003E\\nDon\u2019t just haul the scanner from one destination
+        to another, use it on the go! This is the vision fully realized with the AV36,
+        which is powered by a USB port instead of a wall socket. So now, documents
+        can be scanned whenever a laptop is present, which can be anywhere.\\n\\n\u003Cb\u003EPortable\u003C\/b\u003E\\nThe
+        AV36 is light (only 0.7kg) and small in size at 290mm x 77mm x 52mm. The small
+        form factor enables users to pack along easily without sacrificing too much
+        luggage space or become a burden to carry. Coupled with the benefits of being
+        USB powered, the AV36 sets a new standard for scanner portability.\\n\\n\u003Cb\u003EDuplex
+        scanning\u003C\/b\u003E\\nThe AV36 is a duplex scanner with an optical resolution
+        of 600dpi. Save the time and effort of manually scanning a double-sided document
+        or a plastic ID card. A complete color scan of A4 document at 300dpi in simplex
+        mode takes 12 seconds, and 7.5 seconds per image in duplex mode.\\n\\n\u003Cb\u003ECompatible
+        with plastic cards\u003C\/b\u003E\\nSupported document size ranges from A8
+        to A4, and it can scan embossed plastic cards up to 1.25mm thick, such as
+        credit cards and ID cards.\\n\\n\u003Cb\u003EBundled software\u003C\/b\u003E\\nThe
+        newest version of TWAIN (v5.60) and extensive software applications Avision
+        Button Manager, AVScan 5, NewSoft Presto! BizCard and ScanSoft PaperPort 11SE
+        are included with every shipped unit to bring the most out of the AV36.\\n\\n\u003Cb\u003ENewSoft
+        Presto! BizCard Presto!\u003C\/b\u003E\\nBizCard is a complete contact management
+        solution that lets you scan, edit and synchronize business card contacts to
+        various contact management software applications. It captures and converts
+        business cards into a searchable and editable database, with support for 12
+        different languages including English, most European languages, Simplified\/Traditional
+        Chinese and Japanese. BizCard is the ideal tool for helping you stay in touch
+        and organized."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-01-05T00:00:00+00:00"}],"color_scanning":[{"locale":null,"scope":null,"data":true}]},"created":"2017-10-23T07:50:18+00:00","updated":"2017-10-23T07:50:26+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/11704300"}},"identifier":"11704300","family":"multifunctionals","parent":null,"groups":[],"categories":["canon","multifunctionals","print_scan_sales"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Canon
+        i-SENSYS MF4410"}],"description":[{"locale":"de_DE","scope":"print","data":"Dieses
+        kompakt-elegante SW-Laser-Multifunktionssystem mit Drucker, Kopierer und Scanner
+        ist ideal f\u00fcr zu Hause, in kleinen B\u00fcros und punktet mit Produktivit\u00e4t,
+        Komfort und hoher Energieeffizienz.\\n\\n\u003Cb\u003EFeatures\u003C\/b\u003E\\n-
+        SW-Laser-Multifunktionssystem: Drucker, Kopierer und Scanner.\\n- Elegantes,
+        Platz sparendes Design.\\n- Anwenderfreundliches, intuitiv zu bedienendes
+        LCD.\\n- Bis zu 23 SW-Drucke\/Min.; Druck der ersten Seite nach nur ca. 9
+        Sekunden.\\n- Druckaufl\u00f6sung von bis zu 1.200 x 600 dpi f\u00fcr qualitativ
+        hochwertige Ausdrucke und Kopien.\\n- Energieeffizient.\\n\\n\u003Cb\u003EDas
+        kompakte, elegante 3-in-1 Multifunktionssystem f\u00fcr zu Hause\u003C\/b\u003E\\n\\n\u003Cb\u003EElegant
+        und kompakt\u003C\/b\u003E\\nDieses kompakte Multifunktionssystem \u00fcberzeugt
+        mit einem attraktiven Preis-Leistungs-Verh\u00e4ltnis: Neben Kopieren und
+        Scannen ist es ideal f\u00fcr das Drucken von Dokumenten in ausgezeichneter
+        Druckqualit\u00e4t. Mit seinem eleganten, vollst\u00e4ndig in schwarz gehaltenem
+        Design und der kleinen Stellfl\u00e4che ist das System ein Blickfang auf jedem
+        Schreibtisch und ideal f\u00fcr den Einsatz im B\u00fcro oder zu Hause.\\n\\n\u003Cb\u003EExzellente
+        Bildqualit\u00e4t\u003C\/b\u003E\\nDie interpolierte Druckaufl\u00f6sung von
+        1.200 x 600 dpi liefert professionell aussehende Laserdrucke mit gestochen
+        scharfem Text und detailgetreuen Grafiken.\\n\\n\u003Cb\u003EKomfortable Bedienung\u003C\/b\u003E\\nDas
+        LC-Display des i-SENSYS MF4410 ist klar, intuitiv verst\u00e4ndlich und optimiert
+        f\u00fcr maximalen Bedienkomfort. Ein 5-zeiliges LC-Display und die animierte
+        Benutzerf\u00fchrung erh\u00f6hen den Bedienkomfort; Sie k\u00f6nnen schnell
+        und einfach auf die Funktionen zugreifen, alle erforderlichen Informationen
+        werden verst\u00e4ndlich angezeigt. Das spart Zeit und M\u00fche!\\n\\n\u003Cb\u003EZeitsparend
+        und effizient\u003C\/b\u003E\\nBei einer Druckgeschwindigkeit von ca. 23 Seiten
+        pro Minute und der Ausgabe der ersten Seite nach nur ca. 9 Sekunden k\u00f6nnen
+        Sie sicher sein, Ihre Ausdrucke und Kopien immer sofort zur Hand haben, wenn
+        Sie sie ben\u00f6tigen. Dank der Quick First-Print-Technologien geh\u00f6ren
+        lange Wartezeiten vor dem Drucker der Vergangenheit an. Dieses umweltfreundliche
+        System ben\u00f6tigt gerade einmal ca. 3 Watt im Sleep-Modus \u2013 das spart
+        Energie.\\n\\n\u003Cb\u003EVielseitiges Scannen von Farbdokumenten\u003C\/b\u003E\\nDas
+        Scannen von farbigen Dokumenten und Fotos wird mit einer Aufl\u00f6sung von
+        bis zu 600 dpi zum Kinderspiel. Mithilfe der MF Toolbox lassen sich Daten
+        direkt als E-Mail-Anhang oder durchsuchbare PDF-Dateien scannen \u2013 so
+        finden sich Informationen sp\u00e4ter leichter wieder.\\n\\n\u003Cb\u003EAll-in-One-Cartridge\u003C\/b\u003E\\nDie
+        recycelbare All-in-One Cartridge sorgt f\u00fcr gleichbleibend hochwertige
+        Druckqualit\u00e4t und minimiert den Wartungsaufwand. Sie enth\u00e4lt neben
+        dem Toner auch die Trommel und die Reinigungseinheit \u2013 nach dem Austausch
+        mit einer original Canon Lasercartridge ist das Multifunktionssystem wieder
+        so gut wie neu."},{"locale":"en_US","scope":"print","data":"This stylish mono
+        laser 3-in-1 offers print, copy and scan functions in one compact device.
+        Ideal for homes and small offices it\u2019s productive, easy-to-use and energy
+        efficient.\\n\\n\u003Cb\u003EFeatures\u003C\/b\u003E\\n- Mono laser 3-in-1:
+        print, copy \u0026 scan.\\n- Stylish, space-saving design.\\n- Easy to use
+        intuitive LCD display.\\n- 23 ppm, 9 seconds First Copy Out Time.\\n- Up to
+        1200 x 600 dpi resolution for prints and copies.\\n- Energy efficient.\\n\\n\u003Cb\u003EThe
+        compact, stylish 3-in-1 multifunctional for personal use\u003C\/b\u003E\\n\\n\u003Cb\u003EStylish
+        and compact\u003C\/b\u003E\\nOffering excellent value for money, this sleek
+        multifunctional provides high quality print, copy and scan functionality in
+        one space saving unit. With its stylish all black design and small footprint,
+        it looks great on any desk and is perfect for both home and small office use.\\n\\n\u003Cb\u003ESuperior
+        image quality\u003C\/b\u003E\\nAn enhanced print resolution of up to 1200
+        x 600 dpi delivers professional laser output for all your work, with sharp
+        text and fine graphics.\\n\\n\u003Cb\u003EEasy to use\u003C\/b\u003E\\nThe
+        i-SENSYS MF4410 features a simple and intuitive LCD interface designed for
+        easy operation. With 5 lines of text plus animations, features can be quickly
+        and easily accessed and more information can be communicated saving time and
+        effort.\\n\\n\u003Cb\u003ETime saving and efficient\u003C\/b\u003E\\nWith
+        an output speed of 23 ppm and a Fast First Copy Out Time of less than 9 seconds,
+        prints and copies are delivered the moment you need them. With quick recovery
+        from sleep mode, thanks to Quick First-Print technologies, long waits for
+        your documents are a thing of the past. Additionally, this economical device
+        uses only 3 watts in sleep mode, ensuring energy efficiency.\\n\\n\u003Cb\u003EVersatile
+        colour scanning\u003C\/b\u003E\\nScanning colour documents and photos is easy
+        and highly versatile using a resolution as high as 9600 x 9600 dpi. Files
+        can be scanned directly to email, or searchable PDF using the MF Toolbox,
+        enabling them to be quickly retrieved in the future.\\n\\n\u003Cb\u003EAll-in-One
+        cartridge\u003C\/b\u003E\\nThe All-In-One recyclable cartridge ensures maintenance-free
+        operation and continuous high quality output. Replace the compact cartridge
+        in seconds \u2013 containing toner, drum and cleaning units \u2013 with an
+        Authentic Canon Laser Cartridge and your multifunctional is as good as new."},{"locale":"fr_FR","scope":"print","data":"Ce
+        multifonction laser noir et blanc 3-en-1 \u00e9l\u00e9gant permet l\u0027impression,
+        la copie et la num\u00e9risation. Id\u00e9al pour les particuliers et les
+        bureaux de petite taille, il est performant, simple \u00e0 utiliser et \u00e9conome
+        en \u00e9nergie.\\n\\n\u003Cb\u003ECaract\u00e9ristiques\u003C\/b\u003E\\n-
+        Multifonction laser noir et blanc 3-en-1 : imprimez, copiez et num\u00e9risez.\\n-
+        Design \u00e9l\u00e9gant et peu encombrant.\\n- \u00c9cran LCD intuitif simple
+        \u00e0 utiliser.\\n- 23 ppm, premi\u00e8re copie en 9 secondes.\\n- R\u00e9solution
+        jusqu\u0027\u00e0 1200 x 600 dpi pour des impressions et des copies de qualit\u00e9
+        sup\u00e9rieure.\\n- Faible consommation d\u0027\u00e9nergie.\\n\\n\u003Cb\u003EMultifonction
+        3-en-1 compact et \u00e9l\u00e9gant destin\u00e9 \u00e0 une utilisation personnelle\u003C\/b\u003E\\n\\n\u003Cb\u003E\u00c9l\u00e9gant
+        et compact\u003C\/b\u003E\\nCe multifonction \u00e9l\u00e9gant offre un excellent
+        rapport qualit\u00e9-prix. Il r\u00e9unit des fonctions d\u0027impression,
+        de copie et de num\u00e9risation haute qualit\u00e9 au sein d\u0027un seul
+        appareil tr\u00e8s compact. Avec son design noir \u00e9pur\u00e9 et son faible
+        encombrement, il ne d\u00e9parera pas votre bureau. Il convient aussi bien
+        aux particuliers qu\u0027aux petites entreprises.\\n\\n\u003Cb\u003EQualit\u00e9
+        d\u0027image sup\u00e9rieure\u003C\/b\u003E\\nLa r\u00e9solution d\u0027impression
+        optimis\u00e9e de 1200 x 600 dpi permet de r\u00e9aliser des sorties laser
+        professionnelles pour tous vos travaux, avec des impressions de texte nettes
+        et des images claires.\\n\\n\u003Cb\u003ESimplicit\u00e9 d\u0027utilisation\u003C\/b\u003E\\nL\u0027i-SENSYS
+        MF4410 comporte une interface LCD simple et intuitive qui fait de son utilisation
+        un jeu d\u0027enfant. Gr\u00e2ce aux 5 lignes de texte et aux animations de
+        cette interface, vous acc\u00e9dez rapidement aux fonctions et obtenez des
+        informations qui vous font \u00e9conomiser temps et efforts.\\n\\n\u003Cb\u003E\u00c9conomie
+        de temps et d\u0027\u00e9nergie\u003C\/b\u003E\\nGr\u00e2ce \u00e0 la vitesse
+        d\u0027impression de 23 ppm et \u00e0 la sortie de la premi\u00e8re feuille
+        en moins de 9 secondes, les impressions et les copies sont r\u00e9alis\u00e9es
+        en temps et en heure. Avec les technologies \u00ab Quick First Print \u00bb
+        (impression premi\u00e8re page rapide), l\u0027appareil sort imm\u00e9diatement
+        du mode veille : les longues attentes appartiennent d\u00e9sormais au pass\u00e9.
+        De plus, cet appareil \u00e9conomique ne consomme que 3 watts en mode veille,
+        et assure ainsi des \u00e9conomies d\u0027\u00e9nergie.\\n\\n\u003Cb\u003ENum\u00e9risation
+        couleur polyvalente\u003C\/b\u003E\\nNum\u00e9riser des documents et des photos
+        couleur se fait tr\u00e8s simplement, et l\u0027appareil offre une grande
+        polyvalence avec une r\u00e9solution pouvant atteindre 9600 x 9600 dpi. Les
+        fichiers num\u00e9ris\u00e9s peuvent \u00eatre instantan\u00e9ment envoy\u00e9s
+        par courriel. \u00c0 l\u0027aide de MF Toolbox, vous pouvez \u00e9galement
+        les convertir en PDF avec fonction de recherche, ce qui vous permettra de
+        les retrouver rapidement \u00e0 l\u0027avenir.\\n\\n\u003Cb\u003ECartouche
+        Tout-en-Un\u003C\/b\u003E\\nLa cartouche Tout-en-Un recyclable garantit un
+        fonctionnement sans entretien et des sorties d\u0027une qualit\u00e9 constante.
+        Quelques secondes suffisent \u00e0 remplacer la cartouche compacte (qui comprend
+        le toner, le tambour et les unit\u00e9s de nettoyage) par une cartouche laser
+        Canon authentique, et votre multifonction fonctionnera comme au premier jour."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2011-11-10T00:00:00+00:00"}],"color_scanning":[{"locale":null,"scope":null,"data":false}],"maximum_print_size":[{"locale":null,"scope":null,"data":"a4_210_x_297_mm_"}],"multifunctional_functions":[{"locale":null,"scope":null,"data":["scan"]}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/1712634"}},"identifier":"1712634","family":"mp3_players","parent":null,"groups":[],"categories":["audio_video_sales","mp3_players","sony"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Sony
+        NWZ-E438F"}],"description":[{"locale":"en_US","scope":"print","data":"Sony
+        NWZ-E438F. Player media type: flash-media. Display: LCD, Display resolution:
+        240 x 320. Audio formats supported: AAC, MP3, WMA, Video formats supported:
+        MP4, MPEG4. Depth: 8.5, Height: 83.9. Connectivity technology: Wired"}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2008-09-12T00:00:00+00:00"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/16672632"}},"identifier":"16672632","family":"webcams","parent":null,"groups":[],"categories":["cameras_sales","hp","webcams"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"HP
+        KQ245AA"}],"description":[{"locale":"en_US","scope":"print","data":"Share
+        your photos or videos effortlessly, chat face to face over the internet, enjoy
+        HD quality video and more with the HP Premium Webcam."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-12-12T00:00:00+00:00"}],"total_megapixels":[{"locale":null,"scope":null,"data":"2"}],"maximum_video_resolution":[{"locale":null,"scope":null,"data":"1600_x_1200"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/14101037"}},"identifier":"14101037","family":"led_tvs","parent":null,"groups":[],"categories":["led_tvs","toshiba","tvs_projectors_sales"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Toshiba
+        23DL933G LED TV"}],"description":[{"locale":"de_DE","scope":"print","data":"\u003Cb\u003ELED\u003C\/b\u003E\\nLEDs
+        wandeln Strom effizient in Licht um und liefern zus\u00e4tzlich bessere Kontraste
+        und leuchtendere Farben. Die Full-HD-Aufl\u00f6sung unterstreicht diese hervorragenden
+        Eigenschaften zus\u00e4tzlich.\\n\\n\u003Cb\u003EFULL HD\u003C\/b\u003E\\nF\u00fcr
+        Bilder in High Definition Aufl\u00f6sung, wie sie durch HDTV und Blu-ray bereitgestellt
+        werden, hat sich in Europa die Aufl\u00f6sung 1.920x1.080 Bildpunkte f\u00fcr
+        das \u00fcbertragene Signal weitgehend durchgesetzt.\\n\\n\u003Cb\u003EDVD-Player
+        integriert\u003C\/b\u003E\\nDieser TV hat einen integrierten DVD Player, so
+        dass Sie auf ein externes Ger\u00e4t verzichten k\u00f6nnen und trotzdem all
+        Ihre Lieblingsfilme genie\u00dfen k\u00f6nnen.\\n\\n\u003Cb\u003EDualtuner\u003C\/b\u003E\\nDieser
+        TV bietet neben einem analogen Tuner ebenfalls einen Tuner f\u00fcr DVB-T
+        und DVB-C (HD).\\n\\n\u003Cb\u003EVideos, Musik und Bilder per USB Schnittstelle\u003C\/b\u003E\\nMit
+        diesem TV k\u00f6nnen Sie Videos, Musik und Bilder per USB Schnittstelle genie\u00dfen.\\nVideos,
+        Musik und Bilder per USB Schnittstelle"},{"locale":"en_US","scope":"print","data":"Toshiba
+        23DL933G. HD type: Full HD, Display resolution: 1920 x 1080, Aspect ratio:
+        16:9. Tuner type: Analogue \u0026 Digital, Analog signal format system: PAL
+        BG, PAL DK, PAL I, SECAM B\/G, SECAM D\/K, SECAM L, Digital signal format
+        system: DVB-C, DVB-T. RMS rated power: 2.5. Optical disc player type: DVD
+        player, Disc types supported: DVD+R, DVD+RW, DVD-R, DVD-RW. Video formats
+        supported: AVI, DAT, H.264, ISO, MKV, MP4, MPEG1, MPEG2, MPEG4, VOB, XVID,
+        Audio formats supported: AAC, MP3, MP4, Image formats supported: JPG"}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-05-02T00:00:00+00:00"}],"display_diagonal":[{"locale":null,"scope":null,"data":{"amount":23,"unit":"INCH"}}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/10627329"}},"identifier":"10627329","family":"pc_monitors","parent":null,"groups":[],"categories":["nec","pc_monitors","tvs_projectors_sales"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"NEC
+        EX201W"}],"picture":[{"locale":null,"scope":null,"data":"f\/1\/7\/e\/f17e10c909cbaf89538174a3a49d130e1d3e6398_10627329_7290.jpg","_links":{"download":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/media-files\/f\/1\/7\/e\/f17e10c909cbaf89538174a3a49d130e1d3e6398_10627329_7290.jpg\/download"}}}],"description":[{"locale":"de_DE","scope":"print","data":"Das
+        ultraschmale \u201eOffice Cool\u0022-Design verbindet die bewahrte Qualitat
+        und Leistungsfahigkeit von MultiSync\u00ae mit neuen Standards in Bezug auf
+        Minimalismus und Eco- Innovation. Der 20 Zoll gro.e Breitbild-TFT-Monitor
+        mit TNPanel und LED-Hintergrundbeleuchtung ist ideal fur Unternehmen, die
+        Wert auf Stil, zukunftssichere Technologie und bewahrte Bildqualitat bei hochster\\nFlexibilitat
+        legen.\\n\\nMit seiner au.erst schmalen LED-Hintergrundbeleuchtung und einem
+        Design, bei dem Bildschirminhalt und -position im Mittelpunkt stehen, passt
+        der EX201W von NEC perfekt ins\\nmoderne Buro und zu den neuen Trends bei
+        Unternehmensausstattung. Sein kompaktes Format und flexibles Konzept machen
+        ihn ideal fur Rezeptionen, Abfertigungsbereiche und informelle Besprechungen.
+        Fur anspruchsvolle, umweltbewusste Nutzer und Anwender, die Wert auf optimale
+        Arbeitsplatzgestaltung legen, bietet der EX201W einen Leuchtdichtesensor und
+        einen Human Sensor sowie die kleinste Standflache unter allen Geraten auf
+        dem Markt, die mit umfassenden Ergonomiefunktionen ausgestattet sind. Der
+        Bildschirm lasst sich leicht mit VESA-Halterungen befestigen."},{"locale":"en_US","scope":"print","data":"NEC
+        EX201W. Response time: 3.7, Display resolution: 1600 x 900, Contrast ratio
+        (typical): 1000:1. VESA mounting interfaces compatibility: 100 x 100, Swivel
+        angle range: -170 - 170, Tilt angle: -5 - 30. Input voltage: 100 - 240, Input
+        frequency: 50\/60, Power consumption (standby): 0.5. Width: 474.8, Depth:
+        47.6, Height: 278.2. Cables included: AC, DVI, USB"}],"display_srgb":[{"locale":null,"scope":null,"data":false}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2011-08-11T00:00:00+00:00"}],"display_color":[{"locale":null,"scope":null,"data":false}],"response_time":[{"locale":null,"scope":null,"data":4}],"display_diagonal":[{"locale":null,"scope":null,"data":{"amount":20,"unit":"INCH"}}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/11275331"}},"identifier":"11275331","family":"pc_monitors","parent":null,"groups":[],"categories":["pc_monitors","tvs_projectors_sales","viewsonic"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Viewsonic
+        Value Series VA2703"}],"description":[{"locale":"en_US","scope":"print","data":"ViewSonic\u2019s
+        VA2703 is a 27\u0022 large format LCD display with Full HD 1080p resolution.
+        With wide viewing angles, 15,000:1 Dynamic Contrast Ratio, DVI \/ VGA dual
+        inputs, and VESA mount option, VA2703 offers crystal crisp images and flexible
+        set up. The display\u2019s large viewing area greatly enhances productivity
+        when users work on large spreadsheets or use multiple applications. Ergonomic
+        tilt adjusts screen angle for comfortable productivity or collaboration and
+        presentations. 3 year warranty, the industry\u2019s best pixel performance
+        policy, and energy saving Eco mode make the VA2703 the best value for corporations,
+        home and education.\\n\\n\u003Cb\u003EKey Features\u003C\/b\u003E\\n\\n\u003Cb\u003EFull
+        27\u0022 Widescreen With 1920x1080 Native Resolution\u003C\/b\u003E\\nThe
+        widescreen aspect ratio allows you to view HD content in its native format
+        with no stretching or distortion.\\n\\n\u003Cb\u003E15,000:1 Dynamic Contrast
+        Ratio\u003C\/b\u003E\\nProvides darker black levels and better overall front-of-screen
+        performance.\\n\\n\u003Cb\u003EClearMotiv\u00ae 3ms Video Response Time\u003C\/b\u003E\\nFast
+        3ms video response enables digital HD broadcast-quality video and blur-free
+        gaming.\\n\\n\u003Cb\u003EOptiSync\u00ae Digital \/ Analog Inputs Expand Your
+        Connectivity\u003C\/b\u003E\\nMulti-mode input technology supports both digital
+        (DVI) and analog (VGA) signals for ultimate compatibility and configuration
+        flexibility.\\n\\n\u003Cb\u003EEco-Mode\u003C\/b\u003E\\nEnvironmentally-friendly
+        Eco-mode reduces power consumption by up to 50% and extends backlight life.\\n\\n\u003Cb\u003EStylish
+        Slim-Bezel Design\u003C\/b\u003E\\nThe thin bezel lets you see more without
+        taking up valuable desktop real estate."}],"display_srgb":[{"locale":null,"scope":null,"data":false}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2011-10-25T00:00:00+00:00"}],"display_color":[{"locale":null,"scope":null,"data":false}],"response_time":[{"locale":null,"scope":null,"data":3}],"display_diagonal":[{"locale":null,"scope":null,"data":{"amount":27,"unit":"INCH"}}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 07:16:40 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=51p5adedjql7ce24sh6tfe1rb1; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YmEyNDNiMzAyZjU0ZjExZTRlNmY1MDRmN2JlODlmMWEwNThiYWRhZDg5ZDVmNGE3YzVhZmI5MjJiZGRmNTU4Ng]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=51p5adedjql7ce24sh6tfe1rb1]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/products?page=2&with_count=false&pagination_type=page&limit=10
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=2\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"previous":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=3\u0026with_count=false\u0026pagination_type=page\u0026limit=10"}},"current_page":2,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/1320064"}},"identifier":"1320064","family":"pc_monitors","parent":null,"groups":[],"categories":["lenovo","pc_monitors","tvs_projectors_sales"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Lenovo
+        Flat Panel Performance ThinkVision L190x"}],"description":[{"locale":"en_US","scope":"print","data":"The
+        ThinkVision L190x is an ultra-slim, 19-inch monitor offering outstanding image
+        quality with a stand that offers tilt, swivel, pivot, and height adjustments.
+        Its ultra slim bezel is only 6.6 mm wide and saves space to provide a nearly
+        seamless view in a multiple-monitor environment. ThinkVision L190x is thoughtfully
+        designed, delivering high performance images even when viewed from extreme
+        angles. These monitors are the ideal choice for multiple, dual, or tilted
+        configurations and allow for greater collaboration and productivity. The monitor
+        can be rotated to change from landscape to portrait viewing and the image
+        will adjust automatically. The ThinkVision L190x is in the Performance ThinkVision
+        family of monitors. It is best suited for specialized applications in multi-monitor
+        environments where quick access to USB ports is needed.\\n  \\n\u003Cb\u003EFeatures
+        \u0026 Benefits:\u003C\/b\u003E \\n  \\n- 19-in viewable image size \\n- Native
+        resolution of 1280 x 1024 \\n- ThinkVantage design \\n- Ultra slim side bezels
+        (6.6 mm) for multi-monitoring \\n- Pivot for portrait or landscape viewing
+        (graphics card dependent) \\n- Automatic image rotating software included
+        \\n- Rear stand cover and clip to keep cables hidden \\n- Carrying handle
+        for easy transport \\n- Direct access button for automatic image setup \\n-
+        Complimentary design for ThinkPad and ThinkCentre systems \\n- Analog and
+        DVI-D video signal connectors \\n- Supports High Definition Content Protection
+        (HDCP) \\n- Compliance with ENERGY STAR 4.0 requirements \\n- The Electronic
+        Product Environmental Assessment Tool(EPEAT) Silver category \\n- Four port
+        USB hub \\n- Kensington Lock slot for security \\n- TCO\u002703 compliance
+        \\n- Offers attachment points for optional ThinkVision USB Soundbar (40Y7616)
+        \\n- Analog and digital connectors provide attachment flexibility \\n- Wide
+        viewing angles (178 degrees both horizontal and vertical) for multi-monitoring
+        \\n- Dual input connectors allow attachment to two systems simultaneously
+        \\n- Windows Vista Premium Certified \\n- 31 Watt power consumption via internal
+        power \\n- Kensington lock slot \\n- Meets 100 mm VESA standard for mounting
+        \\n- Detachable base for wall- or arm-mounting (sold separately) \\n- Available
+        in business black"}],"display_srgb":[{"locale":null,"scope":null,"data":false}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2007-10-26T00:00:00+00:00"}],"display_color":[{"locale":null,"scope":null,"data":false}],"response_time":[{"locale":null,"scope":null,"data":25}],"display_diagonal":[{"locale":null,"scope":null,"data":{"amount":19,"unit":"INCH"}}],"power_requirements":[{"locale":null,"scope":null,"data":"100
+        - 240 VAC, 50 - 60 Hz"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/8009612"}},"identifier":"8009612","family":"scanners","parent":null,"groups":[],"categories":["kodak","print_scan_sales","scanners"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Kodak
+        i2400"}],"description":[{"locale":"de_DE","scope":"print","data":"\u003Cb\u003EVereinfachen
+        Sie die Erledigung Ihrer Scanaufgaben.\u003C\/b\u003E\\nDenken Sie mal einen
+        Moment \u00fcber die vielen Schritte bei Scanvorg\u00e4ngen nach, die Tag
+        f\u00fcr Tag immer wieder durchgef\u00fchrt werden. Scannen, Bearbeiten, Benennen,
+        Dateiformat w\u00e4hlen \u2013 all das wiederholt sich immer wieder. \u00dcberlegen
+        Sie jetzt, wie viel Zeit und Geld Sie sparen k\u00f6nnten, wenn Sie all diese
+        Schritte per Tastendruck erledigen k\u00f6nnten. Genau das bietet die Smart
+        Touch-Funktion von Kodak.\\n\\nDer KODAK i2400 Scanner mit integrierter Smart
+        Touch-Funktion erm\u00f6glicht Ihnen das Erfassen, Verwalten, Verarbeiten
+        und Erstellen von PDFs und anderen Dateiformaten. Dabei werden ehemals zeitaufw\u00e4ndige
+        Prozesse automatisiert.\\n\\nBeispielsweise kann ein Unternehmen das Scannen
+        von Auftragsbest\u00e4tigungen als Option 3 konfigurieren. Alle Mitarbeiter,
+        die Auftragsbest\u00e4tigungen scannen m\u00fcssen, k\u00f6nnen dann eine
+        Taste dr\u00fccken, um \u201e3\u201c zu w\u00e4hlen, woraufhin die Dokumente
+        gescannt und an das richtige Ziel gesendet werden. Hierf\u00fcr ist keine
+        Schulung oder Programmierung erforderlich. Mit der Smart Touch-Funktion von
+        Kodak erledigen Sie Ihre Arbeit leichter, schneller und intelligenter.\\n\\n\u003Cb\u003EMehr
+        M\u00f6glichkeiten, die Arbeit zu erledigen.\u003C\/b\u003E\\nMehr Produktivit\u00e4t,
+        mehr Imaging-Power \u2013 Dank zweier LED-Lichtquellen k\u00f6nnen Sie schneller
+        mit dem Scannen beginnen, da keine Aufw\u00e4rmzeit der Lampen erforderlich
+        ist. Die Lichtquellen sind sofort einsatzbereit und bieten bessere Bildklarheit,
+        Einheitlichkeit und Farbstabilit\u00e4t.\\n\\nMehr Vielseitigkeit \u2013 Das
+        ausziehbare Ausgabefach mit eigenem Schubfach und die flexible Papierhandhabung
+        erm\u00f6glichen die Verarbeitung nahezu aller Arten von Dokumenten \u2013
+        von kleinen oder gro\u00dfen, dicken oder d\u00fcnnen Dokumenten \u00fcber
+        Ausweise bis hin zu Visitenkarten.\\n\\nMehr Zuverl\u00e4ssigkeit \u2013 Der
+        \u00e4u\u00dferst zuverl\u00e4ssige 50-Blatt-Einzug und das integrierte Papierfach
+        machen das Scannen einfach."},{"locale":"en_US","scope":"print","data":"\u003Cb\u003EAdd
+        a Smart Touch to your office.\u003C\/b\u003E\\n\\nTake a moment to think about
+        those multiple-step scanning operations that are done again and again, day
+        after day. Scanning, editing, naming, choosing a file format \u2014 it\u2019s
+        so repetitive. Now imagine the time and money you could save by doing all
+        that at the press of a button. That\u2019s what Kodak\u2019s Smart Touch functionality
+        is all about.\\n\\nThe KODAK i2400 Scanner with built-in Smart Touch functionality
+        lets you capture, manage, process, and deliver PDFs and other file formats
+        \u2014 automating processes that previously were time-consuming.\\n\\nFor
+        example, a business could configure its purchase orders scanning process as
+        Option 3. Then anyone who needs to scan purchase orders can just press a button
+        to choose \u201c3\u201d and the documents would be scanned and sent to their
+        proper destination \u2014 no training or programming required. Make your work
+        easier, faster, and smarter with KODAK\u2019s Smart Touch functionality.\\n\\n\u003Cb\u003EMore
+        productivity, more imaging power\u003C\/b\u003E\\n\u2014 Dual LED illumination
+        gets you started faster by eliminating lamp warmup time to provide immediate
+        response, plus image clarity, consistency, and color stability. \\n\\n\u003Cb\u003EMore
+        versatility\u003C\/b\u003E\\n\u2014 Our extendable, self-storing output tray
+        and flexible paper handling will take care of just about anything you want
+        to scan \u2014 small documents or large, thick or thin, ID cards, even embossed
+        hard cards. \\n\\n\u003Cb\u003EMore reliability\u003C\/b\u003E\\n\u2014 The
+        highly reliable 50-sheet feeder and integrated paper tray make it easy to
+        get scanning done. \\n\\n\u003Cb\u003EMore possibilities\u003C\/b\u003E\\n\u2014
+        Conveniently scan exception documents with the optional KODAK A4 Flatbed Accessory,
+        which connects or detaches in seconds via USB connectivity."},{"locale":"fr_FR","scope":"print","data":"\u003Cb\u003EAjoutez
+        une fonctionnalit\u00e9 Smart Touch \u00e0 votre bureau.\u003C\/b\u003E\\nPrenez
+        quelques minutes pour r\u00e9fl\u00e9chir \u00e0 ces num\u00e9risations en
+        plusieurs \u00e9tapes qui doivent \u00eatre faites et refaites, jour apr\u00e8s
+        jour. Num\u00e9risation, modification, appellation, choix du format du fichier
+        : toutes ces proc\u00e9dures sont r\u00e9p\u00e9titives. Maintenant, imaginez
+        le temps et l\u2019argent que vous pourriez \u00e9conomiser s\u2019il vous
+        suffisait d\u2019appuyer sur un bouton pour effectuer toutes ces t\u00e2ches.
+        Voil\u00e0 tout l\u2019int\u00e9r\u00eat de la fonctionnalit\u00e9 Smart Touch
+        de Kodak.\\n\\nAvec la fonctionnalit\u00e9 Smart Touch int\u00e9gr\u00e9e
+        au scanner KODAK i2400, vous pouvez capturer, g\u00e9rer, traiter et g\u00e9n\u00e9rer
+        des fichiers PDF ou autres en automatisant les proc\u00e9dures qui, auparavant,
+        vous prenaient du temps.\\n\\nPar exemple, une entreprise peut configurer
+        la proc\u00e9dure de num\u00e9risation de ses bons de commande en Option 3.
+        Par la suite, toute personne devant num\u00e9riser des bons de commande peut
+        simplement appuyer sur un bouton afin de choisir l\u2019option \u00ab 3 \u00bb
+        et les documents seront num\u00e9ris\u00e9s et envoy\u00e9s vers la destination
+        appropri\u00e9e. Aucune formation ni programmation n\u2019est requise. Simplifiez,
+        acc\u00e9l\u00e9rez et travaillez de mani\u00e8re plus intelligente avec la
+        fonctionnalit\u00e9 Smart Touch de KODAK.\\n\\n\u003Cb\u003EDavantage de moyens
+        pour mener \u00e0 bien vos t\u00e2ches professionnelles.\u003C\/b\u003E\\nUne
+        puissance d\u2019imagerie accrue pour plus de productivit\u00e9\u00b7 : un
+        \u00e9clairage \u00e0 double voyant vous permet de d\u00e9marrer plus rapidement
+        en \u00e9liminant le temps de pr\u00e9chauffe de la lampe, pour fournir ainsi
+        une r\u00e9ponse imm\u00e9diate, mais \u00e9galement une nettet\u00e9 d\u2019image,
+        une coh\u00e9rence et une stabilit\u00e9 des couleurs.\\n\\nPlus de polyvalence
+        : notre plateau de sortie extensible \u00e0 stockage ind\u00e9pendant et notre
+        gestion flexible du papier se chargeront de tous les travaux de num\u00e9risation
+        que vous souhaitez (documents de petite ou de grande taille, \u00e9pais ou
+        fins, carte d\u2019identit\u00e9 et m\u00eame cartes papier en relief."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2011-03-07T00:00:00+00:00"}],"color_scanning":[{"locale":null,"scope":null,"data":true}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/1325806"}},"identifier":"1325806","family":"digital_cameras","parent":null,"groups":[],"categories":["cameras_sales","digital_cameras","kodak"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Kodak
+        EasyShare ZD710"}],"weight":[{"locale":null,"scope":null,"data":{"amount":"533.0000","unit":"GRAM"}}],"camera_type":[{"locale":null,"scope":null,"data":"compact"}],"description":[{"locale":"en_US","scope":"print","data":"\u003Cb\u003EStable
+        shots makes stunning prints.\u003C\/b\u003E\\n-7.1 MP for prints up to 30
+        \u00d7 40 in. (76 \u00d7 102 cm).  \\n-10X optical zoom lens.  \\n-Digital
+        image stabilization.\\n-High ISO (up to 1600). \\n-KODAK PERFECT TOUCH Technology.
+        \\n-Smart scene mode. \\n-2.0 in. (5.0 cm) wide angle color LCD.\\n\\n \\n"}],"sensor_type":[{"locale":null,"scope":null,"data":"ccd"}],"optical_zoom":[{"locale":null,"scope":null,"data":10}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2007-11-03T00:00:00+00:00"}],"auto_exposure":[{"locale":null,"scope":null,"data":false}],"auto_focus_lock":[{"locale":null,"scope":null,"data":false}],"total_megapixels":[{"locale":null,"scope":null,"data":"16000000"}],"auto_focus_assist_beam":[{"locale":null,"scope":null,"data":false}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/20352"}},"identifier":"20352","family":"loudspeakers","parent":null,"groups":[],"categories":["audio_video_sales","logitech","loudspeakers"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Logitech
+        SPEAKERS Z-540"}],"description":[{"locale":"en_US","scope":"print","data":"Feel
+        like youre part of the action or at the concert hall when you step up to this
+        surround-sound speaker system that wont bust your budget. The Logitech Z-540
+        provides the deep lows, clear mids, and smooth highs to envelop you in music
+        and sound effects. The five-piece system uses patented M3D for realistic surround
+        sound. The subwoofer design delivers twice the bass energy of similar systems.
+        The stylish satellites stand on desk or mount on the wall. budget. The Logitech
+        Z-540 is great for PC games and music"}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2005-06-27T00:00:00+00:00"}]},"created":"2017-10-23T07:50:17+00:00","updated":"2017-10-23T07:50:25+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/7820677"}},"identifier":"7820677","family":"webcams","parent":null,"groups":[],"categories":["cameras_sales","microsoft","webcams"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Microsoft
+        LifeCam Studio for Business"}],"description":[{"locale":"en_US","scope":"print","data":"\u003Cb\u003EThe
+        closest to being there Experience the vivid sights, sounds, and colors of
+        real life with HD video.\u003C\/b\u003E\\n\\n\u003Cb\u003E1080p HD Sensor\u003C\/b\u003E\\nFull
+        1080p HD sensor for superior sharpness and image quality.\\n\\n\u003Cb\u003EAuto
+        Focus\u003C\/b\u003E\\nStay in focus at any distance.\\n\\n\u003Cb\u003EHigh-Precision
+        Glass Element Lens\u003C\/b\u003E\\nWide-angle glass element lens for advanced,
+        high-precision optics.\\n\\n\u003Cb\u003ETrueColor Technology\u003C\/b\u003E\\nAutomatically
+        delivers bright and colorful video, in virtually all lighting conditions.\\n\\n\u003Cb\u003EClearFrame
+        Technology\u003C\/b\u003E\\nClearFrame Technology for smooth, detailed video.\\n\\n\u003Cb\u003EHigh-Fidelity
+        Microphone\u003C\/b\u003E\\nHigh-fidelity microphone for more natural, detailed
+        audio.\\n\\n\u003Cb\u003ETripod Thread\u003C\/b\u003E\\nReady to be mounted
+        on a standard tripod. (Tripod not included.)\\n\\n\u003Cb\u003EWindows Live
+        Movie Maker\u003C\/b\u003E\\nStart a movie project with one click, then upload
+        widescreen video to social networking sites.\\n\\n\u003Cb\u003EWindows Live
+        Photo Gallery\u003C\/b\u003E\\nEasily upload a photo that you can edit, tag,
+        and share with friends and family.\\n\\n\u003Cb\u003EWindows Live Call Button\u003C\/b\u003E\\nThe
+        easy way to start a video call.\\n\\n\u003Cb\u003EWorks with\u003C\/b\u003E\\nWindows
+        Live Messenger, Yahoo!, AOL Instant Messenger, and Skype."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2011-01-21T00:00:00+00:00"}],"total_megapixels":[{"locale":null,"scope":null,"data":"2"}],"maximum_frame_rate":[{"locale":null,"scope":null,"data":30}],"maximum_video_resolution":[{"locale":null,"scope":null,"data":"1920_x_1080"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/15705882"}},"identifier":"15705882","family":"laser_led_printers","parent":null,"groups":[],"categories":["laser_led_printers","lexmark","print_scan_sales"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Lexmark
+        MS812dtn"}],"description":[{"locale":"en_US","scope":"print","data":"\u003Cb\u003EStar
+        Performer. Stellar Finish.\u003C\/b\u003E\\nThe Lexmark MS812dtn network-ready
+        laser printer with internal 2-sided printing, 800 MHz dual-core processor,
+        512MB of memory and 1,200-sheet standard input has a print speed of up to
+        70 ppm.\\n\\n\u003Cb\u003EFaster Processing\u003C\/b\u003E\\nImprove your
+        print speeds by taking advantage of up to 2.5 GB of memory, an 800 MHz dual-core
+        processor and Gigabit Ethernet.\\n\\n\u003Cb\u003EReliable High Performance\u003C\/b\u003E\\nPrint
+        up to 50,000 pages per month. Plus, enjoy fewer maintenance hassles with our
+        state-of-the-art paper handling.\\n\\n\u003Cb\u003EKeep Jobs Moving\u003C\/b\u003E\\nWith
+        a maximum input capacity of up to 4,400 sheets and an extra high yield toner
+        cartridge, you won\u2019t have to add paper or change cartridges as often.\\n\\n\u003Cb\u003ESpend
+        Less Time Waiting\u003C\/b\u003E\\nPrint up to 70 pages per minute, and produce
+        your first page in as little as 4 seconds.\\n\\n\u003Cb\u003EPrint on a Wide
+        Range of Media\u003C\/b\u003E\\nWith built-in 2-sided printing and the ability
+        to print on diverse materials, you can do more for your business and use less
+        paper."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-10-10T00:00:00+00:00"}],"maximum_print_size":[{"locale":null,"scope":null,"data":"legal_216_x_356_mm_"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/1314976"}},"identifier":"1314976","family":"loudspeakers","parent":null,"groups":[],"categories":["audio_video_sales","loudspeakers","sony"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Sony
+        SS-SP32FWB"}],"picture":[{"locale":null,"scope":null,"data":"e\/b\/9\/c\/eb9ce2240bffe31969b86617d5b9a5b0b33d5843_1314976_5566.jpg","_links":{"download":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/media-files\/e\/b\/9\/c\/eb9ce2240bffe31969b86617d5b9a5b0b33d5843_1314976_5566.jpg\/download"}}}],"description":[{"locale":"en_US","scope":"print","data":"When
+        it comes to creating high-quality Hi-Fi sound in your home, selecting the
+        proper speakers is even more important. Sony makes it easy with an extremely
+        wide range of different speakers. Whether you\u0027re listening to a refined
+        string quartet or watching a powerful action-packed movie, Sony\u0027s speakers
+        are designed to deliver an intensive acoustic experience that is both powerful
+        and emotional."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2007-10-13T00:00:00+00:00"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/3669355"}},"identifier":"3669355","family":"loudspeakers","parent":null,"groups":[],"categories":["audio_video_sales","loudspeakers","trust"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Trust
+        MiDo 2.1 Speaker Set"}],"description":[{"locale":"de_DE","scope":"print","data":"-
+        Sehr kompaktes 2.1-Lautsprecherset mit Subwoofer aus Holz und einer Gesamtausgangsleistung
+        von 12 Watt RMS (Spitzenleistung 24 Watt)\\n- Platzsparender Subwoofer mit
+        Bassreflexsystem f\u00fcr vollen und reichen Klang mit kr\u00e4ftigen B\u00e4ssen\\n-
+        Lautst\u00e4rkeregler an der R\u00fcckseite des Subwoofers."},{"locale":"en_US","scope":"print","data":"-
+        Extra compact 2.1 speaker set including wooden subwoofer with a total RMS
+        power output of 12 Watt (24 Watt peak power)\\n- Space saving subwoofer with
+        bass reflex port for full and rich sound with powerful bass\\n- Volume control
+        at the back of the subwoofer."},{"locale":"fr_FR","scope":"print","data":"-
+        Syst\u00e8me d\u0027enceintes 2.1 ultracompactes comprenant un caisson de
+        basses en bois avec une puissance totale de sortie de 12 W RMS (24 W en puissance
+        de pointe)\\n- Caisson de basses compact avec \u00e9vent bass reflex offrant
+        un son riche et plein, aux basses puissantes\\n- Commande du volume situ\u00e9e
+        \u00e0 l\u0027arri\u00e8re du caisson de basses."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2009-09-26T00:00:00+00:00"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/13689212"}},"identifier":"13689212","family":"camcorders","parent":null,"groups":[],"categories":["camcorders","cameras_sales","canon"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Canon
+        LEGRIA HF M52"}],"description":[{"locale":"en_US","scope":"print","data":"\u003Cb\u003EShare
+        exceptional movie creations with Wi-Fi\u003C\/b\u003E\\nEffortlessly create
+        and share professional quality video with the Wi-Fi enabled LEGRIA HF M52.
+        An HD CMOS PRO sensor ensures superb images even in low light while Intelligent
+        IS combats camera shake.\\n\\n- Wi-Fi with MP4 support.\\n- Canon HD CMOS
+        PRO sensor.\\n- Optical Intelligent IS.\\n- Audio Scene Select.\\n- 10x HD
+        Video lens, iris diaphragm.\\n- Store direct to external HDD.\\n- 32GB memory,
+        SDXC slot.\\n- Creative cinematic features.\\n- 7.5cm touch screen.\\n- Smart
+        Auto, Face Detection, Instant AF.\\n\\n\u003Cb\u003EWi-Fi with MP4 support\u003C\/b\u003E\\nIn-built
+        Wi-Fi lets you effortlessly share your creations to social networking sites
+        and view your videos on DNLA certified TVs and iOS devices. Support for MP4
+        format ensures quick transfer times of HD movies.\\n\\n\u003Cb\u003ECanon
+        HD CMOS PRO sensor\u003C\/b\u003E\\nThe HD CMOS PRO sensor is designed and
+        made by Canon for its professional camcorders. The light gathering area of
+        the pixels is 160% bigger than conventional CMOS sensors, delivering a wider
+        dynamic range and advanced low-light performance.\\n\\n\u003Cb\u003EOptical
+        Intelligent IS\u003C\/b\u003E\\nIntelligent IS is the perfect solution to
+        combat camera shake. It automatically detects the scene and selects exactly
+        the right optical Image Stabilizer settings from 4 modes to counteract movement
+        and prevent blur. It ensures sharp, detailed videos in every situation - leaving
+        you free to concentrate on shooting.\\n\\n\u003Cb\u003EAudio Scene Select\u003C\/b\u003E\\nIt\u2019s
+        simple to make your movies sound as good as they look with Audio Scene Select
+        and a high-sensitivity, built-in zoom microphone. Just select from 5 scene
+        modes and audio settings are optimised automatically.\\n\\n\u003Cb\u003ECanon
+        HD Video lens\u003C\/b\u003E\\nA high-quality, Canon HD Video lens with 10x
+        optical zoom features an iris diaphragm for soft background blurring.\\n\\n\u003Cb\u003EStore
+        direct to external HDD\u003C\/b\u003E\\nCopy movies direct from the inbuilt
+        memory or SDXC card slot to an external hard drive. Just follow the easy on-screen
+        menus for simple storage.\\n\\n\u003Cb\u003E32GB memory, SDXC card slot\u003C\/b\u003E\\nA
+        32GB Dual Flash memory lets you store over 12 hours of movies to the built-in
+        memory. Record even longer with the SDXC card slot.\\n\\n\u003Cb\u003ECreative
+        cinematic features\u003C\/b\u003E\\nUse Story Creator to develop your video
+        skills and effortlessly create memorable short videos with a story - just
+        choose a theme and follow the in-built scene suggestions. Inspire your creativity
+        with Cinema-Look Filters and add fun effects to your movies without a PC using
+        Touch Decoration.\\n\\n\u003Cb\u003EFingertip control\u003C\/b\u003E\\nOperation
+        is easy with a high-resolution 7.5cm (3.0\u201d) gesture-based Touch-screen
+        LCD, which gives you intuitive fingertip control of shooting and playback
+        functions.\\n\\n\u003Cb\u003EEffortless shooting\u003C\/b\u003E\\nCreating
+        high-quality movies is effortless with Smart Auto. Fully automatic, it intelligently
+        selects shooting settings from 38 scenes. Face Detection optimises the settings
+        for great people shots and Instant AF ensures fast and accurate focusing."}],"sensor_type":[{"locale":null,"scope":null,"data":"cmos"}],"optical_zoom":[{"locale":null,"scope":null,"data":10}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-04-05T00:00:00+00:00"}],"image_stabilizer":[{"locale":null,"scope":null,"data":true}],"total_megapixels":[{"locale":null,"scope":null,"data":"2.37"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/10977324"}},"identifier":"10977324","family":"multifunctionals","parent":null,"groups":[],"categories":["brother","multifunctionals","print_scan_sales"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Brother
+        MFC-J5910DW multifunctional"}],"description":[{"locale":"de_DE","scope":"print","data":"\u003Cb\u003EDIN
+        A3 Business 4-in-1 Tinten-Multifunktionscenter mit DIN A3 Duplexdruck-Funktion,
+        LAN-\/WLAN-MFC-Server und Touchscreen-Display\u003C\/b\u003E\\n\\n\u003Cb\u003EDIN
+        A3 Farbdrucker\u003C\/b\u003E\\n- Bis zu 35 Seiten pro Minute in S\/W (DIN
+        A4)\\n- Bis zu 27 Seiten pro Minute in Farbe (DIN A4)\\n- Bis zu 12 ISO-Seiten
+        pro Minute in S\/W (DIN A4)\\n- Bis zu 10 ISO-Seiten pro Minute in Farbe (DIN
+        A4)\\n- Automatischer Duplexdruck bis DIN A3\\n- Bis zu 6.000 x 1.200 dpi
+        Druckaufl\u00f6sung\\n- 4 separate Tintenpatronen\\n- USB 2.0 Hi-Speed, 10\/100
+        BaseTX (LAN) und 802.11 b\/g\/n (WLAN) Schnittstelle\\n- Dokumentenecht drucken
+        nach PTS\\n- mit LC-1240BK\/LC-1280XLBK\\n- AirPrint kompatibel\\n- Google
+        Cloud Print\u2122 kompatibel\\n\\n\u003Cb\u003EDIN A4 Farbkopierer\u003C\/b\u003E\\n-
+        35 Blatt Vorlageneinzug (ADF) und\\n- DIN A4 Vorlagenglas\\n- 1 Papierkassette
+        f\u00fcr 250 Blatt\\n- 4,9 cm Touchscreen LCD-Farbdisplay mit ber\u00fchrungsempfindlichem
+        Bedienfeld\\n\\n\u003Cb\u003EDIN A4 Farbscanner\u003C\/b\u003E\\n- Scan-to-E-Mail,
+        -Bild, -Text, -PDF, -Datei, USB-Stick, -Speicherkarte,\\n\\n\u003Cb\u003EDIN
+        A4 Farbfax\u003C\/b\u003E\\n- Werbefax-L\u00f6schfunktion\\n\\n\u003Cb\u003EFotodirektdruck\u003C\/b\u003E\\n-
+        Randloser Fotodruck bis DIN A3\\n- Fotodirektdruck via PictBridge, USB-Stick,
+        Speicherkarte\\n\\n\u003Cb\u003EIntegrierter LAN-\/WLAN-MFC-Server\u003C\/b\u003E\\n-
+        Drucken, Scannen, Faxen im LAN oder WLAN."},{"locale":"en_US","scope":"print","data":"All\u2010in\u2010one
+        A3 colour printing just got faster and more affordable. Quickly print, copy,
+        scan or fax using the MFC\u2010J5910DW, a model that\u2019s compact enough
+        for any office, whether it\u2019s at home or at work.\\n\\nWith precision
+        colour printing up to A3, your presentations, projects and photographs can
+        be given more punch than previously possible, whilst our XL cartridges help
+        you considerably reduce running costs. Plus, the latest wireless \u0027N\u0027
+        technology means you can share the benefits of the small printer with big
+        capability with the rest of the team in your office \u2010or the family at
+        home."},{"locale":"fr_FR","scope":"print","data":"\u003Cb\u003EImprimante
+        multifonction jet d\u2019encre couleur A3 professionnelle avec Fax, Impression
+        recto-verso et connection r\u00e9seau et WiFi\u003C\/b\u003E\\nB\u00e9n\u00e9ficiez
+        du format A3 gr\u00e2ce \u00e0 cette imprimante multifonction jet d\u2019encre
+        4-en-1. En plus d\u2019imprimer, de num\u00e9riser, de copier et de t\u00e9l\u00e9copier
+        jusqu\u2019au format A4, le MFC-J5910DW imprime vos documents et photos jusqu\u2019au
+        format A3. D\u00e9sormais, donnez davantage d\u2019impact et communiquez en
+        grand pour l\u2019ensemble de vos documents personnels et professionnels.
+        D\u00e9marquez-vous et fa\u00eetes des \u00e9conomies gr\u00e2ce aux cartouches
+        haute capacit\u00e9 LC1280XL permettant d\u0027imprimer jusqu\u0027\u00e0
+        2400 pages en N\u0026B et 1200 pages en couleur. Economisez jusqu\u0027\u00e0
+        65% sur vos co\u00fbts d\u0027impression en noir gr\u00e2ce \u00e0 l\u0027utilisation
+        des cartouches LC1280XL-BK par rapport aux cartouches standards LC1240BK (calcul
+        bas\u00e9 sur les prix publics HT conseill\u00e9s par Brother)."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2011-09-11T00:00:00+00:00"}],"color_scanning":[{"locale":null,"scope":null,"data":false}],"maximum_print_size":[{"locale":null,"scope":null,"data":"297_x_432_mm"}],"multifunctional_functions":[{"locale":null,"scope":null,"data":["copy","fax","print","scan"]}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 07:16:41 GMT']
+      Keep-Alive: ['timeout=5, max=99']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YmEyNDNiMzAyZjU0ZjExZTRlNmY1MDRmN2JlODlmMWEwNThiYWRhZDg5ZDVmNGE3YzVhZmI5MjJiZGRmNTU4Ng]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=51p5adedjql7ce24sh6tfe1rb1]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/products?page=3&with_count=false&pagination_type=page&limit=10
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=3\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"previous":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=2\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=4\u0026with_count=false\u0026pagination_type=page\u0026limit=10"}},"current_page":3,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/127469"}},"identifier":"127469","family":"laser_led_printers","parent":null,"groups":[],"categories":["hp","laser_led_printers","print_scan_sales"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"HP
+        LaserJet 1160 Printer"}],"description":[{"locale":"de_DE","scope":"print","data":"Der
+        leistungsstarke, \u00e4u\u00dferst zuverl\u00e4ssige HP LaserJet 1160 Arbeitsplatzdrucker
+        liefert professionelle Schwarzwei\u00dfdokumente in hoher Geschwindigkeit
+        und bietet optimale Kompatibilit\u00e4t \u2013\u00a0zu einem g\u00fcnstigen
+        Preis."},{"locale":"en_US","scope":"print","data":"The HP LaserJet 1160 Printer
+        provides the dependable, high-quality output you are used to expecting from
+        HP, along with the performance you need, all at an affordable price. \\n\u2022
+        Get professional-looking documents with the HP LaserJet 1160 Printer, featuring
+        1200 dpi effective output quality. With Instant-on technology and up to 19
+        ppm A4, your print job is finished before many printers have even started
+        printing. \\n\u2022 The highly-reliable HP LaserJet 1160 Printer easily fits
+        into your office environment, supporting a wide range of operating systems
+        and offering simple connectivity via USB and parallel ports - all at a great
+        price. \\n"}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2005-09-16T00:00:00+00:00"}],"power_requirements":[{"locale":null,"scope":null,"data":"110
+        - 127 VAC (+\/- 10%), 50\/60 Hz (+\/- 2 Hz); 220 to 240 VAC (+\/- 10%), 50\/60
+        Hz (+\/- 2 Hz)"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/14962869"}},"identifier":"14962869","family":"loudspeakers","parent":null,"groups":[],"categories":["audio_video_sales","gear4","loudspeakers"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"GEAR4
+        Classic Red Bird"}],"description":[{"locale":"en_US","scope":"print","data":"-
+        Link multiple speakers via 3.5mm cable\\n- iPod, iPhone, iPad compatible\\n-
+        Android Compatible\\n- Expandable bass port\\n- Up to 8Hrs playback"}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-08-11T00:00:00+00:00"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/8617001"}},"identifier":"8617001","family":"camcorders","parent":null,"groups":[],"categories":["camcorders","cameras_sales","samsung"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Samsung
+        100UP"}],"description":[{"locale":"en_US","scope":"print","data":"Samsung
+        100UP. Sensor type: CMOS, Optical sensor size: 1\/4. Focal length range (f-f):
+        275 - 2750, Image stabilizer type: optical. Camcorder media type: Memory card,
+        Compatible memory cards: SD, SDHC. White balance: Auto, Manual. Camera shutter
+        speed: 1\/60 - 1\/10000"}],"sensor_type":[{"locale":null,"scope":null,"data":"cmos"}],"optical_zoom":[{"locale":null,"scope":null,"data":10}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2011-03-26T00:00:00+00:00"}],"image_stabilizer":[{"locale":null,"scope":null,"data":true}],"total_megapixels":[{"locale":null,"scope":null,"data":"5"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/12830519"}},"identifier":"12830519","family":"pc_monitors","parent":null,"groups":[],"categories":["hp","pc_monitors","tvs_projectors_sales"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"HP
+        LD4730G"}],"description":[{"locale":"en_US","scope":"print","data":"Perfect
+        for eye-popping large format video wall installations that attract customer
+        attention, the HP LD4730 delivers stunning display technology and performance
+        features and a micro-thin bezel that\u2019s virtually invisible between tiled
+        displays.\\n\\n\u003Cb\u003ESmart technology\u003C\/b\u003E\\n- Efficiently
+        manage and deploy network-attached digital signage displays (DSDs) over the
+        enterprise with simplified Video\u2013Over\u2013Ethernet (VOE), an HP-exclusive
+        video input.\\n- VOE also helps simplify installation and cabling, increase
+        flexibility, and reduce your cost of deployment.\\n- Save time and money by
+        associating up to 12 DSDs with a single media player. HP remote management
+        features make it easy to manage associations from any computer on the network.\\n-
+        Video inputs on the DSDs provide expansive connectivity options for a range
+        of devices.\\n\\n\u003Cb\u003EOut-of-the-box productivity\u003C\/b\u003E\\n-
+        HP Network Sign Manager Software helps you remotely control and manage your
+        DSD and your message.\\n- Integrated software enables \u201con-the-fly\u201d
+        command and setting changes to one or more DSDs from a single source\u2014great
+        for businesses with multiple LAN-connected displays in different physical
+        locations like stores, lobbies, offices, and travel hubs.\\n\\n\u003Cb\u003EHP
+        DreamColor quality\u003C\/b\u003E\\n- HP\u2019s leading color management technology,
+        HP DreamColor, helps ensure simplified color matching on all your displays
+        and keeps your video wall at peak performance with vibrant colors and deep
+        rich tones.\\n- The HP DreamColor Calibration Solution (sold separately) delivers
+        host-less color calibration for all displays in the video wall to help ensure
+        consistent and accurate color across the entire display area.\\n\\n\u003Cb\u003EBuilt
+        to last\u003C\/b\u003E\\n- HP Digital Signage Displays are engineered for
+        demanding usage for enhanced performance and reliability and rated to operate
+        24\/7 in traditional retail and commercial environments."}],"display_srgb":[{"locale":null,"scope":null,"data":false}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-02-10T00:00:00+00:00"}],"display_color":[{"locale":null,"scope":null,"data":false}],"response_time":[{"locale":null,"scope":null,"data":12}],"display_diagonal":[{"locale":null,"scope":null,"data":{"amount":47,"unit":"INCH"}}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/15705878"}},"identifier":"15705878","family":"laser_led_printers","parent":null,"groups":[],"categories":["laser_led_printers","lexmark","print_scan_sales"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Lexmark
+        MS812dn"}],"description":[{"locale":"en_US","scope":"print","data":"\u003Cb\u003EStar
+        Performer. Stellar Finish.\u003C\/b\u003E\\nThe Lexmark MS812dn network-ready
+        laser printer with internal two-sided printing, 800 MHz processor, 512MB of
+        memory standard and 650-sheet standard input has a print speed of up to 66
+        ppm.\\n\\n\u003Cb\u003EFaster Processing\u003C\/b\u003E\\nImprove your print
+        speeds by taking advantage of up to 2.5 GB of memory, an 800 MHz dual-core
+        processor and Gigabit Ethernet.\\n\\n\u003Cb\u003EReliable High Performance\u003C\/b\u003E\\nPrint
+        up to 50,000 pages per month, and enjoy fewer maintenance hassles with our
+        state-of-the-art paper handling.\\n\\n\u003Cb\u003EKeep Jobs Moving\u003C\/b\u003E\\nWith
+        a maximum input capacity of up to 4,400 sheets and an extra high yield toner
+        cartridge, you\u0027ll rarely have to add paper or change cartridges.\\n\\n\u003Cb\u003ESpend
+        Less Time Waiting\u003C\/b\u003E\\nPrint up to 66 pages per minute, and produce
+        your first page in as little as 4 seconds.\\n\\n\u003Cb\u003EPrint on a Wide
+        Range of Media\u003C\/b\u003E\\nWith built-in two-sided printing and the ability
+        to print on diverse materials, you can do more for your business and use less
+        paper."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-10-10T00:00:00+00:00"}],"maximum_print_size":[{"locale":null,"scope":null,"data":"legal_216_x_356_mm_"}]},"created":"2017-10-23T07:50:17+00:00","updated":"2017-10-23T07:50:25+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/14191635"}},"identifier":"14191635","family":"digital_cameras","parent":null,"groups":[],"categories":["cameras_sales","digital_cameras","samsung"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Samsung
+        DV 300F"}],"weight":[{"locale":null,"scope":null,"data":{"amount":"533.0000","unit":"GRAM"}}],"camera_type":[{"locale":null,"scope":null,"data":"compact"}],"description":[{"locale":"en_US","scope":"print","data":"Samsung
+        300F, DV. Megapixel: 16.1, Camera type: Compact, Optical sensor size: 1\/2.3.
+        Focal length range (f-f): 4.5 - 22.5, Minimum aperture: 2.5, Maximum aperture:
+        6.3. Focus: TTL, Focus adjustment: Auto, Normal focusing range: 0.8 - \u221e,
+        2.5 - \u221e. ISO sensitivity: 80, 100, 200, 400, 800, 1600, 3200, Auto, Light
+        exposure modes: Auto, Light exposure control: Program AE. Camera shutter speed
+        (min): 0.0005"}],"sensor_type":[{"locale":null,"scope":null,"data":"ccd"}],"optical_zoom":[{"locale":null,"scope":null,"data":5}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-05-14T00:00:00+00:00"}],"auto_exposure":[{"locale":null,"scope":null,"data":false}],"auto_focus_lock":[{"locale":null,"scope":null,"data":false}],"total_megapixels":[{"locale":null,"scope":null,"data":"16000000"}],"auto_focus_assist_beam":[{"locale":null,"scope":null,"data":false}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/594877"}},"identifier":"594877","family":"scanners","parent":null,"groups":[],"categories":["print_scan_sales","scanners","xerox"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Xerox
+        DocuMate 152"}],"description":[{"locale":"de_DE","scope":"print","data":"Der
+        neue Xerox DocuMate 152 ist ein kompakter Duplex Scanner mit einzigartiger
+        OneTouch Technologie. Er macht das Scannen zu FCM (Enterprise Content Management)
+        und DIM (Dokumenten Image Management) Applikationen erschwinglich. Der Xerox
+        DocuMate 152, ein Farb-, Seiteneinzugs- Dokumenten-Scanner, kann bis zu 30
+        Bilder in der Minute im Duplex Modus scannen. Der DocuMate 152 wurde speziell
+        als Einzel Arbeitsplatz Scanner entwickelt und bezieht die OneTouch Technologie
+        mit ein. Die OneTouch Technologie erlaubt es dem Anwender au\u00dferdem sehr
+        einfach und benutzerfreundlich die \u0022Bestimmungsorte\u0022 gescannter
+        Dokumente direkt am Scanner festzulegen. Lediglich durch dr\u00fccken von
+        nur einer Taste und Auswahl einer von neun vorprogrammierten auch individuell
+        anpa\u00dfbaren Scan Einstellungen."},{"locale":"en_US","scope":"print","data":"-
+        Convert documents into searchable PDF files with One Touch\\n- 9 Visioneer
+        OneTouch pre-programmed \u2018scan-to\u2019 destinations\\n- Kofax VRS technology
+        delivers perfect scans from imperfect originals\\n- Scans documents at 18
+        pages per minute\/36 images per minute*\\n- Compact Duplex Scanner with 50
+        page ADF capacity**\\n* 200dpi, black \u0026 white\\n** 75 g\/m2\\n\\n\u003Cb\u003EProductivity
+        at your Desktop\u003C\/b\u003E\\nThe Xerox DocuMate 152, colour sheetfed duplex
+        document scanner, scans up to 18 pages per minute (ppm) and 36 images per
+        minute (ipm), includes a 50-page automatic document feeder and has the ability
+        to automatically scan documents in searchable PDF files. The Xerox DocuMate
+        152 is designed specifically for desktop use and incorporates Visioneer OneTouch
+        technology for eliminating multiple steps in sending scanned documents to
+        predetermined applications or devices.\\nThe DocuMate 152 offers a professional
+        software bundle that includes Nuance PaperPort and OmniPage Pro. It also comes
+        with an advanced TWAIN driver to enable communication with advanced electronic
+        content management (ECM) software applications.\\n\\n\u003Cb\u003EScanning
+        at the Touch of a Button\u003C\/b\u003E\\nDo you want to do more with the
+        paper on your desk? Would you like to copy it, collate it, file it, search
+        it, mail it and make it disappear? Sounds time consuming doesn\u2019t it?
+        How about if you could do it all with just one touch?\\nThe DocuMate 152 is
+        powered by Visioneer OneTouch\u00ae technology to scan documents using nine
+        preset buttons for your most common destinations, yet they are completely
+        configurable. This enables your document to be scanned with the proper settings
+        for resolution, colour, duplex, auto-crop, auto-straighten, file format and
+        then delivered to virtually any application, folder or device \u2013 at the
+        touch of a button!\\n\\n\u003Cb\u003EPerfect Scans from Imperfect Originals\u003C\/b\u003E\\nVisioneer
+        OneTouch with Kofax\u00ae VRS\u2122 (Virtual ReScan\u00ae) technology is integrated
+        into the scanner driver so that you get perfect scans from\\nimperfect originals.
+        VRS also eliminates the need to rescan documents through automatic cropping,
+        straightening, brightness control and\\nedge clean-up. All this is integrated
+        into Visioneer OneTouch so your entire scanning requirements are achieved
+        at the touch of a button.\\nMost new users in document imaging are not scanner
+        experts, so simplified, point-and-click solutions that deliver high quality
+        images\\nand integration with business applications are essential."},{"locale":"fr_FR","scope":"print","data":"Technologie
+        Kofax VRS integree. \\nConversion de documents en fichiers PDF interrogeables
+        avec fonctionnalite Une touche. \\n9 destinations\u00abnum\u00e9risation vers\u00bbpreprogrammees
+        avec fonctionnalite Une touche. \\nNumerisation de 30 images par minute en
+        recto-verso. \\nScanner recto-verso compact avec capacite de CAD de 50pages.
+        \\nClient de recherche X1 prime pour les documents. \\nVisioneer OneTouch
+        pour la numerisation directe"}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2006-11-01T00:00:00+00:00"}],"color_scanning":[{"locale":null,"scope":null,"data":true}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/13710067"}},"identifier":"13710067","family":"digital_cameras","parent":null,"groups":[],"categories":["cameras_sales","digital_cameras","fujifilm"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Fujifilm
+        FinePix S4200"}],"weight":[{"locale":null,"scope":null,"data":{"amount":"533.0000","unit":"GRAM"}}],"camera_type":[{"locale":null,"scope":null,"data":"compact"}],"description":[{"locale":"en_US","scope":"print","data":"\u003Cb\u003ELong
+        24x optical zoom\u003C\/b\u003E\\nThe combination of versatile \u0026 functional
+        Fujinon lens and a bright viewfinder gives a sensational shooting experience.\\n\\n\u003Cb\u003ESR
+        AUTO \u0026 Detection Functions\u003C\/b\u003E\\nEquipped with SR AUTO, an
+        auto 6 scene-recognition function fully loaded with detection functions that
+        finds faces, blinks and smiles for clear optimised people photos.\\n\\n\u003Cb\u003EHigh
+        Performance Shooting Functions\u003C\/b\u003E\\nIntroducing high-performance
+        shooting functions of Motion Panorama, Super Macro, Tracking Auto Focus, Instant
+        Zoom and a Zoom Bracketing Mode.\\n\\n\u003Cb\u003EEasy Upload and Searching\u003C\/b\u003E\\nShare
+        pictures with friends and family, tagging pictures and movies for upload to
+        FACEBOOK and YouTube\u2122 right within your camera."}],"sensor_type":[{"locale":null,"scope":null,"data":"ccd"}],"optical_zoom":[{"locale":null,"scope":null,"data":24}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-04-08T00:00:00+00:00"}],"auto_exposure":[{"locale":null,"scope":null,"data":false}],"auto_focus_lock":[{"locale":null,"scope":null,"data":false}],"total_megapixels":[{"locale":null,"scope":null,"data":"16000000"}],"auto_focus_assist_beam":[{"locale":null,"scope":null,"data":false}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/16466450"}},"identifier":"16466450","family":"loudspeakers","parent":null,"groups":[],"categories":["audio_video_sales","lenovo","loudspeakers"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Lenovo
+        M0620"}],"description":[{"locale":"en_US","scope":"print","data":"The Lenovo
+        speaker M0620 (0B45914) is a 2.0 speaker system which includes a main speaker
+        with built-in amplifiers and a sub-speaker. They can be attached to your laptop
+        or desktop computer or you can use it with your smartphone or MP3\/MP4 player.
+        Although the speakers are small in size, the sound they produce is big and
+        bold."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-12-03T00:00:00+00:00"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/1111111130"}},"identifier":"1111111130","family":"clothing","parent":"apollon_yellow","groups":[],"categories":["master_men_blazers_deals","supplier_zaro"],"enabled":true,"values":{"ean":[{"locale":null,"scope":null,"data":"1234567890142"}],"size":[{"locale":null,"scope":null,"data":"xs"}],"weight":[{"locale":null,"scope":null,"data":{"amount":"600.0000","unit":"GRAM"}}],"color":[{"locale":null,"scope":null,"data":"yellow"}],"variation_name":[{"locale":"en_US","scope":null,"data":"Apollon
+        yellow"}],"variation_image":[{"locale":null,"scope":null,"data":"9\/1\/4\/1\/9141b1262701c16d7d9cfc03277ab321a900ccde_apollon.jpg","_links":{"download":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/media-files\/9\/1\/4\/1\/9141b1262701c16d7d9cfc03277ab321a900ccde_apollon.jpg\/download"}}}],"name":[{"locale":null,"scope":null,"data":"Long
+        gray suit jacket and matching pants unstructured"}],"image":[{"locale":null,"scope":null,"data":"8\/5\/d\/6\/85d68741cf9aee975f9585b107d43ea30eb02e25_apollon.jpg","_links":{"download":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/media-files\/8\/5\/d\/6\/85d68741cf9aee975f9585b107d43ea30eb02e25_apollon.jpg\/download"}}}],"price":[{"locale":null,"scope":null,"data":[{"amount":"899.00","currency":"EUR"},{"amount":null,"currency":"USD"}]}],"erp_name":[{"locale":"en_US","scope":null,"data":"Apollon"}],"supplier":[{"locale":null,"scope":null,"data":"zaro"}],"collection":[{"locale":null,"scope":null,"data":["winter_2016"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Long
+        gray suit jacket and matching pants unstructured. 61% wool, 30% polyester,
+        9% ramie. Dry clean only."}],"wash_temperature":[{"locale":null,"scope":null,"data":"600"}]},"created":"2017-10-23T07:50:33+00:00","updated":"2017-10-23T07:50:35+00:00","associations":{}}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 07:16:42 GMT']
+      Keep-Alive: ['timeout=5, max=98']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+version: 1

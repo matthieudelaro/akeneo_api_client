@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from akeneo_api_client.utils import *
+from akeneo_api_client.interfaces import *
 import requests
 import json
 
@@ -9,41 +10,6 @@ import logzero
 from logzero import logger
 
 import urllib.parse
-
-
-class ResourcePool:
-    def __init__(self, endpoint, session):
-        """Initialize the ResourcePool to the given endpoint. Eg: products"""
-        self._endpoint = endpoint
-        self._session = session
-        pass
-
-    def get_list(self, **kwargs):
-        """Send a request with search, etc.
-        Returns an iterable list (Collection)"""
-        url = self._endpoint
-        r = self._session.get(url)
-
-        if r.status_code != 200:
-            raise requests.HTTPError("Status code: {0}".format(r.status_code))
-
-        c = Collection(self._session, json_text=r.text)
-        return c
-
-    def get_item(self, id):
-        """Returns a unique item object"""
-        logger.debug(self._endpoint)
-        url = urljoin(self._endpoint, id)
-        logger.debug(url)
-        r = self._session.get(url)
-
-        if r.status_code != 200:
-            raise requests.HTTPError("The item {0} doesn't exit".format(id))
-
-        logger.debug(r.status_code)
-        logger.debug(r.text)
-        # return json.loads(r.text) : returns a dict
-        return json2object(r.text) # returns an object
 
 
 class Collection:
@@ -60,14 +26,13 @@ class Collection:
         self._session = session
         logger.debug(json_data)
         self._link_first = json_data["_links"]["first"]
-        self._link_next = urllib.parse.unquote(json_data["_links"]["next"]["href"])
-        self._items = [json2object(json.dumps(item))
-                       for item in json_data["_embedded"]["items"]]
+        self._items = []
+        self._parse_page(json_data)
 
-    def get_list(self):
+    def fetch_list(self):
         return self._items
 
-    def fetch_more_items(self):
+    def fetch_next_page(self):
         if not self._link_next:
             raise StopIteration()
         else:
@@ -76,8 +41,11 @@ class Collection:
                 raise StopIteration()
             else:
                 json_data = json.loads(r.text)
-                self._link_next = urllib.parse.unquote(json_data["_links"]["next"]["href"])
-                self._items += [json2object(json.dumps(item))
+                self._parse_page(json_data)
+
+    def _parse_page(self, json_data):
+        self._link_next = urllib.parse.unquote(json_data["_links"]["next"]["href"])
+        self._items += [json2object(json.dumps(item))
                        for item in json_data["_embedded"]["items"]]
 
     def __iter__(self):
@@ -88,7 +56,7 @@ class CollectionIterator:
     def __init__(self, collection):
         self.i = 0
         self._collection = collection
-        self.count = len(self._collection.get_list())
+        self.count = len(self._collection.fetch_list())
 
     def __iter__(self):
         # Iterators are iterables too.
@@ -97,12 +65,19 @@ class CollectionIterator:
 
     def __next__(self):
         if not self.i < self.count:
-            self._collection.fetch_more_items()
-            self.count = len(self._collection.get_list())
+            self._collection.fetch_next_page()
+            self.count = len(self._collection.fetch_list())
 
         if self.i < self.count:
-            item = self._collection.get_list()[self.i]
+            item = self._collection.fetch_list()[self.i]
             self.i += 1
             return item
         else:
             raise StopIteration()
+
+
+class CollectionGenerator:
+    """TODO: make a collection iterable as a generator instead of an iterator,
+    to address performance concerns when handling a huge amount of data.
+    See http://anandology.com/python-practice-book/iterators.html#generators."""
+    pass
