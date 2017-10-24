@@ -47,7 +47,7 @@ class TestCollectionMock(VCRTestCase):
     def test_loading_json(self):
         c = Collection(requests.Session(), json_text=self.json_text)
         self.assertEqual(len(c._items), 10)
-        self.assertEqual(c._items[0].identifier, 'Biker-jacket-polyester-xl')
+        self.assertEqual(c._items[0]['identifier'], 'Biker-jacket-polyester-xl')
 
     def test_fetch_item(self):
         session = requests.Session()
@@ -57,8 +57,8 @@ class TestCollectionMock(VCRTestCase):
         pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
         item = pool.fetch_item('1111111137')
         logger.debug(item)
-        self.assertEqual(item.identifier, '1111111137')
-        self.assertEqual(len(item.categories), 3)
+        self.assertEqual(item['identifier'], '1111111137')
+        self.assertEqual(len(item['categories']), 3)
 
     def test_fetch_item_from_invalid_pool(self):
         session = requests.Session()

@@ -44,6 +44,5 @@ class ResourcePool:
 
         logger.debug(r.status_code)
         logger.debug(r.text)
-        # return json.loads(r.text) : returns a dict
-        return json2object(r.text) # returns an object
+        return json.loads(r.text) # returns item as a dict
 

@@ -45,8 +45,7 @@ class Collection:
 
     def _parse_page(self, json_data):
         self._link_next = urllib.parse.unquote(json_data["_links"]["next"]["href"])
-        self._items += [json2object(json.dumps(item))
-                       for item in json_data["_embedded"]["items"]]
+        self._items += json_data["_embedded"]["items"]
 
     def __iter__(self):
         return CollectionIterator(self)
