@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV9vdnZzY2JhajBwd3dnOHNvb2trZ2tjOGNrNGtvZzhnc2NnOGc0NHNjODhjOHc0OHd3OnJwaTB3dWl1c2E4b2tvazRjdzhra2tjNHM0ODhnYzBzZ2drYzA0ODB3c2trZ2t3bzA=]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"YmNhMWFkODVhMDliN2NhNjc5YzY4MjZjMThkMTFmZDBjYTM5MzljMGRiY2MxNWYzMTdkNzE0YjljNDIzNTFhYw","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"ODI3NTE2ZTdiZmI4MzE3NjVmOWUxODFlNGUwODY2ZTZkYzk4NmNiZGM1YTY3YTBhNzJkYTc4MTE3ZjRhNTNkMQ"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 11:27:41 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=3445c4046380hcrom5pi8drb49; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"identifier":"myawesometshirt","enabled":true,"family":"clothing","categories":["master_men_blazers"],"groups":[],"parent":null,"values":{"collection":[{"data":["summer_2017"],"locale":null,"scope":null}],"color":[{"data":"white","locale":null,"scope":null}],"description":[{"data":"Biker
+      jacket","locale":"en_US","scope":"ecommerce"}],"ean":[{"data":"1234567946367","locale":null,"scope":null}],"material":[{"data":"polyester","locale":null,"scope":null}],"name":[{"data":"Biker
+      jacket","locale":null,"scope":null}],"price":[{"data":[{"amount":null,"currency":"EUR"},{"amount":null,"currency":"USD"}],"locale":null,"scope":null}],"size":[{"data":"xl","locale":null,"scope":null}],"variation_name":[{"data":"Biker
+      jacket polyester","locale":"en_US","scope":null}]}}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YmNhMWFkODVhMDliN2NhNjc5YzY4MjZjMThkMTFmZDBjYTM5MzljMGRiY2MxNWYzMTdkNzE0YjljNDIzNTFhYw]
+      Connection: [keep-alive]
+      Content-Length: ['766']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/rest/v1/products
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 11:27:42 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Location: ['http://localhost:8080/api/rest/v1/products/myawesometshirt']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=u5j3nfklj5n3q86dtffaj5qe0c; path=/; HttpOnly]
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YmNhMWFkODVhMDliN2NhNjc5YzY4MjZjMThkMTFmZDBjYTM5MzljMGRiY2MxNWYzMTdkNzE0YjljNDIzNTFhYw]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=u5j3nfklj5n3q86dtffaj5qe0c]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/myawesometshirt
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Tue, 24 Oct 2017 11:27:43 GMT']
+      Keep-Alive: ['timeout=5, max=99']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+version: 1

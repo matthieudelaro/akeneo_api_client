@@ -29,7 +29,7 @@ class Collection:
         self._items = []
         self._parse_page(json_data)
 
-    def fetch_list(self):
+    def get_list(self):
         return self._items
 
     def fetch_next_page(self):
@@ -44,7 +44,11 @@ class Collection:
                 self._parse_page(json_data)
 
     def _parse_page(self, json_data):
-        self._link_next = urllib.parse.unquote(json_data["_links"]["next"]["href"])
+        next_link = json_data["_links"].get('next')
+        if next_link:
+            self._link_next = urllib.parse.unquote(next_link['href'])
+        else:
+            self._link_next = None
         self._items += json_data["_embedded"]["items"]
 
     def __iter__(self):
@@ -55,7 +59,7 @@ class CollectionIterator:
     def __init__(self, collection):
         self.i = 0
         self._collection = collection
-        self.count = len(self._collection.fetch_list())
+        self.count = len(self._collection.get_list())
 
     def __iter__(self):
         # Iterators are iterables too.
@@ -63,12 +67,13 @@ class CollectionIterator:
         return self
 
     def __next__(self):
+        # TODO: Improve performance by using an iterator on the list?
         if not self.i < self.count:
             self._collection.fetch_next_page()
-            self.count = len(self._collection.fetch_list())
+            self.count = len(self._collection.get_list())
 
         if self.i < self.count:
-            item = self._collection.fetch_list()[self.i]
+            item = self._collection.get_list()[self.i]
             self.i += 1
             return item
         else:

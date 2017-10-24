@@ -18,6 +18,52 @@ from logzero import logger
 
 from vcr_unittest import VCRTestCase
 
+import copy
+
+
+class TestPoolMock(VCRTestCase):
+    client_id = '1_ovvscbaj0pwwg8sookkgkc8ck4kog8gscg8g44sc88c8w48ww'
+    secret = 'rpi0wuiusa8okok4cw8kkkc4s488gc0sggkc0480wskkgkwo0'
+    username = 'admin'
+    password = 'admin'
+    base_url = 'http://localhost:8080'
+
+    def _get_vcr(self, **kwargs):
+        logzero.loglevel(logging.INFO)
+        myvcr = super(TestPoolMock, self)._get_vcr(**kwargs)
+        myvcr.match_on = ['method', 'path', 'query', 'body', 'headers']
+        myvcr.record_mode='none'
+        return myvcr
+
+    def test_create_delete_from_json(self):
+        session = requests.Session()
+        session.auth = Auth(self.base_url,
+            self.client_id, self.secret, self.username, self.password)
+        session.headers.update({'Content-Type': 'application/json'})
+        pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
+        pool.create_item(json.loads(self.valid_product))
+        pool.delete_item('myawesometshirt')
+    
+    def test_create_delete_from_real_element(self):
+        session = requests.Session()
+        session.auth = Auth(self.base_url,
+            self.client_id, self.secret, self.username, self.password)
+        session.headers.update({'Content-Type': 'application/json'})
+        if False:
+            session.auth._request_a_token()
+            pool = ResourcePool(urljoin('http://localhost:8088', '/api/rest/v1/', 'products/'), session)
+        else:
+            pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
+        initialItem = pool.fetch_item('Biker-jacket-polyester-xl')
+        item = copy.deepcopy(initialItem)
+        item['identifier'] = 'myawesometshirt'
+        item['values']['ean'][0]['data'] = '1234567946367'
+        item['values']['size'][0]['data'] = 'XS'
+        pool.create_item(item)
+        pool.delete_item('myawesometshirt')
+
+    valid_product = """{"identifier":"myawesometshirt","enabled":true,"family":"clothing","categories":["master_men_blazers"],"groups":[],"parent":null,"values":{"collection":[{"data":["summer_2017"],"locale":null,"scope":null}],"color":[{"data":"white","locale":null,"scope":null}],"description":[{"data":"Biker jacket","locale":"en_US","scope":"ecommerce"}],"ean":[{"data":"1234567946367","locale":null,"scope":null}],"material":[{"data":"polyester","locale":null,"scope":null}],"name":[{"data":"Biker jacket","locale":null,"scope":null}],"price":[{"data":[{"amount":null,"currency":"EUR"},{"amount":null,"currency":"USD"}],"locale":null,"scope":null}],"size":[{"data":"xl","locale":null,"scope":null}],"variation_name":[{"data":"Biker jacket polyester","locale":"en_US","scope":null}]}}"""
+
 
 class TestCollectionMock(VCRTestCase):
     client_id = '1_ovvscbaj0pwwg8sookkgkc8ck4kog8gscg8g44sc88c8w48ww'

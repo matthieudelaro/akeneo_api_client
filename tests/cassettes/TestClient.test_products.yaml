@@ -1,0 +1,361 @@
+interactions:
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV9vdnZzY2JhajBwd3dnOHNvb2trZ2tjOGNrNGtvZzhnc2NnOGc0NHNjODhjOHc0OHd3OnJwaTB3dWl1c2E4b2tvazRjdzhra2tjNHM0ODhnYzBzZ2drYzA0ODB3c2trZ2t3bzA=]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"ZGE4MjZhMDA2Y2IzODU0MDhkNWQ5OWQ4NTY4ZGJjYjVkODhiMzM0ZmFiNWQ4MTJjYTllMDE1MmNhNTJiNjE5MQ","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"MDBhZGE2MTBmZjNiZWFiZTVkZmE5MjVkMzlhZDRjY2U5M2M0YmEwZjcyMzE4NTYzMDI3MDVmNmJjZTYxYTExOA"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 14:36:44 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=t2mbhpgdsi3kugsb5sufdbnqlc; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer ZGE4MjZhMDA2Y2IzODU0MDhkNWQ5OWQ4NTY4ZGJjYjVkODhiMzM0ZmFiNWQ4MTJjYTllMDE1MmNhNTJiNjE5MQ]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/products/1111111137
+  response:
+    body: {string: '{"identifier":"1111111137","family":"clothing","parent":"ares_pink","groups":[],"categories":["master_men_blazers_deals","print_clothing","supplier_mongo"],"enabled":true,"values":{"ean":[{"locale":null,"scope":null,"data":"1234567890149"}],"size":[{"locale":null,"scope":null,"data":"s"}],"weight":[{"locale":null,"scope":null,"data":{"amount":"800.0000","unit":"GRAM"}}],"color":[{"locale":null,"scope":null,"data":"pink"}],"variation_name":[{"locale":"en_US","scope":null,"data":"Ares
+        pink"}],"name":[{"locale":null,"scope":null,"data":"Blazer wool mixed with
+        sand print foot hen"}],"price":[{"locale":null,"scope":null,"data":[{"amount":"1099.00","currency":"EUR"},{"amount":null,"currency":"USD"}]}],"erp_name":[{"locale":"en_US","scope":null,"data":"Ares"}],"supplier":[{"locale":null,"scope":null,"data":"mongo"}],"collection":[{"locale":null,"scope":null,"data":["spring_2015"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Blazer
+        wool mixed with sand print foot hen, single breasted with two buttons, patch
+        pockets and contrasting lapel collar, model \u0027Vienna\u0027. Das Model
+        185 cm gro\u00df ist und tr\u00e4gt Gr\u00f6\u00dfe 40 (DE Gr\u00f6\u00dfe
+        50 - 101cm Brustumfang) 60% wool, 30% polyester, 10% cotton. Machine washable."}],"wash_temperature":[{"locale":null,"scope":null,"data":"600"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 14:36:46 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=07qs3e5rua98pgmd3c32ohm8hu; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer ZGE4MjZhMDA2Y2IzODU0MDhkNWQ5OWQ4NTY4ZGJjYjVkODhiMzM0ZmFiNWQ4MTJjYTllMDE1MmNhNTJiNjE5MQ]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=07qs3e5rua98pgmd3c32ohm8hu]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/products
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=2\u0026with_count=false\u0026pagination_type=page\u0026limit=10"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/Biker-jacket-polyester-xl"}},"identifier":"Biker-jacket-polyester-xl","family":"clothing","parent":"model-biker-jacket-polyester","groups":[],"categories":["master_men_blazers"],"enabled":true,"values":{"ean":[{"locale":null,"scope":null,"data":"1234567890367"}],"size":[{"locale":null,"scope":null,"data":"xl"}],"color":[{"locale":null,"scope":null,"data":"white"}],"material":[{"locale":null,"scope":null,"data":"polyester"}],"variation_name":[{"locale":"en_US","scope":null,"data":"Biker
+        jacket polyester"}],"name":[{"locale":null,"scope":null,"data":"Biker jacket"}],"price":[{"locale":null,"scope":null,"data":[{"amount":null,"currency":"EUR"},{"amount":null,"currency":"USD"}]}],"collection":[{"locale":null,"scope":null,"data":["summer_2017"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Biker
+        jacket"}]},"created":"2017-10-23T07:50:17+00:00","updated":"2017-10-23T07:50:25+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/1111111115"}},"identifier":"1111111115","family":"clothing","parent":"aphrodite","groups":[],"categories":["master_women_blouses","print_clothing","supplier_zaro"],"enabled":true,"values":{"size":[{"locale":null,"scope":null,"data":"xl"}],"color":[{"locale":null,"scope":null,"data":"blue"}],"name":[{"locale":null,"scope":null,"data":"Top
+        Layered Sleeveless gauze snake print"}],"price":[{"locale":null,"scope":null,"data":[{"amount":"299.00","currency":"EUR"},{"amount":null,"currency":"USD"}]}],"erp_name":[{"locale":"en_US","scope":null,"data":"Aphrodite"}],"supplier":[{"locale":null,"scope":null,"data":"zaro"}],"collection":[{"locale":null,"scope":null,"data":["summer_2016"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Top
+        Layered Sleeveless gauze snake print. Pleated round neck and drop back closure.
+        \u00b7 Back length 55.2 cmCes measures are calculated for a size M."}],"wash_temperature":[{"locale":null,"scope":null,"data":"700"}]},"created":"2017-10-23T07:50:17+00:00","updated":"2017-10-23T07:50:26+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/17851719"}},"identifier":"17851719","family":"scanners","parent":null,"groups":[],"categories":["avision","print_scan_sales","scanners"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Avision
+        @V2800"}],"description":[{"locale":"de_DE","scope":"print","data":"Der @V2800
+        ist eine innovative Scanl\u00f6sung, der Scan-to-E-Mail, Scan-to-Server und
+        digitale Kopie-F\u00e4higkeiten beinhaltet. Die Scan-to-E-Mail-Funktion erm\u00f6glicht
+        das Scannen in Farbe von Dokumenten und sendet sie per E-Mail (PDF, JPEG,
+        TIFF) direkt vom @V2800 ohne einen PC.Mit der der Scan-to-Server-Funktion
+        k\u00f6nnen Sie Dokumente scannen und sie auf einem bestimmten Serverpfad
+        speichern.\\nWenn der @ V2800 an Ihrem kompatiblen Laser-Drucker angeschlossen
+        ist, k\u00f6nnen sie qualitativ hochwertig digitale Kopien anfertigen und
+        somit viele f\u00fcr den B\u00fcroalltag unentbehrliche Funktionen mit nur
+        einem Ger\u00e4t durchf\u00fchren.\\n\\nDurch das integrierte Faxmodem ersetzt
+        der Avision @V2800 das alte Faxger\u00e4t und druckt beim Anschlu\u00df eines
+        kompatiblen Druckers eingehende Faxe sofort aus."},{"locale":"en_US","scope":"print","data":"The
+        product offers an unprecedented document delivery technology, transmitting
+        paper documents electronically over the internet.  With @V2800, you can instantly
+        scan single-sided or double-sided paper-based document and deliver the electronics
+        image to various destinations including e-mail addresses, printer, fax machine,
+        ftp servers, web site, or someone else\u0027s computer on the network.\\n\\nThe
+        new way to distribute documents is faster, more cost effective, and safer
+        than any traditional methods such as mail, or copier."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2013-03-01T00:00:00+00:00"}],"color_scanning":[{"locale":null,"scope":null,"data":true}]},"created":"2017-10-23T07:50:17+00:00","updated":"2017-10-23T07:50:25+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/12249740"}},"identifier":"12249740","family":"scanners","parent":null,"groups":[],"categories":["avision","print_scan_sales","scanners"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Avision
+        AV36"}],"picture":[{"locale":null,"scope":null,"data":"2\/e\/4\/a\/2e4a92cd3aeef5814d4b79153f6daa303921123a_12249740_4511.jpg","_links":{"download":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/media-files\/2\/e\/4\/a\/2e4a92cd3aeef5814d4b79153f6daa303921123a_12249740_4511.jpg\/download"}}}],"description":[{"locale":"de_DE","scope":"print","data":"Sammeln
+        sich unterwegs zu viele Dokumente an?\\nEntscheiden sie sich f\u00fcr den
+        Avision AV36 Scanner.\\n\\nDieser vollst\u00e4ndig portable Scanner erlaubt
+        ihnen das Einscannen von allen ihren Dokumenten, Fotos, Visitenkarten, Ausweisen,
+        Kreditkarten und Bl\u00e4ttern bis\\nzu einer Gr\u00f6\u00dfe von 216 x 356mm.\\nDieser
+        handliche und vielseitige Scanner kommt mit der Stromversorgung eines USB
+        2.0 Anschlusses aus.\\nDer Avision AV36 Scanner l\u00e4\u00dft sich bequem
+        transportieren und ben\u00f6tigt nur ein Minimum an Platz auf dem Schreibtisch.\\nDurch
+        die Verwendung der CIS Technik (Contact Image Sensor) entgegen der CCD Technik,
+        kann der Scanner kleiner und portabler sowie stromsparender gebaut werden.\\n\\nSomit
+        ist der Avision AV36 Scanner die perfekte L\u00f6sung f\u00fcr alle, die f\u00fcr
+        unterwegs eine effiziente und leicht verst\u00e4ndliche Scannl\u00f6sung ben\u00f6tigen.\\n\\nEin
+        einfacher Druck auf die Scanntaste und das Dokument wird mit bis zu 24bit
+        Farbtiefe und 600dpi optischer Aufl\u00f6sung gescannt. Die gerade Papierf\u00fchrung
+        erlaubt es dem AV36 Ausweise und sogar Kreditkarten problemlos zu scannen,
+        ohne diese zu besch\u00e4digen.\\n\\nDer brandneue AV36 ist nicht nur f\u00fcr
+        den portablen Einsatz entwickelt worden sondern auch mit der Absicht das Ger\u00e4t
+        frei von einer externen Stromquelle nutzen zu k\u00f6nnen.Es reicht ein USB
+        Anschlu\u00df aus um das Ger\u00e4t mit Strom zu versorgen und das Bild zu
+        \u00fcbertragen.\\n\\n\u003Cb\u003EMobile Stromversorgung via USB\u003C\/b\u003E\\nTragen
+        sie das Ger\u00e4t nicht von einem Standort zum n\u00e4chsten sondern nutzen
+        sie es unterwegs! Diese Vision wurde mit dem AV36 Scanner realisiert, der
+        unabh\u00e4ngig vom Stromnetz, nur \u00fcber den USB-Anschluss mit Strom versorgt
+        wird. Somit scannen sie ihre Dokumente \u00fcberall wo ein Notebook genutzt
+        werden kann, praktisch \u00fcberall.\\n\\n\u003Cb\u003EPortabel\u003C\/b\u003E\\nDer
+        AV36 ist sehr leicht (nur 0.7kg) und sehr klein mit 290mm x 77mm x 52mm. Die
+        geringe Gr\u00f6\u00dfe erlaubt es dem Nutzer das Ger\u00e4t problemlos mitzuf\u00fchren
+        ohne zus\u00e4tzllichen Ballast zu tragen. Aufgrund der Tatsache das kein
+        Netzteil ben\u00f6tigt wird ist der Avision AV36 der ideale Begleiter f\u00fcr
+        unterwegs und setzt einen neuen Standard in der Welt der portablen Scanner
+        ohne auf Qualit\u00e4t verzichten zu m\u00fcssen.\\n\\n\u003Cb\u003EDuplex
+        Scanner\u003C\/b\u003E\\nDer AV36 ist ein Duplex Scannermit einer optischen
+        Aufl\u00f6sung von 600dpi. Sparen sie Zeit und M\u00fche indem sie ihre doppelseitigen
+        Dokumente oder ID-Karten in einem Scannvorgang einlesen. Das Scannen eines
+        Dokuments dauert in Farbe bei 300 dpi Aufl\u00f6sung nur 12 Sekunden im Simplex
+        Modus, sowie 15 Sekunden im Duplex Modus.\\n\\n\u003Cb\u003EKompatibel mit
+        Plastik Karten(EC)\u003C\/b\u003E\\nUnterst\u00fctzt Dokumente von A8 bis
+        A4, und kann dabei Plastik Karten(z.B EC Karten\/P\u00e4sse) bis zu einer
+        H\u00f6he von 1.25mm einscannen.\\n\\n\u003Cb\u003ESoftware Umfang\u003C\/b\u003E\\nDer
+        Avision AV36 Scanner wird mit Twain und ISIS Treibern ausgeliefert, der Vollversion
+        des exklusiven Avision Button Manager, AVScan, ScanSoft PaperPort 11SE , NewSoft
+        Presto! BizCard\\n\\n\u003Cb\u003ENewSoft Presto! BizCard Presto!\u003C\/b\u003E\\nPresto!
+        BizCard ist eine umfassende Kontaktverwaltungs Software mit der Sie ihre Visitenkarten
+        scannen , bearbeiten und mit einer Vielzahl an Anwendungen synchronisieren
+        k\u00f6nnen.Das ideale Werkzeug um ihre Kontakte zu pflegen und sprach\u00fcbergreifend
+        zu organisieren.\\nPresto! BizCard erfasst und konvertiert ihre Visitenkarten
+        in eine durchsuchbare und editierbare Datenbank. Diese Informationen lassen
+        sich somit einfach und m\u00fchelos mit dem AV36 zu ihrem\\nComputer\/Laptop
+        \u00fcbertragen."},{"locale":"en_US","scope":"print","data":"\u003Cb\u003EMobile
+        power by USB\u003C\/b\u003E\\nDon\u2019t just haul the scanner from one destination
+        to another, use it on the go! This is the vision fully realized with the AV36,
+        which is powered by a USB port instead of a wall socket. So now, documents
+        can be scanned whenever a laptop is present, which can be anywhere.\\n\\n\u003Cb\u003EPortable\u003C\/b\u003E\\nThe
+        AV36 is light (only 0.7kg) and small in size at 290mm x 77mm x 52mm. The small
+        form factor enables users to pack along easily without sacrificing too much
+        luggage space or become a burden to carry. Coupled with the benefits of being
+        USB powered, the AV36 sets a new standard for scanner portability.\\n\\n\u003Cb\u003EDuplex
+        scanning\u003C\/b\u003E\\nThe AV36 is a duplex scanner with an optical resolution
+        of 600dpi. Save the time and effort of manually scanning a double-sided document
+        or a plastic ID card. A complete color scan of A4 document at 300dpi in simplex
+        mode takes 12 seconds, and 7.5 seconds per image in duplex mode.\\n\\n\u003Cb\u003ECompatible
+        with plastic cards\u003C\/b\u003E\\nSupported document size ranges from A8
+        to A4, and it can scan embossed plastic cards up to 1.25mm thick, such as
+        credit cards and ID cards.\\n\\n\u003Cb\u003EBundled software\u003C\/b\u003E\\nThe
+        newest version of TWAIN (v5.60) and extensive software applications Avision
+        Button Manager, AVScan 5, NewSoft Presto! BizCard and ScanSoft PaperPort 11SE
+        are included with every shipped unit to bring the most out of the AV36.\\n\\n\u003Cb\u003ENewSoft
+        Presto! BizCard Presto!\u003C\/b\u003E\\nBizCard is a complete contact management
+        solution that lets you scan, edit and synchronize business card contacts to
+        various contact management software applications. It captures and converts
+        business cards into a searchable and editable database, with support for 12
+        different languages including English, most European languages, Simplified\/Traditional
+        Chinese and Japanese. BizCard is the ideal tool for helping you stay in touch
+        and organized."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-01-05T00:00:00+00:00"}],"color_scanning":[{"locale":null,"scope":null,"data":true}]},"created":"2017-10-23T07:50:18+00:00","updated":"2017-10-23T07:50:26+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/11704300"}},"identifier":"11704300","family":"multifunctionals","parent":null,"groups":[],"categories":["canon","multifunctionals","print_scan_sales"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Canon
+        i-SENSYS MF4410"}],"description":[{"locale":"de_DE","scope":"print","data":"Dieses
+        kompakt-elegante SW-Laser-Multifunktionssystem mit Drucker, Kopierer und Scanner
+        ist ideal f\u00fcr zu Hause, in kleinen B\u00fcros und punktet mit Produktivit\u00e4t,
+        Komfort und hoher Energieeffizienz.\\n\\n\u003Cb\u003EFeatures\u003C\/b\u003E\\n-
+        SW-Laser-Multifunktionssystem: Drucker, Kopierer und Scanner.\\n- Elegantes,
+        Platz sparendes Design.\\n- Anwenderfreundliches, intuitiv zu bedienendes
+        LCD.\\n- Bis zu 23 SW-Drucke\/Min.; Druck der ersten Seite nach nur ca. 9
+        Sekunden.\\n- Druckaufl\u00f6sung von bis zu 1.200 x 600 dpi f\u00fcr qualitativ
+        hochwertige Ausdrucke und Kopien.\\n- Energieeffizient.\\n\\n\u003Cb\u003EDas
+        kompakte, elegante 3-in-1 Multifunktionssystem f\u00fcr zu Hause\u003C\/b\u003E\\n\\n\u003Cb\u003EElegant
+        und kompakt\u003C\/b\u003E\\nDieses kompakte Multifunktionssystem \u00fcberzeugt
+        mit einem attraktiven Preis-Leistungs-Verh\u00e4ltnis: Neben Kopieren und
+        Scannen ist es ideal f\u00fcr das Drucken von Dokumenten in ausgezeichneter
+        Druckqualit\u00e4t. Mit seinem eleganten, vollst\u00e4ndig in schwarz gehaltenem
+        Design und der kleinen Stellfl\u00e4che ist das System ein Blickfang auf jedem
+        Schreibtisch und ideal f\u00fcr den Einsatz im B\u00fcro oder zu Hause.\\n\\n\u003Cb\u003EExzellente
+        Bildqualit\u00e4t\u003C\/b\u003E\\nDie interpolierte Druckaufl\u00f6sung von
+        1.200 x 600 dpi liefert professionell aussehende Laserdrucke mit gestochen
+        scharfem Text und detailgetreuen Grafiken.\\n\\n\u003Cb\u003EKomfortable Bedienung\u003C\/b\u003E\\nDas
+        LC-Display des i-SENSYS MF4410 ist klar, intuitiv verst\u00e4ndlich und optimiert
+        f\u00fcr maximalen Bedienkomfort. Ein 5-zeiliges LC-Display und die animierte
+        Benutzerf\u00fchrung erh\u00f6hen den Bedienkomfort; Sie k\u00f6nnen schnell
+        und einfach auf die Funktionen zugreifen, alle erforderlichen Informationen
+        werden verst\u00e4ndlich angezeigt. Das spart Zeit und M\u00fche!\\n\\n\u003Cb\u003EZeitsparend
+        und effizient\u003C\/b\u003E\\nBei einer Druckgeschwindigkeit von ca. 23 Seiten
+        pro Minute und der Ausgabe der ersten Seite nach nur ca. 9 Sekunden k\u00f6nnen
+        Sie sicher sein, Ihre Ausdrucke und Kopien immer sofort zur Hand haben, wenn
+        Sie sie ben\u00f6tigen. Dank der Quick First-Print-Technologien geh\u00f6ren
+        lange Wartezeiten vor dem Drucker der Vergangenheit an. Dieses umweltfreundliche
+        System ben\u00f6tigt gerade einmal ca. 3 Watt im Sleep-Modus \u2013 das spart
+        Energie.\\n\\n\u003Cb\u003EVielseitiges Scannen von Farbdokumenten\u003C\/b\u003E\\nDas
+        Scannen von farbigen Dokumenten und Fotos wird mit einer Aufl\u00f6sung von
+        bis zu 600 dpi zum Kinderspiel. Mithilfe der MF Toolbox lassen sich Daten
+        direkt als E-Mail-Anhang oder durchsuchbare PDF-Dateien scannen \u2013 so
+        finden sich Informationen sp\u00e4ter leichter wieder.\\n\\n\u003Cb\u003EAll-in-One-Cartridge\u003C\/b\u003E\\nDie
+        recycelbare All-in-One Cartridge sorgt f\u00fcr gleichbleibend hochwertige
+        Druckqualit\u00e4t und minimiert den Wartungsaufwand. Sie enth\u00e4lt neben
+        dem Toner auch die Trommel und die Reinigungseinheit \u2013 nach dem Austausch
+        mit einer original Canon Lasercartridge ist das Multifunktionssystem wieder
+        so gut wie neu."},{"locale":"en_US","scope":"print","data":"This stylish mono
+        laser 3-in-1 offers print, copy and scan functions in one compact device.
+        Ideal for homes and small offices it\u2019s productive, easy-to-use and energy
+        efficient.\\n\\n\u003Cb\u003EFeatures\u003C\/b\u003E\\n- Mono laser 3-in-1:
+        print, copy \u0026 scan.\\n- Stylish, space-saving design.\\n- Easy to use
+        intuitive LCD display.\\n- 23 ppm, 9 seconds First Copy Out Time.\\n- Up to
+        1200 x 600 dpi resolution for prints and copies.\\n- Energy efficient.\\n\\n\u003Cb\u003EThe
+        compact, stylish 3-in-1 multifunctional for personal use\u003C\/b\u003E\\n\\n\u003Cb\u003EStylish
+        and compact\u003C\/b\u003E\\nOffering excellent value for money, this sleek
+        multifunctional provides high quality print, copy and scan functionality in
+        one space saving unit. With its stylish all black design and small footprint,
+        it looks great on any desk and is perfect for both home and small office use.\\n\\n\u003Cb\u003ESuperior
+        image quality\u003C\/b\u003E\\nAn enhanced print resolution of up to 1200
+        x 600 dpi delivers professional laser output for all your work, with sharp
+        text and fine graphics.\\n\\n\u003Cb\u003EEasy to use\u003C\/b\u003E\\nThe
+        i-SENSYS MF4410 features a simple and intuitive LCD interface designed for
+        easy operation. With 5 lines of text plus animations, features can be quickly
+        and easily accessed and more information can be communicated saving time and
+        effort.\\n\\n\u003Cb\u003ETime saving and efficient\u003C\/b\u003E\\nWith
+        an output speed of 23 ppm and a Fast First Copy Out Time of less than 9 seconds,
+        prints and copies are delivered the moment you need them. With quick recovery
+        from sleep mode, thanks to Quick First-Print technologies, long waits for
+        your documents are a thing of the past. Additionally, this economical device
+        uses only 3 watts in sleep mode, ensuring energy efficiency.\\n\\n\u003Cb\u003EVersatile
+        colour scanning\u003C\/b\u003E\\nScanning colour documents and photos is easy
+        and highly versatile using a resolution as high as 9600 x 9600 dpi. Files
+        can be scanned directly to email, or searchable PDF using the MF Toolbox,
+        enabling them to be quickly retrieved in the future.\\n\\n\u003Cb\u003EAll-in-One
+        cartridge\u003C\/b\u003E\\nThe All-In-One recyclable cartridge ensures maintenance-free
+        operation and continuous high quality output. Replace the compact cartridge
+        in seconds \u2013 containing toner, drum and cleaning units \u2013 with an
+        Authentic Canon Laser Cartridge and your multifunctional is as good as new."},{"locale":"fr_FR","scope":"print","data":"Ce
+        multifonction laser noir et blanc 3-en-1 \u00e9l\u00e9gant permet l\u0027impression,
+        la copie et la num\u00e9risation. Id\u00e9al pour les particuliers et les
+        bureaux de petite taille, il est performant, simple \u00e0 utiliser et \u00e9conome
+        en \u00e9nergie.\\n\\n\u003Cb\u003ECaract\u00e9ristiques\u003C\/b\u003E\\n-
+        Multifonction laser noir et blanc 3-en-1 : imprimez, copiez et num\u00e9risez.\\n-
+        Design \u00e9l\u00e9gant et peu encombrant.\\n- \u00c9cran LCD intuitif simple
+        \u00e0 utiliser.\\n- 23 ppm, premi\u00e8re copie en 9 secondes.\\n- R\u00e9solution
+        jusqu\u0027\u00e0 1200 x 600 dpi pour des impressions et des copies de qualit\u00e9
+        sup\u00e9rieure.\\n- Faible consommation d\u0027\u00e9nergie.\\n\\n\u003Cb\u003EMultifonction
+        3-en-1 compact et \u00e9l\u00e9gant destin\u00e9 \u00e0 une utilisation personnelle\u003C\/b\u003E\\n\\n\u003Cb\u003E\u00c9l\u00e9gant
+        et compact\u003C\/b\u003E\\nCe multifonction \u00e9l\u00e9gant offre un excellent
+        rapport qualit\u00e9-prix. Il r\u00e9unit des fonctions d\u0027impression,
+        de copie et de num\u00e9risation haute qualit\u00e9 au sein d\u0027un seul
+        appareil tr\u00e8s compact. Avec son design noir \u00e9pur\u00e9 et son faible
+        encombrement, il ne d\u00e9parera pas votre bureau. Il convient aussi bien
+        aux particuliers qu\u0027aux petites entreprises.\\n\\n\u003Cb\u003EQualit\u00e9
+        d\u0027image sup\u00e9rieure\u003C\/b\u003E\\nLa r\u00e9solution d\u0027impression
+        optimis\u00e9e de 1200 x 600 dpi permet de r\u00e9aliser des sorties laser
+        professionnelles pour tous vos travaux, avec des impressions de texte nettes
+        et des images claires.\\n\\n\u003Cb\u003ESimplicit\u00e9 d\u0027utilisation\u003C\/b\u003E\\nL\u0027i-SENSYS
+        MF4410 comporte une interface LCD simple et intuitive qui fait de son utilisation
+        un jeu d\u0027enfant. Gr\u00e2ce aux 5 lignes de texte et aux animations de
+        cette interface, vous acc\u00e9dez rapidement aux fonctions et obtenez des
+        informations qui vous font \u00e9conomiser temps et efforts.\\n\\n\u003Cb\u003E\u00c9conomie
+        de temps et d\u0027\u00e9nergie\u003C\/b\u003E\\nGr\u00e2ce \u00e0 la vitesse
+        d\u0027impression de 23 ppm et \u00e0 la sortie de la premi\u00e8re feuille
+        en moins de 9 secondes, les impressions et les copies sont r\u00e9alis\u00e9es
+        en temps et en heure. Avec les technologies \u00ab Quick First Print \u00bb
+        (impression premi\u00e8re page rapide), l\u0027appareil sort imm\u00e9diatement
+        du mode veille : les longues attentes appartiennent d\u00e9sormais au pass\u00e9.
+        De plus, cet appareil \u00e9conomique ne consomme que 3 watts en mode veille,
+        et assure ainsi des \u00e9conomies d\u0027\u00e9nergie.\\n\\n\u003Cb\u003ENum\u00e9risation
+        couleur polyvalente\u003C\/b\u003E\\nNum\u00e9riser des documents et des photos
+        couleur se fait tr\u00e8s simplement, et l\u0027appareil offre une grande
+        polyvalence avec une r\u00e9solution pouvant atteindre 9600 x 9600 dpi. Les
+        fichiers num\u00e9ris\u00e9s peuvent \u00eatre instantan\u00e9ment envoy\u00e9s
+        par courriel. \u00c0 l\u0027aide de MF Toolbox, vous pouvez \u00e9galement
+        les convertir en PDF avec fonction de recherche, ce qui vous permettra de
+        les retrouver rapidement \u00e0 l\u0027avenir.\\n\\n\u003Cb\u003ECartouche
+        Tout-en-Un\u003C\/b\u003E\\nLa cartouche Tout-en-Un recyclable garantit un
+        fonctionnement sans entretien et des sorties d\u0027une qualit\u00e9 constante.
+        Quelques secondes suffisent \u00e0 remplacer la cartouche compacte (qui comprend
+        le toner, le tambour et les unit\u00e9s de nettoyage) par une cartouche laser
+        Canon authentique, et votre multifonction fonctionnera comme au premier jour."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2011-11-10T00:00:00+00:00"}],"color_scanning":[{"locale":null,"scope":null,"data":false}],"maximum_print_size":[{"locale":null,"scope":null,"data":"a4_210_x_297_mm_"}],"multifunctional_functions":[{"locale":null,"scope":null,"data":["scan"]}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/1712634"}},"identifier":"1712634","family":"mp3_players","parent":null,"groups":[],"categories":["audio_video_sales","mp3_players","sony"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Sony
+        NWZ-E438F"}],"description":[{"locale":"en_US","scope":"print","data":"Sony
+        NWZ-E438F. Player media type: flash-media. Display: LCD, Display resolution:
+        240 x 320. Audio formats supported: AAC, MP3, WMA, Video formats supported:
+        MP4, MPEG4. Depth: 8.5, Height: 83.9. Connectivity technology: Wired"}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2008-09-12T00:00:00+00:00"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/16672632"}},"identifier":"16672632","family":"webcams","parent":null,"groups":[],"categories":["cameras_sales","hp","webcams"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"HP
+        KQ245AA"}],"description":[{"locale":"en_US","scope":"print","data":"Share
+        your photos or videos effortlessly, chat face to face over the internet, enjoy
+        HD quality video and more with the HP Premium Webcam."}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-12-12T00:00:00+00:00"}],"total_megapixels":[{"locale":null,"scope":null,"data":"2"}],"maximum_video_resolution":[{"locale":null,"scope":null,"data":"1600_x_1200"}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/14101037"}},"identifier":"14101037","family":"led_tvs","parent":null,"groups":[],"categories":["led_tvs","toshiba","tvs_projectors_sales"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Toshiba
+        23DL933G LED TV"}],"description":[{"locale":"de_DE","scope":"print","data":"\u003Cb\u003ELED\u003C\/b\u003E\\nLEDs
+        wandeln Strom effizient in Licht um und liefern zus\u00e4tzlich bessere Kontraste
+        und leuchtendere Farben. Die Full-HD-Aufl\u00f6sung unterstreicht diese hervorragenden
+        Eigenschaften zus\u00e4tzlich.\\n\\n\u003Cb\u003EFULL HD\u003C\/b\u003E\\nF\u00fcr
+        Bilder in High Definition Aufl\u00f6sung, wie sie durch HDTV und Blu-ray bereitgestellt
+        werden, hat sich in Europa die Aufl\u00f6sung 1.920x1.080 Bildpunkte f\u00fcr
+        das \u00fcbertragene Signal weitgehend durchgesetzt.\\n\\n\u003Cb\u003EDVD-Player
+        integriert\u003C\/b\u003E\\nDieser TV hat einen integrierten DVD Player, so
+        dass Sie auf ein externes Ger\u00e4t verzichten k\u00f6nnen und trotzdem all
+        Ihre Lieblingsfilme genie\u00dfen k\u00f6nnen.\\n\\n\u003Cb\u003EDualtuner\u003C\/b\u003E\\nDieser
+        TV bietet neben einem analogen Tuner ebenfalls einen Tuner f\u00fcr DVB-T
+        und DVB-C (HD).\\n\\n\u003Cb\u003EVideos, Musik und Bilder per USB Schnittstelle\u003C\/b\u003E\\nMit
+        diesem TV k\u00f6nnen Sie Videos, Musik und Bilder per USB Schnittstelle genie\u00dfen.\\nVideos,
+        Musik und Bilder per USB Schnittstelle"},{"locale":"en_US","scope":"print","data":"Toshiba
+        23DL933G. HD type: Full HD, Display resolution: 1920 x 1080, Aspect ratio:
+        16:9. Tuner type: Analogue \u0026 Digital, Analog signal format system: PAL
+        BG, PAL DK, PAL I, SECAM B\/G, SECAM D\/K, SECAM L, Digital signal format
+        system: DVB-C, DVB-T. RMS rated power: 2.5. Optical disc player type: DVD
+        player, Disc types supported: DVD+R, DVD+RW, DVD-R, DVD-RW. Video formats
+        supported: AVI, DAT, H.264, ISO, MKV, MP4, MPEG1, MPEG2, MPEG4, VOB, XVID,
+        Audio formats supported: AAC, MP3, MP4, Image formats supported: JPG"}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2012-05-02T00:00:00+00:00"}],"display_diagonal":[{"locale":null,"scope":null,"data":{"amount":23,"unit":"INCH"}}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/10627329"}},"identifier":"10627329","family":"pc_monitors","parent":null,"groups":[],"categories":["nec","pc_monitors","tvs_projectors_sales"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"NEC
+        EX201W"}],"picture":[{"locale":null,"scope":null,"data":"f\/1\/7\/e\/f17e10c909cbaf89538174a3a49d130e1d3e6398_10627329_7290.jpg","_links":{"download":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/media-files\/f\/1\/7\/e\/f17e10c909cbaf89538174a3a49d130e1d3e6398_10627329_7290.jpg\/download"}}}],"description":[{"locale":"de_DE","scope":"print","data":"Das
+        ultraschmale \u201eOffice Cool\u0022-Design verbindet die bewahrte Qualitat
+        und Leistungsfahigkeit von MultiSync\u00ae mit neuen Standards in Bezug auf
+        Minimalismus und Eco- Innovation. Der 20 Zoll gro.e Breitbild-TFT-Monitor
+        mit TNPanel und LED-Hintergrundbeleuchtung ist ideal fur Unternehmen, die
+        Wert auf Stil, zukunftssichere Technologie und bewahrte Bildqualitat bei hochster\\nFlexibilitat
+        legen.\\n\\nMit seiner au.erst schmalen LED-Hintergrundbeleuchtung und einem
+        Design, bei dem Bildschirminhalt und -position im Mittelpunkt stehen, passt
+        der EX201W von NEC perfekt ins\\nmoderne Buro und zu den neuen Trends bei
+        Unternehmensausstattung. Sein kompaktes Format und flexibles Konzept machen
+        ihn ideal fur Rezeptionen, Abfertigungsbereiche und informelle Besprechungen.
+        Fur anspruchsvolle, umweltbewusste Nutzer und Anwender, die Wert auf optimale
+        Arbeitsplatzgestaltung legen, bietet der EX201W einen Leuchtdichtesensor und
+        einen Human Sensor sowie die kleinste Standflache unter allen Geraten auf
+        dem Markt, die mit umfassenden Ergonomiefunktionen ausgestattet sind. Der
+        Bildschirm lasst sich leicht mit VESA-Halterungen befestigen."},{"locale":"en_US","scope":"print","data":"NEC
+        EX201W. Response time: 3.7, Display resolution: 1600 x 900, Contrast ratio
+        (typical): 1000:1. VESA mounting interfaces compatibility: 100 x 100, Swivel
+        angle range: -170 - 170, Tilt angle: -5 - 30. Input voltage: 100 - 240, Input
+        frequency: 50\/60, Power consumption (standby): 0.5. Width: 474.8, Depth:
+        47.6, Height: 278.2. Cables included: AC, DVI, USB"}],"display_srgb":[{"locale":null,"scope":null,"data":false}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2011-08-11T00:00:00+00:00"}],"display_color":[{"locale":null,"scope":null,"data":false}],"response_time":[{"locale":null,"scope":null,"data":4}],"display_diagonal":[{"locale":null,"scope":null,"data":{"amount":20,"unit":"INCH"}}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/11275331"}},"identifier":"11275331","family":"pc_monitors","parent":null,"groups":[],"categories":["pc_monitors","tvs_projectors_sales","viewsonic"],"enabled":true,"values":{"name":[{"locale":null,"scope":null,"data":"Viewsonic
+        Value Series VA2703"}],"description":[{"locale":"en_US","scope":"print","data":"ViewSonic\u2019s
+        VA2703 is a 27\u0022 large format LCD display with Full HD 1080p resolution.
+        With wide viewing angles, 15,000:1 Dynamic Contrast Ratio, DVI \/ VGA dual
+        inputs, and VESA mount option, VA2703 offers crystal crisp images and flexible
+        set up. The display\u2019s large viewing area greatly enhances productivity
+        when users work on large spreadsheets or use multiple applications. Ergonomic
+        tilt adjusts screen angle for comfortable productivity or collaboration and
+        presentations. 3 year warranty, the industry\u2019s best pixel performance
+        policy, and energy saving Eco mode make the VA2703 the best value for corporations,
+        home and education.\\n\\n\u003Cb\u003EKey Features\u003C\/b\u003E\\n\\n\u003Cb\u003EFull
+        27\u0022 Widescreen With 1920x1080 Native Resolution\u003C\/b\u003E\\nThe
+        widescreen aspect ratio allows you to view HD content in its native format
+        with no stretching or distortion.\\n\\n\u003Cb\u003E15,000:1 Dynamic Contrast
+        Ratio\u003C\/b\u003E\\nProvides darker black levels and better overall front-of-screen
+        performance.\\n\\n\u003Cb\u003EClearMotiv\u00ae 3ms Video Response Time\u003C\/b\u003E\\nFast
+        3ms video response enables digital HD broadcast-quality video and blur-free
+        gaming.\\n\\n\u003Cb\u003EOptiSync\u00ae Digital \/ Analog Inputs Expand Your
+        Connectivity\u003C\/b\u003E\\nMulti-mode input technology supports both digital
+        (DVI) and analog (VGA) signals for ultimate compatibility and configuration
+        flexibility.\\n\\n\u003Cb\u003EEco-Mode\u003C\/b\u003E\\nEnvironmentally-friendly
+        Eco-mode reduces power consumption by up to 50% and extends backlight life.\\n\\n\u003Cb\u003EStylish
+        Slim-Bezel Design\u003C\/b\u003E\\nThe thin bezel lets you see more without
+        taking up valuable desktop real estate."}],"display_srgb":[{"locale":null,"scope":null,"data":false}],"release_date":[{"locale":null,"scope":"ecommerce","data":"2011-10-25T00:00:00+00:00"}],"display_color":[{"locale":null,"scope":null,"data":false}],"response_time":[{"locale":null,"scope":null,"data":3}],"display_diagonal":[{"locale":null,"scope":null,"data":{"amount":27,"unit":"INCH"}}]},"created":"2017-10-23T07:50:34+00:00","updated":"2017-10-23T07:50:36+00:00","associations":{}}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 14:36:47 GMT']
+      Keep-Alive: ['timeout=5, max=99']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+version: 1

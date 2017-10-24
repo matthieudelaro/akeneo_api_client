@@ -1,0 +1,48 @@
+interactions:
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV9vdnZzY2JhajBwd3dnOHNvb2trZ2tjOGNrNGtvZzhnc2NnOGc0NHNjODhjOHc0OHd3OnJwaTB3dWl1c2E4b2tvazRjdzhra2tjNHM0ODhnYzBzZ2drYzA0ODB3c2trZ2t3bzA=]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"MmExNjk1NzM1NzY2YzcwODQxNDU0OWQ0NmI5OTVjODc4MGExYTcxM2Y4OTkwYjMzY2I5MTI2NzE5MDkxYjZiOQ","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"ZjJhMDhmYmNiYjE5ZTU4NDE5OTRlZWZiNTgwZjdjODBhZmY0NWI4YzAyZTk1MDMwMmU2YzJhNmRhYmNmNzY3Mg"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 14:32:17 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=n6qsupm5mp68li56p6modeajep; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer MmExNjk1NzM1NzY2YzcwODQxNDU0OWQ0NmI5OTVjODc4MGExYTcxM2Y4OTkwYjMzY2I5MTI2NzE5MDkxYjZiOQ]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/association-types/PACK
+  response:
+    body: {string: '{"code":"PACK","labels":{"de_DE":"Pack","en_US":"Pack","fr_FR":"Pack"}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 14:32:18 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=90ubt9n9aiuvi7gtuq7iqvq04e; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+version: 1

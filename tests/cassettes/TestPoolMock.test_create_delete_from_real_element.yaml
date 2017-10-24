@@ -1,0 +1,100 @@
+interactions:
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV9vdnZzY2JhajBwd3dnOHNvb2trZ2tjOGNrNGtvZzhnc2NnOGc0NHNjODhjOHc0OHd3OnJwaTB3dWl1c2E4b2tvazRjdzhra2tjNHM0ODhnYzBzZ2drYzA0ODB3c2trZ2t3bzA=]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"YThkMWRmZWJlZmExYTMzZWM3ZmUyZTQ0ZDk0MzE3MzQ1ZDBhNTFiZjQwNjM4NjVlYWNjZmEzMWVmYzMzODE3Zg","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"ZGYwODRhZDkyMzY3MWVlZjNiYmRmNGQxYjM3M2MwNzg4MzJiMWMyN2NiYzU5NDY5ZTUzZDg2OTNjYjdlYmE1Yg"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 11:27:44 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=nm8rcbtb9demnfpgiu48h95cc6; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YThkMWRmZWJlZmExYTMzZWM3ZmUyZTQ0ZDk0MzE3MzQ1ZDBhNTFiZjQwNjM4NjVlYWNjZmEzMWVmYzMzODE3Zg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/products/Biker-jacket-polyester-xl
+  response:
+    body: {string: '{"identifier":"Biker-jacket-polyester-xl","family":"clothing","parent":"model-biker-jacket-polyester","groups":[],"categories":["master_men_blazers"],"enabled":true,"values":{"ean":[{"locale":null,"scope":null,"data":"1234567890367"}],"size":[{"locale":null,"scope":null,"data":"xl"}],"color":[{"locale":null,"scope":null,"data":"white"}],"material":[{"locale":null,"scope":null,"data":"polyester"}],"variation_name":[{"locale":"en_US","scope":null,"data":"Biker
+        jacket polyester"}],"name":[{"locale":null,"scope":null,"data":"Biker jacket"}],"price":[{"locale":null,"scope":null,"data":[{"amount":null,"currency":"EUR"},{"amount":null,"currency":"USD"}]}],"collection":[{"locale":null,"scope":null,"data":["summer_2017"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Biker
+        jacket"}]},"created":"2017-10-23T07:50:17+00:00","updated":"2017-10-23T07:50:25+00:00","associations":{}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 11:27:45 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=291p6t51tv03ognim6vghma3a9; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"identifier":"myawesometshirt","family":"clothing","parent":"model-biker-jacket-polyester","groups":[],"categories":["master_men_blazers"],"enabled":true,"values":{"ean":[{"locale":null,"scope":null,"data":"1234567946367"}],"size":[{"locale":null,"scope":null,"data":"XS"}],"color":[{"locale":null,"scope":null,"data":"white"}],"material":[{"locale":null,"scope":null,"data":"polyester"}],"variation_name":[{"locale":"en_US","scope":null,"data":"Biker
+      jacket polyester"}],"name":[{"locale":null,"scope":null,"data":"Biker jacket"}],"price":[{"locale":null,"scope":null,"data":[{"amount":null,"currency":"EUR"},{"amount":null,"currency":"USD"}]}],"collection":[{"locale":null,"scope":null,"data":["summer_2017"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Biker
+      jacket"}]},"created":"2017-10-23T07:50:17+00:00","updated":"2017-10-23T07:50:25+00:00","associations":{}}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YThkMWRmZWJlZmExYTMzZWM3ZmUyZTQ0ZDk0MzE3MzQ1ZDBhNTFiZjQwNjM4NjVlYWNjZmEzMWVmYzMzODE3Zg]
+      Connection: [keep-alive]
+      Content-Length: ['886']
+      Content-Type: [application/json]
+      Cookie: [BAPID=291p6t51tv03ognim6vghma3a9]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/rest/v1/products
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Date: ['Tue, 24 Oct 2017 11:27:46 GMT']
+      Keep-Alive: ['timeout=5, max=99']
+      Location: ['http://localhost:8080/api/rest/v1/products/myawesometshirt']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YThkMWRmZWJlZmExYTMzZWM3ZmUyZTQ0ZDk0MzE3MzQ1ZDBhNTFiZjQwNjM4NjVlYWNjZmEzMWVmYzMzODE3Zg]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=291p6t51tv03ognim6vghma3a9]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/myawesometshirt
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Tue, 24 Oct 2017 11:27:47 GMT']
+      Keep-Alive: ['timeout=5, max=98']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+version: 1
