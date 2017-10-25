@@ -8,7 +8,6 @@ name = "pypi"
 [packages]
 
 requests = "*"
-requests-oauthlib = "*"
 logzero = "*"
 
 
@@ -17,3 +16,8 @@ logzero = "*"
 nose = "*"
 ipython = "*"
 vcrpy-unittest = "*"
+
+
+[requires]
+
+python_version = "3.6"
