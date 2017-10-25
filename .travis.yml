@@ -3,7 +3,7 @@ python:
   - "3.6"
 # command to install dependencies
 install:
-  - apt-get install pipenv
-  - pipenv install --dev
+  - "pip install pipenv"
+  - "pipenv install --dev"
 script:
   - pipenv run nosetests
