@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/matthieudelaro/akeneo_api_client.svg?branch=master)](https://travis-ci.org/matthieudelaro/akeneo_api_client)
+
 # Python client for Akeneo PIM API
 
 A simple Python client to use the [Akeneo PIM API](https://api.akeneo.com/).
