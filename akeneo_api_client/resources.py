@@ -12,14 +12,18 @@ from logzero import logger
 
 import urllib.parse
 
+class CreatableResource(CreatableResourceInterface):
+    def create_item(self, item):
+        url = self._endpoint
+        logger.debug(json.dumps(item, separators=(',', ':')))
+        r = self._session.post(url, data=json.dumps(item, separators=(',', ':')))
 
-class ResourcePool:
-    def __init__(self, endpoint, session):
-        """Initialize the ResourcePool to the given endpoint. Eg: products"""
-        self._endpoint = endpoint
-        self._session = session
-        pass
+        if r.status_code != 201:
+            raise requests.HTTPError("Status code: {0}. Content: {1}".format(
+                r.status_code,
+                r.text))
 
+class ListableResource(ListableResourceInterface):
     def fetch_list(self, **kwargs):
         """Send a request with search, etc.
         Returns an iterable list (Collection)"""
@@ -32,6 +36,7 @@ class ResourcePool:
         c = Collection(self._session, json_text=r.text)
         return c
 
+class GettableResource(GettableResourceInterface):
     def fetch_item(self, code):
         """Returns a unique item object"""
         logger.debug(self._endpoint)
@@ -46,16 +51,7 @@ class ResourcePool:
         logger.debug(r.text)
         return json.loads(r.text) # returns item as a dict
 
-    def create_item(self, item):
-        url = self._endpoint
-        logger.debug(json.dumps(item, separators=(',', ':')))
-        r = self._session.post(url, data=json.dumps(item, separators=(',', ':')))
-
-        if r.status_code != 201:
-            raise requests.HTTPError("Status code: {0}. Content: {1}".format(
-                r.status_code,
-                r.text))
-
+class DeletableResource(DeletableResourceInterface):
     def delete_item(self, code):
         logger.debug(self._endpoint)
         url = urljoin(self._endpoint, code)
@@ -66,3 +62,22 @@ class ResourcePool:
                 r.status_code,
                 r.text))
 
+class IdentifierBasedResource(CodeBasedResourceInterface):
+    def get_code(self, item):
+        return item['identifier']
+
+class CodeBasedResource(CodeBasedResourceInterface):
+    def get_code(self, item):
+        return item['code']
+
+
+class ResourcePool(
+    CreatableResource,
+    DeletableResource,
+    GettableResource,
+    ListableResource,):
+    def __init__(self, endpoint, session):
+        """Initialize the ResourcePool to the given endpoint. Eg: products"""
+        self._endpoint = endpoint
+        self._session = session
+        pass

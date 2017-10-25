@@ -10,8 +10,6 @@ import logging
 import logzero
 from logzero import logger
 
-from vcr_unittest import VCRTestCase
-
 class Auth(AuthBase):
     TOKEN_PATH = "api/oauth/v1/token"
     TOKEN_EXPIRY_SECURITY = 60 * 2

@@ -21,3 +21,9 @@ class DeletableResourceInterface(abc.ABC):
     @abc.abstractmethod
     def delete_item(self, code):
         pass
+
+class CodeBasedResourceInterface(abc.ABC):
+    @abc.abstractmethod
+    def get_code(self, item):
+        pass
+
