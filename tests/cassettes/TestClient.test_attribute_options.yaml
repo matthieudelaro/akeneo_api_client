@@ -1,0 +1,293 @@
+interactions:
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV9vdnZzY2JhajBwd3dnOHNvb2trZ2tjOGNrNGtvZzhnc2NnOGc0NHNjODhjOHc0OHd3OnJwaTB3dWl1c2E4b2tvazRjdzhra2tjNHM0ODhnYzBzZ2drYzA0ODB3c2trZ2t3bzA=]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"YjU5OTdlNmU3MzY1OGVkMzY4Mzk3NGFmYWJkMWU3ZDllOTIxOTFiMmIzOWE3NDljODU1YzNjMDE5OTc1MTdkYg","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"ZjQ3Zjc4MTIwOWIxYzBlNmQzYzgwNDRjZTI0YWI1MWVhZTQ5NDk0Zjc3MmE5ZTM4Y2E1ZjU0YzdkNWZlOGI3Nw"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:19 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=gqsfovplib7lmpkni9gken5bdv; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YjU5OTdlNmU3MzY1OGVkMzY4Mzk3NGFmYWJkMWU3ZDllOTIxOTFiMmIzOWE3NDljODU1YzNjMDE5OTc1MTdkYg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/attributes
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes?page=1\u0026limit=10\u0026with_count=false"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes?page=2\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/auto_exposure"}},"code":"auto_exposure","type":"pim_catalog_boolean","group":"technical","unique":false,"useable_as_grid_filter":true,"allowed_extensions":[],"metric_family":null,"default_metric_unit":null,"reference_data_name":null,"available_locales":[],"max_characters":null,"validation_rule":null,"validation_regexp":null,"wysiwyg_enabled":null,"number_min":null,"number_max":null,"decimals_allowed":null,"negative_allowed":null,"date_min":null,"date_max":null,"max_file_size":null,"minimum_input_length":null,"sort_order":39,"localizable":false,"scopable":false,"labels":{"de_DE":"Auto
+        exposure","en_US":"Auto exposure","fr_FR":"Auto exposure"},"auto_option_sorting":null},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/auto_focus_assist_beam"}},"code":"auto_focus_assist_beam","type":"pim_catalog_boolean","group":"technical","unique":false,"useable_as_grid_filter":true,"allowed_extensions":[],"metric_family":null,"default_metric_unit":null,"reference_data_name":null,"available_locales":[],"max_characters":null,"validation_rule":null,"validation_regexp":null,"wysiwyg_enabled":null,"number_min":null,"number_max":null,"decimals_allowed":null,"negative_allowed":null,"date_min":null,"date_max":null,"max_file_size":null,"minimum_input_length":null,"sort_order":34,"localizable":false,"scopable":false,"labels":{"de_DE":"Auto
+        focus beam","en_US":"Auto focus beam","fr_FR":"Auto focus beam"},"auto_option_sorting":null},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/auto_focus_lock"}},"code":"auto_focus_lock","type":"pim_catalog_boolean","group":"technical","unique":false,"useable_as_grid_filter":true,"allowed_extensions":[],"metric_family":null,"default_metric_unit":null,"reference_data_name":null,"available_locales":[],"max_characters":null,"validation_rule":null,"validation_regexp":null,"wysiwyg_enabled":null,"number_min":null,"number_max":null,"decimals_allowed":null,"negative_allowed":null,"date_min":null,"date_max":null,"max_file_size":null,"minimum_input_length":null,"sort_order":33,"localizable":false,"scopable":false,"labels":{"de_DE":"Auto
+        focus lock","en_US":"Auto focus lock","fr_FR":"Auto focus lock"},"auto_option_sorting":null},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/auto_focus_modes"}},"code":"auto_focus_modes","type":"pim_catalog_text","group":"technical","unique":false,"useable_as_grid_filter":true,"allowed_extensions":[],"metric_family":null,"default_metric_unit":null,"reference_data_name":null,"available_locales":[],"max_characters":null,"validation_rule":null,"validation_regexp":null,"wysiwyg_enabled":null,"number_min":null,"number_max":null,"decimals_allowed":null,"negative_allowed":null,"date_min":null,"date_max":null,"max_file_size":null,"minimum_input_length":null,"sort_order":31,"localizable":true,"scopable":false,"labels":{"de_DE":"Auto
+        focus modes","en_US":"Auto focus modes","fr_FR":"Auto focus modes"},"auto_option_sorting":null},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/auto_focus_points"}},"code":"auto_focus_points","type":"pim_catalog_number","group":"technical","unique":false,"useable_as_grid_filter":true,"allowed_extensions":[],"metric_family":null,"default_metric_unit":null,"reference_data_name":null,"available_locales":[],"max_characters":null,"validation_rule":null,"validation_regexp":null,"wysiwyg_enabled":null,"number_min":null,"number_max":null,"decimals_allowed":false,"negative_allowed":false,"date_min":null,"date_max":null,"max_file_size":null,"minimum_input_length":null,"sort_order":32,"localizable":false,"scopable":false,"labels":{"de_DE":"Auto
+        focus points","en_US":"Auto focus points","fr_FR":"Auto focus points"},"auto_option_sorting":null},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/brand"}},"code":"brand","type":"pim_catalog_simpleselect","group":"marketing","unique":false,"useable_as_grid_filter":false,"allowed_extensions":[],"metric_family":null,"default_metric_unit":null,"reference_data_name":null,"available_locales":[],"max_characters":null,"validation_rule":null,"validation_regexp":null,"wysiwyg_enabled":null,"number_min":null,"number_max":null,"decimals_allowed":null,"negative_allowed":null,"date_min":null,"date_max":null,"max_file_size":null,"minimum_input_length":null,"sort_order":3,"localizable":false,"scopable":false,"labels":{"de_DE":"Brand","en_US":"Brand","fr_FR":"Marque"},"auto_option_sorting":null},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_brand"}},"code":"camera_brand","type":"pim_catalog_simpleselect","group":"technical","unique":false,"useable_as_grid_filter":true,"allowed_extensions":[],"metric_family":null,"default_metric_unit":null,"reference_data_name":null,"available_locales":[],"max_characters":null,"validation_rule":null,"validation_regexp":null,"wysiwyg_enabled":null,"number_min":null,"number_max":null,"decimals_allowed":null,"negative_allowed":null,"date_min":null,"date_max":null,"max_file_size":null,"minimum_input_length":null,"sort_order":21,"localizable":false,"scopable":false,"labels":{"de_DE":"Hersteller","en_US":"Brand","fr_FR":"Marque"},"auto_option_sorting":null},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_model_name"}},"code":"camera_model_name","type":"pim_catalog_text","group":"technical","unique":false,"useable_as_grid_filter":true,"allowed_extensions":[],"metric_family":null,"default_metric_unit":null,"reference_data_name":null,"available_locales":[],"max_characters":null,"validation_rule":null,"validation_regexp":null,"wysiwyg_enabled":null,"number_min":null,"number_max":null,"decimals_allowed":null,"negative_allowed":null,"date_min":null,"date_max":null,"max_file_size":null,"minimum_input_length":null,"sort_order":22,"localizable":false,"scopable":false,"labels":{"de_DE":"Modelname","en_US":"Model
+        name","fr_FR":"Mod\u00e8le"},"auto_option_sorting":null},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_type"}},"code":"camera_type","type":"pim_catalog_simpleselect","group":"technical","unique":false,"useable_as_grid_filter":true,"allowed_extensions":[],"metric_family":null,"default_metric_unit":null,"reference_data_name":null,"available_locales":[],"max_characters":null,"validation_rule":null,"validation_regexp":null,"wysiwyg_enabled":null,"number_min":null,"number_max":null,"decimals_allowed":null,"negative_allowed":null,"date_min":null,"date_max":null,"max_file_size":null,"minimum_input_length":null,"sort_order":10,"localizable":false,"scopable":false,"labels":{"de_DE":"Kamera-Typ","en_US":"Camera
+        type","fr_FR":"Type d\u0027appareil photo"},"auto_option_sorting":null},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/care_instructions"}},"code":"care_instructions","type":"pim_catalog_textarea","group":"product","unique":false,"useable_as_grid_filter":true,"allowed_extensions":[],"metric_family":null,"default_metric_unit":null,"reference_data_name":null,"available_locales":[],"max_characters":null,"validation_rule":null,"validation_regexp":null,"wysiwyg_enabled":null,"number_min":null,"number_max":null,"decimals_allowed":null,"negative_allowed":null,"date_min":null,"date_max":null,"max_file_size":null,"minimum_input_length":null,"sort_order":7,"localizable":false,"scopable":false,"labels":{"de_DE":"Care
+        instructions","en_US":"Care instructions","fr_FR":"Instructions d\u0027entretien"},"auto_option_sorting":null}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:19 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=cc84qbomkgsrm26o9gkqg82pbr; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YjU5OTdlNmU3MzY1OGVkMzY4Mzk3NGFmYWJkMWU3ZDllOTIxOTFiMmIzOWE3NDljODU1YzNjMDE5OTc1MTdkYg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=cc84qbomkgsrm26o9gkqg82pbr]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/attributes/auto_exposure/options
+  response:
+    body: {string: '{"code":404,"message":"Attribute \"auto_exposure\" does not support
+        options. Only attributes of type \"pim_catalog_simpleselect\", \"pim_catalog_multiselect\"
+        support options."}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:20 GMT']
+      Keep-Alive: ['timeout=5, max=99']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YjU5OTdlNmU3MzY1OGVkMzY4Mzk3NGFmYWJkMWU3ZDllOTIxOTFiMmIzOWE3NDljODU1YzNjMDE5OTc1MTdkYg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=cc84qbomkgsrm26o9gkqg82pbr]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/attributes/auto_focus_assist_beam/options
+  response:
+    body: {string: '{"code":404,"message":"Attribute \"auto_focus_assist_beam\" does
+        not support options. Only attributes of type \"pim_catalog_simpleselect\",
+        \"pim_catalog_multiselect\" support options."}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:21 GMT']
+      Keep-Alive: ['timeout=5, max=98']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YjU5OTdlNmU3MzY1OGVkMzY4Mzk3NGFmYWJkMWU3ZDllOTIxOTFiMmIzOWE3NDljODU1YzNjMDE5OTc1MTdkYg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=cc84qbomkgsrm26o9gkqg82pbr]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/attributes/auto_focus_lock/options
+  response:
+    body: {string: '{"code":404,"message":"Attribute \"auto_focus_lock\" does not
+        support options. Only attributes of type \"pim_catalog_simpleselect\", \"pim_catalog_multiselect\"
+        support options."}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:22 GMT']
+      Keep-Alive: ['timeout=5, max=97']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YjU5OTdlNmU3MzY1OGVkMzY4Mzk3NGFmYWJkMWU3ZDllOTIxOTFiMmIzOWE3NDljODU1YzNjMDE5OTc1MTdkYg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=cc84qbomkgsrm26o9gkqg82pbr]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/attributes/auto_focus_modes/options
+  response:
+    body: {string: '{"code":404,"message":"Attribute \"auto_focus_modes\" does not
+        support options. Only attributes of type \"pim_catalog_simpleselect\", \"pim_catalog_multiselect\"
+        support options."}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:23 GMT']
+      Keep-Alive: ['timeout=5, max=96']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YjU5OTdlNmU3MzY1OGVkMzY4Mzk3NGFmYWJkMWU3ZDllOTIxOTFiMmIzOWE3NDljODU1YzNjMDE5OTc1MTdkYg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=cc84qbomkgsrm26o9gkqg82pbr]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/attributes/auto_focus_points/options
+  response:
+    body: {string: '{"code":404,"message":"Attribute \"auto_focus_points\" does not
+        support options. Only attributes of type \"pim_catalog_simpleselect\", \"pim_catalog_multiselect\"
+        support options."}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:24 GMT']
+      Keep-Alive: ['timeout=5, max=95']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YjU5OTdlNmU3MzY1OGVkMzY4Mzk3NGFmYWJkMWU3ZDllOTIxOTFiMmIzOWE3NDljODU1YzNjMDE5OTc1MTdkYg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=cc84qbomkgsrm26o9gkqg82pbr]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/attributes/brand/options
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/brand\/options?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/brand\/options?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/brand\/options\/akeneo"}},"code":"akeneo","attribute":"brand","sort_order":1,"labels":{"en_US":"Akeneo"}}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:24 GMT']
+      Keep-Alive: ['timeout=5, max=94']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YjU5OTdlNmU3MzY1OGVkMzY4Mzk3NGFmYWJkMWU3ZDllOTIxOTFiMmIzOWE3NDljODU1YzNjMDE5OTc1MTdkYg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=cc84qbomkgsrm26o9gkqg82pbr]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/attributes/camera_brand/options
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_brand\/options?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_brand\/options?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_brand\/options\/canon_brand"}},"code":"canon_brand","attribute":"camera_brand","sort_order":1,"labels":{"de_DE":"Canon","en_US":"Canon","fr_FR":"Canon"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_brand\/options\/nikon_brand"}},"code":"nikon_brand","attribute":"camera_brand","sort_order":2,"labels":{"de_DE":"Nikon","en_US":"Nikon","fr_FR":"Nikon"}}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:25 GMT']
+      Keep-Alive: ['timeout=5, max=93']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YjU5OTdlNmU3MzY1OGVkMzY4Mzk3NGFmYWJkMWU3ZDllOTIxOTFiMmIzOWE3NDljODU1YzNjMDE5OTc1MTdkYg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=cc84qbomkgsrm26o9gkqg82pbr]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/attributes/camera_model_name/options
+  response:
+    body: {string: '{"code":404,"message":"Attribute \"camera_model_name\" does not
+        support options. Only attributes of type \"pim_catalog_simpleselect\", \"pim_catalog_multiselect\"
+        support options."}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:26 GMT']
+      Keep-Alive: ['timeout=5, max=92']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YjU5OTdlNmU3MzY1OGVkMzY4Mzk3NGFmYWJkMWU3ZDllOTIxOTFiMmIzOWE3NDljODU1YzNjMDE5OTc1MTdkYg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=cc84qbomkgsrm26o9gkqg82pbr]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/attributes/camera_type/options
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_type\/options?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_type\/options?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_type\/options\/bridge"}},"code":"bridge","attribute":"camera_type","sort_order":1,"labels":{"de_DE":"Bridge","en_US":"Bridge","fr_FR":"Bridge"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_type\/options\/compact"}},"code":"compact","attribute":"camera_type","sort_order":2,"labels":{"de_DE":"Compact","en_US":"Compact","fr_FR":"Compact"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_type\/options\/milc"}},"code":"milc","attribute":"camera_type","sort_order":3,"labels":{"de_DE":"MILC","en_US":"MILC","fr_FR":"MILC"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_type\/options\/milc_body"}},"code":"milc_body","attribute":"camera_type","sort_order":4,"labels":{"de_DE":"MILC
+        Body","en_US":"MILC Body","fr_FR":"MILC Body"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_type\/options\/slr_body"}},"code":"slr_body","attribute":"camera_type","sort_order":5,"labels":{"de_DE":"SLR
+        Body","en_US":"SLR Body","fr_FR":"SLR Body"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/attributes\/camera_type\/options\/slr_kit"}},"code":"slr_kit","attribute":"camera_type","sort_order":6,"labels":{"de_DE":"SLR
+        Kit","en_US":"SLR Kit","fr_FR":"SLR Kit"}}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:27 GMT']
+      Keep-Alive: ['timeout=5, max=91']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YjU5OTdlNmU3MzY1OGVkMzY4Mzk3NGFmYWJkMWU3ZDllOTIxOTFiMmIzOWE3NDljODU1YzNjMDE5OTc1MTdkYg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=cc84qbomkgsrm26o9gkqg82pbr]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/attributes/care_instructions/options
+  response:
+    body: {string: '{"code":404,"message":"Attribute \"care_instructions\" does not
+        support options. Only attributes of type \"pim_catalog_simpleselect\", \"pim_catalog_multiselect\"
+        support options."}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:28 GMT']
+      Keep-Alive: ['timeout=5, max=90']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 404, message: Not Found}
+version: 1

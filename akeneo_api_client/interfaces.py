@@ -9,12 +9,17 @@ class GettableResourceInterface(abc.ABC):
 
 class ListableResourceInterface(abc.ABC):
     @abc.abstractmethod
-    def fetch_list(self, **kwargs):
+    def fetch_list(self, args=None):
         pass
 
 class CreatableResourceInterface(abc.ABC):
     @abc.abstractmethod
     def create_item(self, item):
+        pass
+
+class UpdatableResourceInterface(abc.ABC):
+    # @abc.abstractmethod
+    def update_item(self, item):
         pass
 
 class DeletableResourceInterface(abc.ABC):
@@ -26,4 +31,3 @@ class CodeBasedResourceInterface(abc.ABC):
     @abc.abstractmethod
     def get_code(self, item):
         pass
-

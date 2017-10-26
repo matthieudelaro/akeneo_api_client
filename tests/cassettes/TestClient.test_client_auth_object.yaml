@@ -12,23 +12,23 @@ interactions:
     method: POST
     uri: http://localhost:8080/api/oauth/v1/token
   response:
-    body: {string: '{"access_token":"MGYxZDE1MzFkODM5OTcxZTE5YjMyM2U3MzkzYzY5NTY3NjU5NzhkMDAwNjFlOGU1MDk4MzU3MjVjNGIxOTVlZQ","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"ZjE1Y2JhMzFmMGI2NzA0MjUxMjljNTg0NTQ5MDMyNDc0NzhmNmJlMmU4ODdjMjU5ZmU5Y2FiNTkzOTdlNDU3NQ"}'}
+    body: {string: '{"access_token":"MWU0NDMyYjRlMTRjMTdkNjhmZmExZjQ2ZDNjYmY3ZDg4MjkyYmE1NDQ3MmMwYzdlM2VmYjBmMzlhNjQ0YzA0Yg","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"ZjFmMWRhYmJjYmQ3ZmQ2Nzk2MGFlMzBjOGFiZDQzZGY2MzczMmI3YjY3Zjg1YWJkNzAxODZhYjY0MzZmYTllMg"}'}
     headers:
       Cache-Control: ['no-store, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:21 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:31 GMT']
       Keep-Alive: ['timeout=5, max=100']
       Pragma: [no-cache]
       Server: [Apache/2.4.28 (Unix)]
-      Set-Cookie: [BAPID=4n0lb68odf86bje6m8crbaj3ou; path=/; HttpOnly]
+      Set-Cookie: [BAPID=qor4f228pm7pdi9sdhkqf73610; path=/; HttpOnly]
     status: {code: 200, message: OK}
 - request:
     body: null
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer MGYxZDE1MzFkODM5OTcxZTE5YjMyM2U3MzkzYzY5NTY3NjU5NzhkMDAwNjFlOGU1MDk4MzU3MjVjNGIxOTVlZQ]
+      Authorization: [Bearer MWU0NDMyYjRlMTRjMTdkNjhmZmExZjQ2ZDNjYmY3ZDg4MjkyYmE1NDQ3MmMwYzdlM2VmYjBmMzlhNjQ0YzA0Yg]
       Connection: [keep-alive]
       Content-Type: [application/json]
       User-Agent: [python-requests/2.18.4]
@@ -46,9 +46,9 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:22 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:32 GMT']
       Keep-Alive: ['timeout=5, max=100']
       Server: [Apache/2.4.28 (Unix)]
-      Set-Cookie: [BAPID=8nbjt6ej36gde572j7cs69h8s5; path=/; HttpOnly]
+      Set-Cookie: [BAPID=akf5s7m2bpb8dq1b5ld4m9gefi; path=/; HttpOnly]
     status: {code: 200, message: OK}
 version: 1

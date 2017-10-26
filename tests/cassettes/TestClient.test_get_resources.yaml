@@ -12,23 +12,23 @@ interactions:
     method: POST
     uri: http://localhost:8080/api/oauth/v1/token
   response:
-    body: {string: '{"access_token":"M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"MTU1YjcyMjYyOTExOTU0MzAwMDNiYmI1NzFhNjg2MTA0ODhiOTI3ZWY0MmE1YzBlYzBiOWMyZWU3Yjg3NWNjZQ"}'}
+    body: {string: '{"access_token":"NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"NWRlNzBlMjM3YmRmZTI2ODEyZmJhNTJiZjczNjRhMGMxZGEzZDJlMGQyNGU3NzYzOGM5MjJlMmYzYTg5OWRlYw"}'}
     headers:
       Cache-Control: ['no-store, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:23 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:42 GMT']
       Keep-Alive: ['timeout=5, max=100']
       Pragma: [no-cache]
       Server: [Apache/2.4.28 (Unix)]
-      Set-Cookie: [BAPID=vah296vs30hga735q3nvjjj839; path=/; HttpOnly]
+      Set-Cookie: [BAPID=p084mavsqoe8fuurcb3uq7060e; path=/; HttpOnly]
     status: {code: 200, message: OK}
 - request:
     body: null
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ]
+      Authorization: [Bearer NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA]
       Connection: [keep-alive]
       Content-Type: [application/json]
       User-Agent: [python-requests/2.18.4]
@@ -42,20 +42,20 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:23 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:43 GMT']
       Keep-Alive: ['timeout=5, max=100']
       Server: [Apache/2.4.28 (Unix)]
-      Set-Cookie: [BAPID=a47losrnvhevoiqg5g2h9oonnt; path=/; HttpOnly]
+      Set-Cookie: [BAPID=bfeui1ptah6bnmpgtcbbg1e7tv; path=/; HttpOnly]
     status: {code: 200, message: OK}
 - request:
     body: null
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ]
+      Authorization: [Bearer NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA]
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Cookie: [BAPID=a47losrnvhevoiqg5g2h9oonnt]
+      Cookie: [BAPID=bfeui1ptah6bnmpgtcbbg1e7tv]
       User-Agent: [python-requests/2.18.4]
     method: GET
     uri: http://localhost:8080/api/rest/v1/attributes
@@ -73,7 +73,7 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:24 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:43 GMT']
       Keep-Alive: ['timeout=5, max=99']
       Server: [Apache/2.4.28 (Unix)]
     status: {code: 200, message: OK}
@@ -82,10 +82,10 @@ interactions:
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ]
+      Authorization: [Bearer NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA]
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Cookie: [BAPID=a47losrnvhevoiqg5g2h9oonnt]
+      Cookie: [BAPID=bfeui1ptah6bnmpgtcbbg1e7tv]
       User-Agent: [python-requests/2.18.4]
     method: GET
     uri: http://localhost:8080/api/rest/v1/attribute-groups
@@ -95,7 +95,7 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:25 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:44 GMT']
       Keep-Alive: ['timeout=5, max=98']
       Server: [Apache/2.4.28 (Unix)]
     status: {code: 200, message: OK}
@@ -104,10 +104,10 @@ interactions:
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ]
+      Authorization: [Bearer NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA]
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Cookie: [BAPID=a47losrnvhevoiqg5g2h9oonnt]
+      Cookie: [BAPID=bfeui1ptah6bnmpgtcbbg1e7tv]
       User-Agent: [python-requests/2.18.4]
     method: GET
     uri: http://localhost:8080/api/rest/v1/categories
@@ -126,7 +126,7 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:26 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:45 GMT']
       Keep-Alive: ['timeout=5, max=97']
       Server: [Apache/2.4.28 (Unix)]
     status: {code: 200, message: OK}
@@ -135,10 +135,10 @@ interactions:
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ]
+      Authorization: [Bearer NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA]
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Cookie: [BAPID=a47losrnvhevoiqg5g2h9oonnt]
+      Cookie: [BAPID=bfeui1ptah6bnmpgtcbbg1e7tv]
       User-Agent: [python-requests/2.18.4]
     method: GET
     uri: http://localhost:8080/api/rest/v1/channels
@@ -148,7 +148,7 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:27 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:46 GMT']
       Keep-Alive: ['timeout=5, max=96']
       Server: [Apache/2.4.28 (Unix)]
     status: {code: 200, message: OK}
@@ -157,10 +157,10 @@ interactions:
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ]
+      Authorization: [Bearer NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA]
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Cookie: [BAPID=a47losrnvhevoiqg5g2h9oonnt]
+      Cookie: [BAPID=bfeui1ptah6bnmpgtcbbg1e7tv]
       User-Agent: [python-requests/2.18.4]
     method: GET
     uri: http://localhost:8080/api/rest/v1/currencies
@@ -170,7 +170,7 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:28 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:47 GMT']
       Keep-Alive: ['timeout=5, max=95']
       Server: [Apache/2.4.28 (Unix)]
     status: {code: 200, message: OK}
@@ -179,10 +179,10 @@ interactions:
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ]
+      Authorization: [Bearer NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA]
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Cookie: [BAPID=a47losrnvhevoiqg5g2h9oonnt]
+      Cookie: [BAPID=bfeui1ptah6bnmpgtcbbg1e7tv]
       User-Agent: [python-requests/2.18.4]
     method: GET
     uri: http://localhost:8080/api/rest/v1/families
@@ -198,7 +198,7 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:29 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:48 GMT']
       Keep-Alive: ['timeout=5, max=94']
       Server: [Apache/2.4.28 (Unix)]
     status: {code: 200, message: OK}
@@ -207,10 +207,10 @@ interactions:
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ]
+      Authorization: [Bearer NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA]
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Cookie: [BAPID=a47losrnvhevoiqg5g2h9oonnt]
+      Cookie: [BAPID=bfeui1ptah6bnmpgtcbbg1e7tv]
       User-Agent: [python-requests/2.18.4]
     method: GET
     uri: http://localhost:8080/api/rest/v1/locales
@@ -220,7 +220,7 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:29 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:48 GMT']
       Keep-Alive: ['timeout=5, max=93']
       Server: [Apache/2.4.28 (Unix)]
     status: {code: 200, message: OK}
@@ -229,10 +229,10 @@ interactions:
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ]
+      Authorization: [Bearer NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA]
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Cookie: [BAPID=a47losrnvhevoiqg5g2h9oonnt]
+      Cookie: [BAPID=bfeui1ptah6bnmpgtcbbg1e7tv]
       User-Agent: [python-requests/2.18.4]
     method: GET
     uri: http://localhost:8080/api/rest/v1/measure-families
@@ -243,7 +243,7 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:30 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:49 GMT']
       Keep-Alive: ['timeout=5, max=92']
       Server: [Apache/2.4.28 (Unix)]
     status: {code: 200, message: OK}
@@ -252,10 +252,10 @@ interactions:
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ]
+      Authorization: [Bearer NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA]
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Cookie: [BAPID=a47losrnvhevoiqg5g2h9oonnt]
+      Cookie: [BAPID=bfeui1ptah6bnmpgtcbbg1e7tv]
       User-Agent: [python-requests/2.18.4]
     method: GET
     uri: http://localhost:8080/api/rest/v1/media-files
@@ -265,7 +265,7 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:31 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:50 GMT']
       Keep-Alive: ['timeout=5, max=91']
       Server: [Apache/2.4.28 (Unix)]
     status: {code: 200, message: OK}
@@ -274,15 +274,15 @@ interactions:
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ]
+      Authorization: [Bearer NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA]
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Cookie: [BAPID=a47losrnvhevoiqg5g2h9oonnt]
+      Cookie: [BAPID=bfeui1ptah6bnmpgtcbbg1e7tv]
       User-Agent: [python-requests/2.18.4]
     method: GET
-    uri: http://localhost:8080/api/rest/v1/products
+    uri: http://localhost:8080/api/rest/v1/products?pagination_type=search_after
   response:
-    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=2\u0026with_count=false\u0026pagination_type=page\u0026limit=10"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/Biker-jacket-polyester-xl"}},"identifier":"Biker-jacket-polyester-xl","family":"clothing","parent":"model-biker-jacket-polyester","groups":[],"categories":["master_men_blazers"],"enabled":true,"values":{"ean":[{"locale":null,"scope":null,"data":"1234567890367"}],"size":[{"locale":null,"scope":null,"data":"xl"}],"color":[{"locale":null,"scope":null,"data":"white"}],"material":[{"locale":null,"scope":null,"data":"polyester"}],"variation_name":[{"locale":"en_US","scope":null,"data":"Biker
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?pagination_type=search_after\u0026limit=10"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?pagination_type=search_after\u0026limit=10"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?pagination_type=search_after\u0026limit=10\u0026search_after=qtXQiA%3D%3D"}},"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/Biker-jacket-polyester-xl"}},"identifier":"Biker-jacket-polyester-xl","family":"clothing","parent":"model-biker-jacket-polyester","groups":[],"categories":["master_men_blazers"],"enabled":true,"values":{"ean":[{"locale":null,"scope":null,"data":"1234567890367"}],"size":[{"locale":null,"scope":null,"data":"xl"}],"color":[{"locale":null,"scope":null,"data":"white"}],"material":[{"locale":null,"scope":null,"data":"polyester"}],"variation_name":[{"locale":"en_US","scope":null,"data":"Biker
         jacket polyester"}],"name":[{"locale":null,"scope":null,"data":"Biker jacket"}],"price":[{"locale":null,"scope":null,"data":[{"amount":null,"currency":"EUR"},{"amount":null,"currency":"USD"}]}],"collection":[{"locale":null,"scope":null,"data":["summer_2017"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Biker
         jacket"}]},"created":"2017-10-23T07:50:17+00:00","updated":"2017-10-23T07:50:25+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/1111111115"}},"identifier":"1111111115","family":"clothing","parent":"aphrodite","groups":[],"categories":["master_women_blouses","print_clothing","supplier_zaro"],"enabled":true,"values":{"size":[{"locale":null,"scope":null,"data":"xl"}],"color":[{"locale":null,"scope":null,"data":"blue"}],"name":[{"locale":null,"scope":null,"data":"Top
         Layered Sleeveless gauze snake print"}],"price":[{"locale":null,"scope":null,"data":[{"amount":"299.00","currency":"EUR"},{"amount":null,"currency":"USD"}]}],"erp_name":[{"locale":"en_US","scope":null,"data":"Aphrodite"}],"supplier":[{"locale":null,"scope":null,"data":"zaro"}],"collection":[{"locale":null,"scope":null,"data":["summer_2016"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Top
@@ -572,7 +572,7 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:32 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:51 GMT']
       Keep-Alive: ['timeout=5, max=90']
       Server: [Apache/2.4.28 (Unix)]
     status: {code: 200, message: OK}
@@ -581,15 +581,15 @@ interactions:
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer M2I5NjUxODEwZjk0NWVkOTEzM2I5Nzc0N2Y2NTIyMTRlZDc1YjNlMWQxMjc5MjZiZDEzMGY2Y2YyZWFiOTczZQ]
+      Authorization: [Bearer NDAwZjgzNTgwYmQzNmZkMzUxMzhmN2QwMjZmMGM3MWU0ZmNhZDg0YTkyYzQ2OWNkZDM2MGM0MGI0ZGY1NTA0NA]
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Cookie: [BAPID=a47losrnvhevoiqg5g2h9oonnt]
+      Cookie: [BAPID=bfeui1ptah6bnmpgtcbbg1e7tv]
       User-Agent: [python-requests/2.18.4]
     method: GET
-    uri: http://localhost:8080/api/rest/v1/product-models
+    uri: http://localhost:8080/api/rest/v1/product-models?pagination_type=search_after
   response:
-    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/product-models?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/product-models?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/product-models?page=2\u0026with_count=false\u0026pagination_type=page\u0026limit=10"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/product-models\/amor"}},"code":"amor","family_variant":"clothing_colorsize","parent":null,"categories":["master_men_blazers","supplier_zaro"],"values":{"name":[{"locale":null,"scope":null,"data":"Heritage
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/product-models?pagination_type=search_after\u0026limit=10"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/product-models?pagination_type=search_after\u0026limit=10"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/product-models?pagination_type=search_after\u0026limit=10\u0026search_after=qt0%3D"}},"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/product-models\/amor"}},"code":"amor","family_variant":"clothing_colorsize","parent":null,"categories":["master_men_blazers","supplier_zaro"],"values":{"name":[{"locale":null,"scope":null,"data":"Heritage
         jacket navy"}],"price":[{"locale":null,"scope":null,"data":[{"amount":"999.00","currency":"EUR"},{"amount":null,"currency":"USD"}]}],"erp_name":[{"locale":"en_US","scope":null,"data":"Amor"}],"supplier":[{"locale":null,"scope":null,"data":"zaro"}],"collection":[{"locale":null,"scope":null,"data":["summer_2016"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Heritage
         jacket navy blue tweed suit with single breasted 2 button. 53% wool, 22% polyester,
         18% acrylic, 5% nylon, 1% cotton, 1% viscose. Dry Cleaning uniquement.Le mannequin
@@ -623,7 +623,7 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:32:33 GMT']
+      Date: ['Thu, 26 Oct 2017 13:22:52 GMT']
       Keep-Alive: ['timeout=5, max=89']
       Server: [Apache/2.4.28 (Unix)]
     status: {code: 200, message: OK}

@@ -12,23 +12,23 @@ interactions:
     method: POST
     uri: http://localhost:8080/api/oauth/v1/token
   response:
-    body: {string: '{"access_token":"ZGE4MjZhMDA2Y2IzODU0MDhkNWQ5OWQ4NTY4ZGJjYjVkODhiMzM0ZmFiNWQ4MTJjYTllMDE1MmNhNTJiNjE5MQ","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"MDBhZGE2MTBmZjNiZWFiZTVkZmE5MjVkMzlhZDRjY2U5M2M0YmEwZjcyMzE4NTYzMDI3MDVmNmJjZTYxYTExOA"}'}
+    body: {string: '{"access_token":"ZjRjZGI1MmM0MjBlNmE3MjAxNmVhMTg3MWEwOTJiNmExYjBkYWNhMGNjZmYzNGJkOTRmZmE2OWRhYzU1YThmNQ","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"NTRmY2MzNGViOGI5NzMxZjgwMGZhOThmYWJmMWRmMmU4ZmU2YThmMWE2MmZkMzU0ZjQzMjllNDRiZjQyNmMwMw"}'}
     headers:
       Cache-Control: ['no-store, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:36:44 GMT']
+      Date: ['Thu, 26 Oct 2017 13:23:01 GMT']
       Keep-Alive: ['timeout=5, max=100']
       Pragma: [no-cache]
       Server: [Apache/2.4.28 (Unix)]
-      Set-Cookie: [BAPID=t2mbhpgdsi3kugsb5sufdbnqlc; path=/; HttpOnly]
+      Set-Cookie: [BAPID=17jbrc148vbf4hcsgmo9dgehht; path=/; HttpOnly]
     status: {code: 200, message: OK}
 - request:
     body: null
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer ZGE4MjZhMDA2Y2IzODU0MDhkNWQ5OWQ4NTY4ZGJjYjVkODhiMzM0ZmFiNWQ4MTJjYTllMDE1MmNhNTJiNjE5MQ]
+      Authorization: [Bearer ZjRjZGI1MmM0MjBlNmE3MjAxNmVhMTg3MWEwOTJiNmExYjBkYWNhMGNjZmYzNGJkOTRmZmE2OWRhYzU1YThmNQ]
       Connection: [keep-alive]
       Content-Type: [application/json]
       User-Agent: [python-requests/2.18.4]
@@ -46,25 +46,25 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:36:46 GMT']
+      Date: ['Thu, 26 Oct 2017 13:23:02 GMT']
       Keep-Alive: ['timeout=5, max=100']
       Server: [Apache/2.4.28 (Unix)]
-      Set-Cookie: [BAPID=07qs3e5rua98pgmd3c32ohm8hu; path=/; HttpOnly]
+      Set-Cookie: [BAPID=7f7a5fhjv002h8k899nst7h5so; path=/; HttpOnly]
     status: {code: 200, message: OK}
 - request:
     body: null
     headers:
       Accept: ['*/*']
       Accept-Encoding: ['gzip, deflate']
-      Authorization: [Bearer ZGE4MjZhMDA2Y2IzODU0MDhkNWQ5OWQ4NTY4ZGJjYjVkODhiMzM0ZmFiNWQ4MTJjYTllMDE1MmNhNTJiNjE5MQ]
+      Authorization: [Bearer ZjRjZGI1MmM0MjBlNmE3MjAxNmVhMTg3MWEwOTJiNmExYjBkYWNhMGNjZmYzNGJkOTRmZmE2OWRhYzU1YThmNQ]
       Connection: [keep-alive]
       Content-Type: [application/json]
-      Cookie: [BAPID=07qs3e5rua98pgmd3c32ohm8hu]
+      Cookie: [BAPID=7f7a5fhjv002h8k899nst7h5so]
       User-Agent: [python-requests/2.18.4]
     method: GET
-    uri: http://localhost:8080/api/rest/v1/products
+    uri: http://localhost:8080/api/rest/v1/products?pagination_type=search_after
   response:
-    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=1\u0026with_count=false\u0026pagination_type=page\u0026limit=10"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?page=2\u0026with_count=false\u0026pagination_type=page\u0026limit=10"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/Biker-jacket-polyester-xl"}},"identifier":"Biker-jacket-polyester-xl","family":"clothing","parent":"model-biker-jacket-polyester","groups":[],"categories":["master_men_blazers"],"enabled":true,"values":{"ean":[{"locale":null,"scope":null,"data":"1234567890367"}],"size":[{"locale":null,"scope":null,"data":"xl"}],"color":[{"locale":null,"scope":null,"data":"white"}],"material":[{"locale":null,"scope":null,"data":"polyester"}],"variation_name":[{"locale":"en_US","scope":null,"data":"Biker
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?pagination_type=search_after\u0026limit=10"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?pagination_type=search_after\u0026limit=10"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products?pagination_type=search_after\u0026limit=10\u0026search_after=qtXQiA%3D%3D"}},"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/Biker-jacket-polyester-xl"}},"identifier":"Biker-jacket-polyester-xl","family":"clothing","parent":"model-biker-jacket-polyester","groups":[],"categories":["master_men_blazers"],"enabled":true,"values":{"ean":[{"locale":null,"scope":null,"data":"1234567890367"}],"size":[{"locale":null,"scope":null,"data":"xl"}],"color":[{"locale":null,"scope":null,"data":"white"}],"material":[{"locale":null,"scope":null,"data":"polyester"}],"variation_name":[{"locale":"en_US","scope":null,"data":"Biker
         jacket polyester"}],"name":[{"locale":null,"scope":null,"data":"Biker jacket"}],"price":[{"locale":null,"scope":null,"data":[{"amount":null,"currency":"EUR"},{"amount":null,"currency":"USD"}]}],"collection":[{"locale":null,"scope":null,"data":["summer_2017"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Biker
         jacket"}]},"created":"2017-10-23T07:50:17+00:00","updated":"2017-10-23T07:50:25+00:00","associations":{}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/products\/1111111115"}},"identifier":"1111111115","family":"clothing","parent":"aphrodite","groups":[],"categories":["master_women_blouses","print_clothing","supplier_zaro"],"enabled":true,"values":{"size":[{"locale":null,"scope":null,"data":"xl"}],"color":[{"locale":null,"scope":null,"data":"blue"}],"name":[{"locale":null,"scope":null,"data":"Top
         Layered Sleeveless gauze snake print"}],"price":[{"locale":null,"scope":null,"data":[{"amount":"299.00","currency":"EUR"},{"amount":null,"currency":"USD"}]}],"erp_name":[{"locale":"en_US","scope":null,"data":"Aphrodite"}],"supplier":[{"locale":null,"scope":null,"data":"zaro"}],"collection":[{"locale":null,"scope":null,"data":["summer_2016"]}],"description":[{"locale":"en_US","scope":"ecommerce","data":"Top
@@ -354,7 +354,7 @@ interactions:
       Cache-Control: ['no-cache, private']
       Connection: [Keep-Alive]
       Content-Type: [application/json]
-      Date: ['Tue, 24 Oct 2017 14:36:47 GMT']
+      Date: ['Thu, 26 Oct 2017 13:23:03 GMT']
       Keep-Alive: ['timeout=5, max=99']
       Server: [Apache/2.4.28 (Unix)]
     status: {code: 200, message: OK}

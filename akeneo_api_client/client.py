@@ -13,6 +13,12 @@ from logzero import logger
 
 import urllib.parse
 
+class ProductPool(ResourcePool,
+    CreatableResource,
+    DeletableResource,
+    GettableResource,
+    ListableResource,):
+    pass
 
 class Client:
     BASIC_API_PATH = '/api/rest/v1/'
@@ -28,7 +34,8 @@ class Client:
         'measure_families',
         'media_files',
         'products',
-        'product_models'
+        'product_models',
+        'published_products'
     ]
 
     def __init__(self,
@@ -65,7 +72,7 @@ class Client:
         self._session.headers.update({'Content-Type': 'application/json'})
         self._association_types = ResourcePool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'association-types/'), session)
-        self._attributes = ResourcePool(
+        self._attributes = AttributesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'attributes/'), session)
         self._attribute_groups = ResourcePool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'attribute-groups/'), session)
@@ -75,7 +82,7 @@ class Client:
             urljoin(self._base_url, self.BASIC_API_PATH, 'channels/'), session)
         self._currencies = ResourcePool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'currencies/'), session)
-        self._families = ResourcePool(
+        self._families = FamiliesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'families/'), session)
         self._locales = ResourcePool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'locales/'), session)
@@ -83,10 +90,12 @@ class Client:
             urljoin(self._base_url, self.BASIC_API_PATH, 'measure-families/'), session)
         self._media_files = ResourcePool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'media-files/'), session)
-        self._products = ResourcePool(
+        self._products = ProductsPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'products/'), session)
-        self._product_models = ResourcePool(
+        self._product_models = ProductModelsPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'product-models/'), session)
+        self._published_products = ProductModelsPool(
+            urljoin(self._base_url, self.BASIC_API_PATH, 'published-products/'), session)
 
     @property
     def association_types(self):
@@ -124,3 +133,6 @@ class Client:
     @property
     def product_models(self):
         return self._product_models
+    @property
+    def published_products(self):
+        return self._published_products

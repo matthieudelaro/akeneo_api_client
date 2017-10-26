@@ -24,7 +24,7 @@ class Collection:
         if not session:
             raise ValueError("session should be provided")
         self._session = session
-        logger.debug(json_data)
+        # logger.debug(json_data)
         self._link_first = json_data["_links"]["first"]
         self._items = []
         self._parse_page(json_data)

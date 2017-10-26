@@ -1,0 +1,285 @@
+interactions:
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV9vdnZzY2JhajBwd3dnOHNvb2trZ2tjOGNrNGtvZzhnc2NnOGc0NHNjODhjOHc0OHd3OnJwaTB3dWl1c2E4b2tvazRjdzhra2tjNHM0ODhnYzBzZ2drYzA0ODB3c2trZ2t3bzA=]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"NmMwNmVjMzMzMTJmODg1OWJkNzNkNjMyYzFhN2IwMDIyYjk1OGY3MTg5N2VkYWM2YTQ0N2MyNWEyYjdjZGQwNg","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"MjhmMmM3MzIyNmFhNzQzM2IwMDk3ZmNhOTg3ZWU1ZWI3YTEwNmEyZGRlZDQ5NmE2N2RiZWU2ZjQyOTEzZWM3NA"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:33 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=f93q5klldrnp1sp7fqcv6o2hgm; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwNmVjMzMzMTJmODg1OWJkNzNkNjMyYzFhN2IwMDIyYjk1OGY3MTg5N2VkYWM2YTQ0N2MyNWEyYjdjZGQwNg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families?page=1\u0026limit=10\u0026with_count=false"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families?page=2\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/accessories"}},"code":"accessories","attributes":["brand","collection","color","composition","description","ean","erp_name","image","keywords","material","meta_description","meta_title","name","notice","price","size","sku","supplier","variation_image","variation_name","weight"],"attribute_as_label":"name","attribute_as_image":"image","attribute_requirements":{"ecommerce":["collection","description","ean","image","name","sku","variation_name"],"mobile":["collection","ean","image","name","sku","variation_name"],"print":["collection","ean","image","name","sku","variation_name"]},"labels":{"en_US":"Accessories","fr_FR":"Accessories","de_DE":"Accessories"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/camcorders"}},"code":"camcorders","attributes":["description","image_stabilizer","name","optical_zoom","picture","power_requirements","price","release_date","sensor_type","sku","total_megapixels","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","name","price","sensor_type","sku","total_megapixels"],"mobile":["description","name","price","sensor_type","sku","total_megapixels"],"print":["description","name","price","sensor_type","sku","total_megapixels"]},"labels":{"en_US":"Camcorders","fr_FR":"Cam\u00e9scopes
+        num\u00e9riques","de_DE":"Digitale Videokameras"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/clothing"}},"code":"clothing","attributes":["brand","care_instructions","collection","color","composition","description","ean","erp_name","image","keywords","material","meta_description","meta_title","name","notice","price","size","sku","supplier","variation_image","variation_name","wash_temperature","weight"],"attribute_as_label":"variation_name","attribute_as_image":"variation_image","attribute_requirements":{"ecommerce":["collection","color","description","ean","size","sku","variation_image","variation_name"],"mobile":["collection","color","ean","size","sku","variation_image","variation_name"],"print":["collection","color","ean","size","sku","variation_image","variation_name"]},"labels":{"en_US":"Clothing","fr_FR":"Clothing","de_DE":"Clothing"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/digital_cameras"}},"code":"digital_cameras","attributes":["auto_exposure","auto_focus_assist_beam","auto_focus_lock","auto_focus_modes","auto_focus_points","camera_brand","camera_model_name","camera_type","description","focus","focus_adjustement","image_resolutions","iso_sensitivity","iso_sensitivity_max","iso_sensitivity_min","lens_mount_interface","light_exposure_corrections","light_exposure_modes","light_metering","max_image_resolution","name","optical_zoom","picture","power_requirements","price","release_date","sensor_type","short_description","sku","supported_aspect_ratios","supported_image_format","total_megapixels","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["auto_exposure","auto_focus_assist_beam","auto_focus_lock","auto_focus_modes","auto_focus_points","camera_brand","camera_model_name","camera_type","description","focus","focus_adjustement","image_resolutions","iso_sensitivity","iso_sensitivity_max","iso_sensitivity_min","lens_mount_interface","light_exposure_corrections","light_exposure_modes","light_metering","max_image_resolution","name","price","sensor_type","short_description","sku","supported_aspect_ratios","supported_image_format","total_megapixels"],"mobile":["camera_type","description","name","price","sensor_type","sku","total_megapixels"],"print":["camera_type","description","name","sensor_type","sku","total_megapixels"]},"labels":{"en_US":"Digital
+        cameras","fr_FR":"Cam\u00e9ras digitales","de_DE":"Digitale Kameras"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/headphones"}},"code":"headphones","attributes":["description","headphone_connectivity","name","picture","power_requirements","price","release_date","sku","snr","thd","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","name","price","sku"],"mobile":["description","name","price","sku"],"print":["description","name","price","sku"]},"labels":{"en_US":"Headphones","fr_FR":"Casques
+        audio","de_DE":"Kopfh\u00f6rer"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/laser_led_printers"}},"code":"laser_led_printers","attributes":["description","maximum_print_size","name","picture","power_requirements","price","release_date","sku","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","maximum_print_size","name","price","sku"],"mobile":["description","maximum_print_size","name","price","sku"],"print":["description","maximum_print_size","name","price","sku"]},"labels":{"en_US":"Laser
+        and LED printers","fr_FR":"Imprimantes laser et LED","de_DE":"Laserdrucker"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/led_tvs"}},"code":"led_tvs","attributes":["description","display_diagonal","name","picture","power_requirements","price","release_date","sku","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","display_diagonal","name","sku"],"mobile":["description","display_diagonal","name","sku"],"print":["description","display_diagonal","name","sku"]},"labels":{"en_US":"LED
+        TVs","fr_FR":"TVs LED","de_DE":"TVs LED"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/loudspeakers"}},"code":"loudspeakers","attributes":["description","name","picture","power_requirements","price","release_date","sku","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","name","price","sku"],"mobile":["description","name","price","sku"],"print":["description","name","price","sku"]},"labels":{"en_US":"Loudspeakers","fr_FR":"Hauts-parleurs","de_DE":"Lautsprecher"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/mp3_players"}},"code":"mp3_players","attributes":["description","name","picture","power_requirements","price","release_date","sku","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","name","price","sku"],"mobile":["description","name","price","sku"],"print":["description","name","price","sku"]},"labels":{"en_US":"MP3
+        players","fr_FR":"Lecteurs et enregistreurs MP3","de_DE":"MP3\/MP4 Player"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/mugs"}},"code":"mugs","attributes":["container_material","description","main_color","name","picture","price","secondary_color","sku"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["container_material","description","main_color","name","price","sku"],"mobile":["description","main_color","name","price","sku"],"print":["description","name","price","sku"]},"labels":{"en_US":"Mugs","fr_FR":"Chopes\/Mugs","de_DE":"Tassen"}}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:35 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=p9bisthb9k8eqi4gb5f6kh6sbp; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwNmVjMzMzMTJmODg1OWJkNzNkNjMyYzFhN2IwMDIyYjk1OGY3MTg5N2VkYWM2YTQ0N2MyNWEyYjdjZGQwNg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=p9bisthb9k8eqi4gb5f6kh6sbp]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families/accessories/variants
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/accessories\/variants?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/accessories\/variants?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/accessories\/variants\/accessories_size"}},"code":"accessories_size","labels":{"de_DE":"Accessories
+        by size","en_US":"Accessories by size","fr_FR":"Accessoires par taille"},"variant_attribute_sets":[{"level":1,"axes":["size"],"attributes":["sku","weight","size","ean"]}]}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:36 GMT']
+      Keep-Alive: ['timeout=5, max=99']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwNmVjMzMzMTJmODg1OWJkNzNkNjMyYzFhN2IwMDIyYjk1OGY3MTg5N2VkYWM2YTQ0N2MyNWEyYjdjZGQwNg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=p9bisthb9k8eqi4gb5f6kh6sbp]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families/camcorders/variants
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/camcorders\/variants?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/camcorders\/variants?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:36 GMT']
+      Keep-Alive: ['timeout=5, max=98']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwNmVjMzMzMTJmODg1OWJkNzNkNjMyYzFhN2IwMDIyYjk1OGY3MTg5N2VkYWM2YTQ0N2MyNWEyYjdjZGQwNg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=p9bisthb9k8eqi4gb5f6kh6sbp]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families/clothing/variants
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/clothing\/variants?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/clothing\/variants?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/clothing\/variants\/clothing_color"}},"code":"clothing_color","labels":{"de_DE":"Kleidung
+        nach Farbe","en_US":"Clothing by color","fr_FR":"V\u00eatements par couleur"},"variant_attribute_sets":[{"level":1,"axes":["color"],"attributes":["sku","variation_name","variation_image","composition","color","ean"]}]},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/clothing\/variants\/clothing_color_size"}},"code":"clothing_color_size","labels":{"de_DE":"Kleidung
+        nach Farbe und Gr\u00f6\u00dfe","en_US":"Clothing by color and size","fr_FR":"V\u00eatements
+        par couleur et taille"},"variant_attribute_sets":[{"level":1,"axes":["color"],"attributes":["variation_name","variation_image","composition","color","material"]},{"level":2,"axes":["size"],"attributes":["sku","weight","size","ean"]}]},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/clothing\/variants\/clothing_colorsize"}},"code":"clothing_colorsize","labels":{"de_DE":"Kleidung
+        nach Farbe\/Gr\u00f6\u00dfe","en_US":"Clothing by color\/size","fr_FR":"V\u00eatements
+        par couleur\/taille"},"variant_attribute_sets":[{"level":1,"axes":["color","size"],"attributes":["sku","variation_name","variation_image","composition","color","size","ean"]}]},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/clothing\/variants\/clothing_material_size"}},"code":"clothing_material_size","labels":{"de_DE":"Clothing
+        by material and size","en_US":"Clothing by material and size","fr_FR":"V\u00eatements
+        par mati\u00e8re et taille"},"variant_attribute_sets":[{"level":1,"axes":["material"],"attributes":["variation_name","variation_image","composition","color","material"]},{"level":2,"axes":["size"],"attributes":["sku","weight","size","ean"]}]},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/clothing\/variants\/clothing_size"}},"code":"clothing_size","labels":{"de_DE":"Kleidung
+        nach Gr\u00f6\u00dfe","en_US":"Clothing by size","fr_FR":"V\u00eatements par
+        taille"},"variant_attribute_sets":[{"level":1,"axes":["size"],"attributes":["sku","weight","size","ean"]}]}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:37 GMT']
+      Keep-Alive: ['timeout=5, max=97']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwNmVjMzMzMTJmODg1OWJkNzNkNjMyYzFhN2IwMDIyYjk1OGY3MTg5N2VkYWM2YTQ0N2MyNWEyYjdjZGQwNg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=p9bisthb9k8eqi4gb5f6kh6sbp]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families/digital_cameras/variants
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/digital_cameras\/variants?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/digital_cameras\/variants?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:38 GMT']
+      Keep-Alive: ['timeout=5, max=96']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwNmVjMzMzMTJmODg1OWJkNzNkNjMyYzFhN2IwMDIyYjk1OGY3MTg5N2VkYWM2YTQ0N2MyNWEyYjdjZGQwNg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=p9bisthb9k8eqi4gb5f6kh6sbp]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families/headphones/variants
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/headphones\/variants?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/headphones\/variants?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:39 GMT']
+      Keep-Alive: ['timeout=5, max=95']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwNmVjMzMzMTJmODg1OWJkNzNkNjMyYzFhN2IwMDIyYjk1OGY3MTg5N2VkYWM2YTQ0N2MyNWEyYjdjZGQwNg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=p9bisthb9k8eqi4gb5f6kh6sbp]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families/laser_led_printers/variants
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/laser_led_printers\/variants?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/laser_led_printers\/variants?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:39 GMT']
+      Keep-Alive: ['timeout=5, max=94']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwNmVjMzMzMTJmODg1OWJkNzNkNjMyYzFhN2IwMDIyYjk1OGY3MTg5N2VkYWM2YTQ0N2MyNWEyYjdjZGQwNg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=p9bisthb9k8eqi4gb5f6kh6sbp]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families/led_tvs/variants
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/led_tvs\/variants?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/led_tvs\/variants?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/led_tvs\/variants\/tv"}},"code":"tv","labels":{"de_DE":"LED
+        TV","en_US":"LED TV","fr_FR":"LED TV"},"variant_attribute_sets":[{"level":1,"axes":["display_diagonal"],"attributes":["sku","price","weight","display_diagonal","picture"]}]}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:40 GMT']
+      Keep-Alive: ['timeout=5, max=93']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwNmVjMzMzMTJmODg1OWJkNzNkNjMyYzFhN2IwMDIyYjk1OGY3MTg5N2VkYWM2YTQ0N2MyNWEyYjdjZGQwNg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=p9bisthb9k8eqi4gb5f6kh6sbp]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families/loudspeakers/variants
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/loudspeakers\/variants?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/loudspeakers\/variants?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:40 GMT']
+      Keep-Alive: ['timeout=5, max=92']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwNmVjMzMzMTJmODg1OWJkNzNkNjMyYzFhN2IwMDIyYjk1OGY3MTg5N2VkYWM2YTQ0N2MyNWEyYjdjZGQwNg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=p9bisthb9k8eqi4gb5f6kh6sbp]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families/mp3_players/variants
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/mp3_players\/variants?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/mp3_players\/variants?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:41 GMT']
+      Keep-Alive: ['timeout=5, max=91']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwNmVjMzMzMTJmODg1OWJkNzNkNjMyYzFhN2IwMDIyYjk1OGY3MTg5N2VkYWM2YTQ0N2MyNWEyYjdjZGQwNg]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=p9bisthb9k8eqi4gb5f6kh6sbp]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families/mugs/variants
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/mugs\/variants?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/mugs\/variants?page=1\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Thu, 26 Oct 2017 13:22:42 GMT']
+      Keep-Alive: ['timeout=5, max=90']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+version: 1
