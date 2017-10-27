@@ -24,7 +24,24 @@ sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('../akeneo_api_client'))
 sys.path.insert(0, os.path.abspath('_themes'))
 
+# from recommonmark.parser import CommonMarkParser
 
+# source_parsers = {
+#     '.md': CommonMarkParser,
+# }
+
+# import recommonmark
+# from recommonmark.transform import AutoStructify
+
+
+# # At the bottom of conf.py
+# # github_doc_root = 'https://github.com/matthieudelaro/akeneo_api_client'
+# def setup(app):
+#     app.add_config_value('recommonmark_config', {
+#             'url_resolver': lambda url: github_doc_root + url,
+#             'auto_toc_tree_section': 'Contents',
+#             }, True)
+#     app.add_transform(AutoStructify)
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -47,16 +64,16 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.py']
+# source_suffix = ['.rst', '.md']
 source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
 
 # General information about the project.
-project = 'Akeneo PIM Python API Client'
-copyright = '2017, matthieudelaro'
-author = 'matthieudelaro'
+project = u'Akeneo PIM Python API Client'
+copyright = u'2017, matthieudelaro'
+author = u'matthieudelaro'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -102,7 +119,7 @@ html_theme_options = {
     'github_user': 'matthieudelaro',
     'github_repo': 'akeneo_api_client',
     'github_banner': True,
-    'show_related': True,
+    'show_related': False,
     'note_bg': '#FFF59C'
 }
 
@@ -116,12 +133,20 @@ html_static_path = ['_static']
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
+# html_sidebars = {
+#     '**': [
+#         'relations.html',  # needs 'show_related': True theme option to display
+#         'searchbox.html',
+#     ]
+# }
+
 html_sidebars = {
-    '**': [
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-    ]
+    'index':    ['sidebarintro.html', 'sourcelink.html', 'searchbox.html',
+                 'hacks.html'],
+    '**':       ['sidebarlogo.html', 'localtoc.html', 'relations.html',
+                 'sourcelink.html', 'searchbox.html', 'hacks.html']
 }
+
 
 
 # -- Options for HTMLHelp output ------------------------------------------
@@ -189,3 +214,5 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 #     'https://docs.python.org/': None,
 #     'http://docs.python-requests.org/':
 # }
+
+

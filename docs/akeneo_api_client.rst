@@ -1,10 +1,10 @@
-akeneo\_api\_client package
-===========================
+.. akeneo\_api\_client package
+.. ===========================
 
-Submodules
-----------
+.. Submodules
+.. ----------
 
-akeneo\_api\_client\.auth module
+auth module
 --------------------------------
 
 .. automodule:: akeneo_api_client.auth
@@ -12,7 +12,7 @@ akeneo\_api\_client\.auth module
     :undoc-members:
     :show-inheritance:
 
-akeneo\_api\_client\.client module
+client module
 ----------------------------------
 
 .. automodule:: akeneo_api_client.client
@@ -20,7 +20,7 @@ akeneo\_api\_client\.client module
     :undoc-members:
     :show-inheritance:
 
-akeneo\_api\_client\.collection module
+collection module
 --------------------------------------
 
 .. automodule:: akeneo_api_client.collection
@@ -28,7 +28,7 @@ akeneo\_api\_client\.collection module
     :undoc-members:
     :show-inheritance:
 
-akeneo\_api\_client\.interfaces module
+interfaces module
 --------------------------------------
 
 .. automodule:: akeneo_api_client.interfaces
@@ -36,7 +36,7 @@ akeneo\_api\_client\.interfaces module
     :undoc-members:
     :show-inheritance:
 
-akeneo\_api\_client\.resources module
+resources module
 -------------------------------------
 
 .. automodule:: akeneo_api_client.resources
@@ -44,7 +44,7 @@ akeneo\_api\_client\.resources module
     :undoc-members:
     :show-inheritance:
 
-akeneo\_api\_client\.utils module
+utils module
 ---------------------------------
 
 .. automodule:: akeneo_api_client.utils
@@ -53,10 +53,10 @@ akeneo\_api\_client\.utils module
     :show-inheritance:
 
 
-Module contents
----------------
+.. Module contents
+.. ---------------
 
-.. automodule:: akeneo_api_client
-    :members:
-    :undoc-members:
-    :show-inheritance:
+.. .. automodule:: akeneo_api_client
+..     :members:
+..     :undoc-members:
+..     :show-inheritance:

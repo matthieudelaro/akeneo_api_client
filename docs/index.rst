@@ -10,23 +10,29 @@ Welcome to Akeneo PIM Python API Client's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-.. automodule:: akeneo_api_client
-   :members:
-   :undoc-members:
-   :private-members:
-   :special-members:
-   :show-inheritance:
+.. include:: ../README.rst
 
-   .. autoclass:: Client
-      :members:
-      :undoc-members:
-      :private-members:
-      :special-members:
-      :show-inheritance:
+Module
+======
+.. include:: modules.rst
 
-Indices and tables
-==================
+.. .. automodule:: akeneo_api_client
+..    :members:
+..    :undoc-members:
+..    :private-members:
+..    :special-members:
+..    :show-inheritance:
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+..    .. autoclass:: Client
+..       :members:
+..       :undoc-members:
+..       :private-members:
+..       :special-members:
+..       :show-inheritance:
+
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`

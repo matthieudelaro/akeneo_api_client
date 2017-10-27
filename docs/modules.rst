@@ -1,5 +1,5 @@
-akeneo_api_client
-=================
+.. akeneo_api_client
+.. =================
 
 .. toctree::
    :maxdepth: 4
