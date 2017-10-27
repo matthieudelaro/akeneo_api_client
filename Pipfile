@@ -16,6 +16,7 @@ logzero = "*"
 nose = "*"
 ipython = "*"
 vcrpy-unittest = "*"
+sphinx = "*"
 
 
 [requires]
