@@ -24,6 +24,15 @@ sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('../akeneo_api_client'))
 sys.path.insert(0, os.path.abspath('_themes'))
 
+# import subprocess
+# # # call(["pipenv", "lock", "-r"])
+# Requirements = subprocess.run(["pipenv", "lock", "-r"], stdout=subprocess.PIPE).stdout.decode('utf-8')
+# rst_epilog = """
+# .. |Requirements| replace:: {Requirements}
+# """.format(
+# Requirements = Requirements,
+# )
+
 # from recommonmark.parser import CommonMarkParser
 
 # source_parsers = {
