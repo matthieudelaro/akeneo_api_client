@@ -19,7 +19,12 @@ class CreatableResourceInterface(abc.ABC):
 
 class UpdatableResourceInterface(abc.ABC):
     # @abc.abstractmethod
-    def update_item(self, item):
+    def update_create_item(self, item_values, code=None):
+        pass
+
+class UpdatableListResourceInterface(abc.ABC):
+    # @abc.abstractmethod
+    def update_create_list(self, item_values, code=None):
         pass
 
 class DeletableResourceInterface(abc.ABC):

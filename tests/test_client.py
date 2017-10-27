@@ -33,8 +33,31 @@ class TestClient(VCRTestCase):
         logzero.loglevel(logging.INFO)
         myvcr = super(TestClient, self)._get_vcr(**kwargs)
         myvcr.match_on = ['method', 'path', 'query', 'body', 'headers']
-        myvcr.record_mode='once'
+        myvcr.record_mode='none'
         return myvcr
+
+    def test_family_update(self):
+        akeneo = Client(self.base_url,
+            self.client_id, self.secret, self.username, self.password)
+
+        # TODO: make a real test, this one is terrible
+        res = akeneo.families.update_create_item({
+            "code": "boots",
+            "labels": {
+                "en_US": "Boots",
+            }
+        })
+        res = akeneo.families.update_create_item({
+            "code": "boots",
+            "labels": {
+                "fr_FR": "Bottes",
+            }
+        })
+        item = akeneo.families.fetch_item('boots')
+        self.assertEquals(item['labels'], {
+                "en_US": "Boots",
+                "fr_FR": "Bottes",
+            })
 
     def test_product_search(self):
         akeneo = Client(self.base_url,
@@ -190,4 +213,3 @@ class TestClient(VCRTestCase):
 
     valid_product = """{"identifier":"myawesometshirt","enabled":true,"family":"clothing","categories":["master_men_blazers"],"groups":[],"parent":null,"values":{"collection":[{"data":["summer_2017"],"locale":null,"scope":null}],"color":[{"data":"white","locale":null,"scope":null}],"description":[{"data":"Biker jacket","locale":"en_US","scope":"ecommerce"}],"ean":[{"data":"1234567946367","locale":null,"scope":null}],"material":[{"data":"polyester","locale":null,"scope":null}],"name":[{"data":"Biker jacket","locale":null,"scope":null}],"price":[{"data":[{"amount":null,"currency":"EUR"},{"amount":null,"currency":"USD"}],"locale":null,"scope":null}],"size":[{"data":"xl","locale":null,"scope":null}],"variation_name":[{"data":"Biker jacket polyester","locale":"en_US","scope":null}]}}"""
 
-    

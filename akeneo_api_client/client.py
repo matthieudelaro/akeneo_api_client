@@ -13,24 +13,18 @@ from logzero import logger
 
 import urllib.parse
 
-class ProductPool(ResourcePool,
-    CreatableResource,
-    DeletableResource,
-    GettableResource,
-    ListableResource,):
-    pass
 
 class Client:
     BASIC_API_PATH = '/api/rest/v1/'
     RESOURCE_NAMES = [
-        'association_types', 
-        'attributes', 
+        'association_types',
+        'attributes',
         'attribute_groups',
-        'categories', 
-        'channels', 
-        'currencies', 
-        'families', 
-        'locales', 
+        'categories',
+        'channels',
+        'currencies',
+        'families',
+        'locales',
         'measure_families',
         'media_files',
         'products',
@@ -42,7 +36,7 @@ class Client:
         base_url, client_id=None, secret=None, username=None, password=None,
         session=None, auth=None):
         """Expect credential
-        1) as auth, or 
+        1) as auth, or
         2) as client_id+secret+username+password, or
         3) as session having an authentication."""
         provided_auth = False
@@ -50,7 +44,7 @@ class Client:
             if client_id or secret or username or password:
                 if client_id and secret and username and password:
                     provided_auth = True
-                    auth = Auth(base_url, client_id, secret, 
+                    auth = Auth(base_url, client_id, secret,
                                 username, password)
             elif session:
                 provided_auth = True
@@ -70,25 +64,25 @@ class Client:
         if auth:
             self._session.auth = auth
         self._session.headers.update({'Content-Type': 'application/json'})
-        self._association_types = ResourcePool(
+        self._association_types = AssociationTypesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'association-types/'), session)
         self._attributes = AttributesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'attributes/'), session)
-        self._attribute_groups = ResourcePool(
+        self._attribute_groups = AttributeGroupsPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'attribute-groups/'), session)
-        self._categories = ResourcePool(
+        self._categories = CategoriesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'categories/'), session)
-        self._channels = ResourcePool(
+        self._channels = ChannelsPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'channels/'), session)
-        self._currencies = ResourcePool(
+        self._currencies = CurrenciesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'currencies/'), session)
         self._families = FamiliesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'families/'), session)
-        self._locales = ResourcePool(
+        self._locales = LocalesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'locales/'), session)
-        self._measure_families = ResourcePool(
+        self._measure_families = MeasureFamiliesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'measure-families/'), session)
-        self._media_files = ResourcePool(
+        self._media_files = MediaFilesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'media-files/'), session)
         self._products = ProductsPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'products/'), session)

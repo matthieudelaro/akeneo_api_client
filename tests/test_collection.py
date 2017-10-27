@@ -21,6 +21,14 @@ from vcr_unittest import VCRTestCase
 import copy
 
 
+class BasicResourcePool(ResourcePool,
+        CreatableResource,
+        DeletableResource,
+        GettableResource,
+        ListableResource
+        ):
+    pass
+
 class TestPoolMock(VCRTestCase):
     client_id = '1_ovvscbaj0pwwg8sookkgkc8ck4kog8gscg8g44sc88c8w48ww'
     secret = 'rpi0wuiusa8okok4cw8kkkc4s488gc0sggkc0480wskkgkwo0'
@@ -40,10 +48,10 @@ class TestPoolMock(VCRTestCase):
         session.auth = Auth(self.base_url,
             self.client_id, self.secret, self.username, self.password)
         session.headers.update({'Content-Type': 'application/json'})
-        pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
+        pool = BasicResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
         pool.create_item(json.loads(self.valid_product))
         pool.delete_item('myawesometshirt')
-    
+
     def test_create_delete_from_real_element(self):
         session = requests.Session()
         session.auth = Auth(self.base_url,
@@ -51,9 +59,9 @@ class TestPoolMock(VCRTestCase):
         session.headers.update({'Content-Type': 'application/json'})
         if False:
             session.auth._request_a_token()
-            pool = ResourcePool(urljoin('http://localhost:8088', '/api/rest/v1/', 'products/'), session)
+            pool = BasicResourcePool(urljoin('http://localhost:8088', '/api/rest/v1/', 'products/'), session)
         else:
-            pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
+            pool = BasicResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
         initialItem = pool.fetch_item('Biker-jacket-polyester-xl')
         item = copy.deepcopy(initialItem)
         item['identifier'] = 'myawesometshirt'
@@ -78,7 +86,7 @@ class TestCollectionMock(VCRTestCase):
         myvcr.match_on = ['method', 'path', 'query', 'body', 'headers']
         myvcr.record_mode='none'
         return myvcr
-        
+
     def test_valid_json_text(self):
         c = Collection(requests.Session(), json_text=self.json_text)
 
@@ -100,7 +108,7 @@ class TestCollectionMock(VCRTestCase):
         session.auth = Auth(self.base_url,
             self.client_id, self.secret, self.username, self.password)
         session.headers.update({'Content-Type': 'application/json'})
-        pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
+        pool = BasicResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
         item = pool.fetch_item('1111111137')
         logger.debug(item)
         self.assertEqual(item['identifier'], '1111111137')
@@ -111,7 +119,7 @@ class TestCollectionMock(VCRTestCase):
         session.auth = Auth(self.base_url,
             self.client_id, self.secret, self.username, self.password)
         session.headers.update({'Content-Type': 'application/json'})
-        pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products_invalid/'), session)
+        pool = BasicResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products_invalid/'), session)
         with self.assertRaises(requests.HTTPError):
             item = pool.fetch_item('1111111137')
 
@@ -120,7 +128,7 @@ class TestCollectionMock(VCRTestCase):
         session.auth = Auth(self.base_url,
             self.client_id, self.secret, self.username, self.password)
         session.headers.update({'Content-Type': 'application/json'})
-        pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
+        pool = BasicResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
         with self.assertRaises(requests.HTTPError):
             item = pool.fetch_item('1111111137asdfsdfgsdf')
 
@@ -129,7 +137,7 @@ class TestCollectionMock(VCRTestCase):
         session.auth = Auth(self.base_url,
             self.client_id, self.secret, self.username, self.password)
         session.headers.update({'Content-Type': 'application/json'})
-        pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
+        pool = BasicResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
         c = pool.fetch_list()
         self.assertEqual(len(c._items), 10)
         c.fetch_next_page()
@@ -142,7 +150,7 @@ class TestCollectionMock(VCRTestCase):
         session.auth = Auth(self.base_url,
             self.client_id, self.secret, self.username, self.password)
         session.headers.update({'Content-Type': 'application/json'})
-        pool = ResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
+        pool = BasicResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
         c = pool.fetch_list()
         self.assertEqual(len(c._items), 10)
         iterator = iter(c)
