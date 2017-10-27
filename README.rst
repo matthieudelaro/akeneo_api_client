@@ -1,4 +1,6 @@
 |Build Status|
+|Documentation Status|
+
 
 Python client for Akeneo PIM API
 ================================
@@ -25,8 +27,9 @@ Run tests as follow:
 
 Tests are provided with mocks, recorded with `VCR.py`_. In case you need
 to (re)run tests, you should install the dataset in you PIM instance as
-follow: - specify the database to install in
-``app/config/parameters.yml``:
+follow:
+
+- specify the database to install in app/config/parameters.yml:
 
 .. code:: yaml
 
@@ -46,3 +49,5 @@ follow: - specify the database to install in
 
 .. |Build Status| image:: https://travis-ci.org/matthieudelaro/akeneo_api_client.svg?branch=master
    :target: https://travis-ci.org/matthieudelaro/akeneo_api_client
+.. |Documentation Status| image:: https://readthedocs.org/projects/akeneo-api-client/badge/?version=latest
+   :target: http://akeneo-api-client.readthedocs.io/en/latest/

@@ -3,18 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Akeneo PIM Python API Client's documentation!
-========================================================
+Akeneo PIM Python API Client
+============================
+
+------------
+
+Content
+=======
+.. include:: modules.rst
+
+.. include:: ../README.rst
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
-.. include:: ../README.rst
-
-Module
-======
-.. include:: modules.rst
 
 .. .. automodule:: akeneo_api_client
 ..    :members:
