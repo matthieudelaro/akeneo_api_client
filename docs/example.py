@@ -39,5 +39,16 @@ iterator = iter(items)
 for i in range(200):
     item = next(iterator)
 print(len(items.get_list())) # 200
+# See Akeneo and Pagination: https://api.akeneo.com/documentation/pagination.html
+
+# When using the iterator, all the items are kept in memory.
+# This is an issue when processing a large amount of data.
+# In this case, better use the generator:
+lots_of_items = akeneo.products.fetch_list()
+for item in lots_of_items.get_generator():
+	print(item)
+print(len(items.get_list())) # 10, ie the size of the page,
+# instead of the total amount of items that have been fetched.
+
 
 

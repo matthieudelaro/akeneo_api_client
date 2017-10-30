@@ -13,21 +13,30 @@ import urllib.parse
 
 
 class Collection:
+    """Holds the result of a search. It can be iterated through as a list,
+    as an iterator, or as a generator. Note that only one iteration should be
+    used on a given Collection object.
+    Search results are paginated: https://api.akeneo.com/documentation/pagination.html
+
+    Using Collection.get_iterator(), the next page will be loaded once the user
+    iterated over the whole current page. The content of the new page will be
+    appended at the end of the current list of items.
+
+    Using Collection.get_generator(), the next page will be loaded once the user
+    iterated over the whole current page. But items of previous pages will
+    be forgotten."""
     def __init__(self, session, json_data=None, json_text=None):
         if json_text and not json_data:
             json_data = json.loads(json_text)
         elif json_data and not json_text:
-            # json_data = json_data
             pass
         else:
             raise ValueError("Please provide either json_data, or json_text.")
         if not session:
             raise ValueError("session should be provided")
         self._session = session
-        # logger.debug(json_data)
         self._link_first = json_data["_links"]["first"]
-        self._items = []
-        self._parse_page(json_data)
+        (self._link_next, self._items) = self._parse_page(json_data)
 
     def get_list(self):
         return self._items
@@ -41,18 +50,35 @@ class Collection:
                 raise StopIteration()
             else:
                 json_data = json.loads(r.text)
-                self._parse_page(json_data)
+                (self._link_next, new_items) = self._parse_page(json_data)
+                self._items += new_items
 
     def _parse_page(self, json_data):
+        final_next_link = None
         next_link = json_data["_links"].get('next')
         if next_link:
-            self._link_next = urllib.parse.unquote(next_link['href'])
-        else:
-            self._link_next = None
-        self._items += json_data["_embedded"]["items"]
+            final_next_link = urllib.parse.unquote(next_link['href'])
+        return (final_next_link, json_data["_embedded"]["items"])
 
     def __iter__(self):
         return CollectionIterator(self)
+
+    def get_iterator(self):
+        return CollectionIterator(self)
+
+    def get_generator(self):
+        """Iterate over the result pages, in an efficient manner.
+        Doesn't store previous pages. Just yield elements one after another,
+        while fetching next elements when required."""
+        items = self._items
+        link_next = self._link_next
+        while True:
+            for item in items:
+                yield item
+            r = self._session.get(link_next)
+            if r.status_code == 200:
+                (link_next, items) = self._parse_page(json.loads(r.text))
+
 
 
 class CollectionIterator:
@@ -78,10 +104,3 @@ class CollectionIterator:
             return item
         else:
             raise StopIteration()
-
-
-class CollectionGenerator:
-    """TODO: make a collection iterable as a generator instead of an iterator,
-    to address performance concerns when handling a huge amount of data.
-    See http://anandology.com/python-practice-book/iterators.html#generators."""
-    pass
