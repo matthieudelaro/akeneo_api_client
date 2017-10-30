@@ -1,0 +1,101 @@
+interactions:
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV9vdnZzY2JhajBwd3dnOHNvb2trZ2tjOGNrNGtvZzhnc2NnOGc0NHNjODhjOHc0OHd3OnJwaTB3dWl1c2E4b2tvazRjdzhra2tjNHM0ODhnYzBzZ2drYzA0ODB3c2trZ2t3bzA=]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"NmMwMWNmYjU1ZTI0YjJiZTkwNDhlMmY1MGY1OGJhNTk2MGY1MWU1ZmY3MTFiMDcyYWNmNTAwNGM1NWQxZWEyMg","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"ZjgzMmJiZTU5ZWE1Y2ZhYzQ2ZDYzMWRiMjJiNGViNzc1NmM2YWI1YWFiMmFlMmE3Yjc1ODk5ZWMzMzIwN2VlNA"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Mon, 30 Oct 2017 11:29:52 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=nlb4nd188nba72pkbr5gdrpi04; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"identifier":"PIMmy42"}
+
+      {"identifier":"PIMmy43"}
+
+      '
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwMWNmYjU1ZTI0YjJiZTkwNDhlMmY1MGY1OGJhNTk2MGY1MWU1ZmY3MTFiMDcyYWNmNTAwNGM1NWQxZWEyMg]
+      Connection: [keep-alive]
+      Content-Length: ['50']
+      Content-type: [application/vnd.akeneo.collection+json]
+      User-Agent: [python-requests/2.18.4]
+    method: PATCH
+    uri: http://localhost:8080/api/rest/v1/products
+  response:
+    body: {string: '{"line":1,"identifier":"PIMmy42","status_code":201}
+
+        {"line":2,"identifier":"PIMmy43","status_code":201}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/vnd.akeneo.collection+json]
+      Date: ['Mon, 30 Oct 2017 11:29:53 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=64dtloavm0kpns36llm9jgfs2g; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwMWNmYjU1ZTI0YjJiZTkwNDhlMmY1MGY1OGJhNTk2MGY1MWU1ZmY3MTFiMDcyYWNmNTAwNGM1NWQxZWEyMg]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=64dtloavm0kpns36llm9jgfs2g]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy42
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:29:54 GMT']
+      Keep-Alive: ['timeout=5, max=99']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer NmMwMWNmYjU1ZTI0YjJiZTkwNDhlMmY1MGY1OGJhNTk2MGY1MWU1ZmY3MTFiMDcyYWNmNTAwNGM1NWQxZWEyMg]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=64dtloavm0kpns36llm9jgfs2g]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy43
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:29:56 GMT']
+      Keep-Alive: ['timeout=5, max=98']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+version: 1

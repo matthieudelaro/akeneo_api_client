@@ -11,6 +11,7 @@ import logzero
 from logzero import logger
 
 import urllib.parse
+import math
 
 class CreatableResource(CreatableResourceInterface):
     def create_item(self, item):
@@ -74,13 +75,12 @@ class GettableResource(GettableResourceInterface):
 
 class DeletableResource(DeletableResourceInterface):
     def delete_item(self, code):
-        logger.debug(self._endpoint)
         url = urljoin(self._endpoint, code)
         r = self._session.delete(url)
 
         if r.status_code != 204:
             raise requests.HTTPError("The item {0} doesn't exit. Content: {1}".format(
-                r.status_code,
+                code,
                 r.text))
 
 
@@ -102,8 +102,40 @@ class UpdatableResource(UpdatableResourceInterface):
 
 
 class UpdatableListResource(UpdatableResourceInterface):
-    def update_create_list(self, item_values, code=None):
-        raise NotImplementedError()
+    def update_create_list(self, items, code=None):
+        url = self._endpoint
+        data = ""
+        for item in items:
+            data += json.dumps(item, separators=(',', ':')) + '\n'
+        r = self._session.patch(url, data=data, headers={'Content-type':'application/vnd.akeneo.collection+json'})
+
+        if r.status_code == 413:
+            # TODO handle 413
+                # Request Entity Too Large
+                # There are too many resources to process (max 100)
+                # =>>>>> or the line of JSON is too long (max 1 000 000 characters)
+            # split the list in several chuncks
+            num = 100
+            n = math.ceil(len(items) / num)
+
+            itemss = [ items[i:i + num] for i in range(0, (n-1)*num, num)]
+            itemss.append(items[(n-1)*num:])
+
+            return [item
+                    for those_items in itemss
+                    for item in self.update_create_list(those_items)]
+
+        if r.status_code != 200:
+            raise requests.HTTPError("Status code: {0}. Content: {1}".format(
+                r.status_code,
+                r.text))
+
+        else:
+            statuses = []
+            for line in r.text.split('\n'):
+                statuses.append(json.loads(line))
+            return statuses
+
 
 class IdentifierBasedResource(CodeBasedResourceInterface):
     def get_code(self, item):

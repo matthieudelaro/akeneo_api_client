@@ -1,0 +1,3500 @@
+interactions:
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV9vdnZzY2JhajBwd3dnOHNvb2trZ2tjOGNrNGtvZzhnc2NnOGc0NHNjODhjOHc0OHd3OnJwaTB3dWl1c2E4b2tvazRjdzhra2tjNHM0ODhnYzBzZ2drYzA0ODB3c2trZ2t3bzA=]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"MDlhMjM5ZDdhNzhhZDE1ZTYzYTNhMWVlNTRjNTVlZmZlOThjMDE0ZmRkNDY2NTVjYmFhMmQ3YmFhMTg4NmMyNg"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Mon, 30 Oct 2017 11:29:57 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=vj05v4jjrp1sbqqfrug8rbifb7; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"identifier":"PIMmy0","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy1","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy2","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy3","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy4","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy5","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy6","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy7","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy8","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy9","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy10","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy11","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy12","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy13","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy14","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy15","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy16","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy17","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy18","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy19","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy20","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy21","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy22","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy23","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy24","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy25","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy26","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy27","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy28","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy29","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy30","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy31","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy32","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy33","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy34","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy35","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy36","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy37","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy38","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy39","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy40","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy41","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy42","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy43","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy44","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy45","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy46","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy47","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy48","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy49","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy50","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy51","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy52","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy53","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy54","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy55","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy56","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy57","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy58","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy59","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy60","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy61","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy62","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy63","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy64","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy65","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy66","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy67","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy68","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy69","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy70","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy71","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy72","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy73","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy74","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy75","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy76","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy77","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy78","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy79","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy80","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy81","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy82","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy83","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy84","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy85","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy86","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy87","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy88","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy89","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy90","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy91","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy92","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy93","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy94","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy95","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy96","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy97","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy98","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy99","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy100","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy101","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy102","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy103","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy104","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy105","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy106","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy107","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy108","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy109","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      '
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['14410']
+      Content-type: [application/vnd.akeneo.collection+json]
+      User-Agent: [python-requests/2.18.4]
+    method: PATCH
+    uri: http://localhost:8080/api/rest/v1/products
+  response:
+    body: {string: '{"code":413,"message":"Too many resources to process, 100 is the
+        maximum allowed."}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [close]
+      Content-Type: [application/json]
+      Date: ['Mon, 30 Oct 2017 11:29:58 GMT']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=370tl0laljstskkgqoilucjui5; path=/; HttpOnly]
+    status: {code: 413, message: Payload Too Large}
+- request:
+    body: '{"identifier":"PIMmy0","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy1","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy2","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy3","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy4","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy5","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy6","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy7","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy8","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy9","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy10","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy11","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy12","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy13","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy14","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy15","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy16","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy17","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy18","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy19","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy20","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy21","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy22","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy23","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy24","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy25","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy26","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy27","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy28","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy29","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy30","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy31","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy32","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy33","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy34","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy35","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy36","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy37","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy38","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy39","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy40","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy41","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy42","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy43","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy44","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy45","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy46","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy47","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy48","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy49","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy50","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy51","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy52","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy53","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy54","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy55","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy56","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy57","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy58","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy59","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy60","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy61","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy62","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy63","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy64","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy65","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy66","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy67","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy68","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy69","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy70","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy71","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy72","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy73","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy74","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy75","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy76","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy77","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy78","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy79","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy80","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy81","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy82","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy83","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy84","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy85","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy86","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy87","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy88","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy89","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy90","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy91","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy92","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy93","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy94","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy95","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy96","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy97","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy98","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy99","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      '
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['13090']
+      Content-type: [application/vnd.akeneo.collection+json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: PATCH
+    uri: http://localhost:8080/api/rest/v1/products
+  response:
+    body: {string: '{"line":1,"identifier":"PIMmy0","status_code":201}
+
+        {"line":2,"identifier":"PIMmy1","status_code":201}
+
+        {"line":3,"identifier":"PIMmy2","status_code":201}
+
+        {"line":4,"identifier":"PIMmy3","status_code":201}
+
+        {"line":5,"identifier":"PIMmy4","status_code":201}
+
+        {"line":6,"identifier":"PIMmy5","status_code":201}
+
+        {"line":7,"identifier":"PIMmy6","status_code":201}
+
+        {"line":8,"identifier":"PIMmy7","status_code":201}
+
+        {"line":9,"identifier":"PIMmy8","status_code":201}
+
+        {"line":10,"identifier":"PIMmy9","status_code":201}
+
+        {"line":11,"identifier":"PIMmy10","status_code":201}
+
+        {"line":12,"identifier":"PIMmy11","status_code":201}
+
+        {"line":13,"identifier":"PIMmy12","status_code":201}
+
+        {"line":14,"identifier":"PIMmy13","status_code":201}
+
+        {"line":15,"identifier":"PIMmy14","status_code":201}
+
+        {"line":16,"identifier":"PIMmy15","status_code":201}
+
+        {"line":17,"identifier":"PIMmy16","status_code":201}
+
+        {"line":18,"identifier":"PIMmy17","status_code":201}
+
+        {"line":19,"identifier":"PIMmy18","status_code":201}
+
+        {"line":20,"identifier":"PIMmy19","status_code":201}
+
+        {"line":21,"identifier":"PIMmy20","status_code":201}
+
+        {"line":22,"identifier":"PIMmy21","status_code":201}
+
+        {"line":23,"identifier":"PIMmy22","status_code":201}
+
+        {"line":24,"identifier":"PIMmy23","status_code":201}
+
+        {"line":25,"identifier":"PIMmy24","status_code":201}
+
+        {"line":26,"identifier":"PIMmy25","status_code":201}
+
+        {"line":27,"identifier":"PIMmy26","status_code":201}
+
+        {"line":28,"identifier":"PIMmy27","status_code":201}
+
+        {"line":29,"identifier":"PIMmy28","status_code":201}
+
+        {"line":30,"identifier":"PIMmy29","status_code":201}
+
+        {"line":31,"identifier":"PIMmy30","status_code":201}
+
+        {"line":32,"identifier":"PIMmy31","status_code":201}
+
+        {"line":33,"identifier":"PIMmy32","status_code":201}
+
+        {"line":34,"identifier":"PIMmy33","status_code":201}
+
+        {"line":35,"identifier":"PIMmy34","status_code":201}
+
+        {"line":36,"identifier":"PIMmy35","status_code":201}
+
+        {"line":37,"identifier":"PIMmy36","status_code":201}
+
+        {"line":38,"identifier":"PIMmy37","status_code":201}
+
+        {"line":39,"identifier":"PIMmy38","status_code":201}
+
+        {"line":40,"identifier":"PIMmy39","status_code":201}
+
+        {"line":41,"identifier":"PIMmy40","status_code":201}
+
+        {"line":42,"identifier":"PIMmy41","status_code":201}
+
+        {"line":43,"identifier":"PIMmy42","status_code":201}
+
+        {"line":44,"identifier":"PIMmy43","status_code":201}
+
+        {"line":45,"identifier":"PIMmy44","status_code":201}
+
+        {"line":46,"identifier":"PIMmy45","status_code":201}
+
+        {"line":47,"identifier":"PIMmy46","status_code":201}
+
+        {"line":48,"identifier":"PIMmy47","status_code":201}
+
+        {"line":49,"identifier":"PIMmy48","status_code":201}
+
+        {"line":50,"identifier":"PIMmy49","status_code":201}
+
+        {"line":51,"identifier":"PIMmy50","status_code":201}
+
+        {"line":52,"identifier":"PIMmy51","status_code":201}
+
+        {"line":53,"identifier":"PIMmy52","status_code":201}
+
+        {"line":54,"identifier":"PIMmy53","status_code":201}
+
+        {"line":55,"identifier":"PIMmy54","status_code":201}
+
+        {"line":56,"identifier":"PIMmy55","status_code":201}
+
+        {"line":57,"identifier":"PIMmy56","status_code":201}
+
+        {"line":58,"identifier":"PIMmy57","status_code":201}
+
+        {"line":59,"identifier":"PIMmy58","status_code":201}
+
+        {"line":60,"identifier":"PIMmy59","status_code":201}
+
+        {"line":61,"identifier":"PIMmy60","status_code":201}
+
+        {"line":62,"identifier":"PIMmy61","status_code":201}
+
+        {"line":63,"identifier":"PIMmy62","status_code":201}
+
+        {"line":64,"identifier":"PIMmy63","status_code":201}
+
+        {"line":65,"identifier":"PIMmy64","status_code":204}
+
+        {"line":66,"identifier":"PIMmy65","status_code":204}
+
+        {"line":67,"identifier":"PIMmy66","status_code":204}
+
+        {"line":68,"identifier":"PIMmy67","status_code":204}
+
+        {"line":69,"identifier":"PIMmy68","status_code":204}
+
+        {"line":70,"identifier":"PIMmy69","status_code":204}
+
+        {"line":71,"identifier":"PIMmy70","status_code":204}
+
+        {"line":72,"identifier":"PIMmy71","status_code":204}
+
+        {"line":73,"identifier":"PIMmy72","status_code":204}
+
+        {"line":74,"identifier":"PIMmy73","status_code":204}
+
+        {"line":75,"identifier":"PIMmy74","status_code":204}
+
+        {"line":76,"identifier":"PIMmy75","status_code":204}
+
+        {"line":77,"identifier":"PIMmy76","status_code":204}
+
+        {"line":78,"identifier":"PIMmy77","status_code":204}
+
+        {"line":79,"identifier":"PIMmy78","status_code":204}
+
+        {"line":80,"identifier":"PIMmy79","status_code":204}
+
+        {"line":81,"identifier":"PIMmy80","status_code":204}
+
+        {"line":82,"identifier":"PIMmy81","status_code":204}
+
+        {"line":83,"identifier":"PIMmy82","status_code":204}
+
+        {"line":84,"identifier":"PIMmy83","status_code":204}
+
+        {"line":85,"identifier":"PIMmy84","status_code":204}
+
+        {"line":86,"identifier":"PIMmy85","status_code":204}
+
+        {"line":87,"identifier":"PIMmy86","status_code":204}
+
+        {"line":88,"identifier":"PIMmy87","status_code":204}
+
+        {"line":89,"identifier":"PIMmy88","status_code":204}
+
+        {"line":90,"identifier":"PIMmy89","status_code":204}
+
+        {"line":91,"identifier":"PIMmy90","status_code":204}
+
+        {"line":92,"identifier":"PIMmy91","status_code":204}
+
+        {"line":93,"identifier":"PIMmy92","status_code":204}
+
+        {"line":94,"identifier":"PIMmy93","status_code":204}
+
+        {"line":95,"identifier":"PIMmy94","status_code":204}
+
+        {"line":96,"identifier":"PIMmy95","status_code":204}
+
+        {"line":97,"identifier":"PIMmy96","status_code":204}
+
+        {"line":98,"identifier":"PIMmy97","status_code":204}
+
+        {"line":99,"identifier":"PIMmy98","status_code":204}
+
+        {"line":100,"identifier":"PIMmy99","status_code":204}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/vnd.akeneo.collection+json]
+      Date: ['Mon, 30 Oct 2017 11:29:59 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"identifier":"PIMmy100","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy101","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy102","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy103","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy104","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy105","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy106","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy107","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy108","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      {"identifier":"PIMmy109","family":"clothing","values":{"description":[{"scope":"ecommerce","locale":"en_US","data":"My
+      amazing"}]}}
+
+      '
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['1320']
+      Content-type: [application/vnd.akeneo.collection+json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: PATCH
+    uri: http://localhost:8080/api/rest/v1/products
+  response:
+    body: {string: '{"line":1,"identifier":"PIMmy100","status_code":204}
+
+        {"line":2,"identifier":"PIMmy101","status_code":204}
+
+        {"line":3,"identifier":"PIMmy102","status_code":204}
+
+        {"line":4,"identifier":"PIMmy103","status_code":204}
+
+        {"line":5,"identifier":"PIMmy104","status_code":204}
+
+        {"line":6,"identifier":"PIMmy105","status_code":204}
+
+        {"line":7,"identifier":"PIMmy106","status_code":204}
+
+        {"line":8,"identifier":"PIMmy107","status_code":204}
+
+        {"line":9,"identifier":"PIMmy108","status_code":204}
+
+        {"line":10,"identifier":"PIMmy109","status_code":204}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/vnd.akeneo.collection+json]
+      Date: ['Mon, 30 Oct 2017 11:30:04 GMT']
+      Keep-Alive: ['timeout=5, max=99']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy0
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:06 GMT']
+      Keep-Alive: ['timeout=5, max=98']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy1
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:07 GMT']
+      Keep-Alive: ['timeout=5, max=97']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy2
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:09 GMT']
+      Keep-Alive: ['timeout=5, max=96']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy3
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:11 GMT']
+      Keep-Alive: ['timeout=5, max=95']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy4
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:12 GMT']
+      Keep-Alive: ['timeout=5, max=94']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy5
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:14 GMT']
+      Keep-Alive: ['timeout=5, max=93']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy6
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:15 GMT']
+      Keep-Alive: ['timeout=5, max=92']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy7
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:18 GMT']
+      Keep-Alive: ['timeout=5, max=91']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy8
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:20 GMT']
+      Keep-Alive: ['timeout=5, max=90']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy9
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:21 GMT']
+      Keep-Alive: ['timeout=5, max=89']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy10
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:23 GMT']
+      Keep-Alive: ['timeout=5, max=88']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy11
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:24 GMT']
+      Keep-Alive: ['timeout=5, max=87']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy12
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:26 GMT']
+      Keep-Alive: ['timeout=5, max=86']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy13
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:27 GMT']
+      Keep-Alive: ['timeout=5, max=85']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy14
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:29 GMT']
+      Keep-Alive: ['timeout=5, max=84']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy15
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:31 GMT']
+      Keep-Alive: ['timeout=5, max=83']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy16
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:33 GMT']
+      Keep-Alive: ['timeout=5, max=82']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy17
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:35 GMT']
+      Keep-Alive: ['timeout=5, max=81']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy18
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:37 GMT']
+      Keep-Alive: ['timeout=5, max=80']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy19
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:40 GMT']
+      Keep-Alive: ['timeout=5, max=79']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy20
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:43 GMT']
+      Keep-Alive: ['timeout=5, max=78']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy21
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:45 GMT']
+      Keep-Alive: ['timeout=5, max=77']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy22
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:47 GMT']
+      Keep-Alive: ['timeout=5, max=76']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy23
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:49 GMT']
+      Keep-Alive: ['timeout=5, max=75']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy24
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:51 GMT']
+      Keep-Alive: ['timeout=5, max=74']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy25
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:53 GMT']
+      Keep-Alive: ['timeout=5, max=73']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy26
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:55 GMT']
+      Keep-Alive: ['timeout=5, max=72']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy27
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:57 GMT']
+      Keep-Alive: ['timeout=5, max=71']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy28
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:30:59 GMT']
+      Keep-Alive: ['timeout=5, max=70']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy29
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:02 GMT']
+      Keep-Alive: ['timeout=5, max=69']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy30
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:04 GMT']
+      Keep-Alive: ['timeout=5, max=68']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy31
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:06 GMT']
+      Keep-Alive: ['timeout=5, max=67']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy32
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:08 GMT']
+      Keep-Alive: ['timeout=5, max=66']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy33
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:10 GMT']
+      Keep-Alive: ['timeout=5, max=65']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy34
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:13 GMT']
+      Keep-Alive: ['timeout=5, max=64']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy35
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:15 GMT']
+      Keep-Alive: ['timeout=5, max=63']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy36
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:16 GMT']
+      Keep-Alive: ['timeout=5, max=62']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy37
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:18 GMT']
+      Keep-Alive: ['timeout=5, max=61']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy38
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:20 GMT']
+      Keep-Alive: ['timeout=5, max=60']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy39
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:23 GMT']
+      Keep-Alive: ['timeout=5, max=59']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy40
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:25 GMT']
+      Keep-Alive: ['timeout=5, max=58']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy41
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:27 GMT']
+      Keep-Alive: ['timeout=5, max=57']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy42
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:30 GMT']
+      Keep-Alive: ['timeout=5, max=56']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy43
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:31 GMT']
+      Keep-Alive: ['timeout=5, max=55']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy44
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:33 GMT']
+      Keep-Alive: ['timeout=5, max=54']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy45
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:36 GMT']
+      Keep-Alive: ['timeout=5, max=53']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy46
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:38 GMT']
+      Keep-Alive: ['timeout=5, max=52']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy47
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:41 GMT']
+      Keep-Alive: ['timeout=5, max=51']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy48
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:43 GMT']
+      Keep-Alive: ['timeout=5, max=50']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy49
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:45 GMT']
+      Keep-Alive: ['timeout=5, max=49']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy50
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:46 GMT']
+      Keep-Alive: ['timeout=5, max=48']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy51
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:48 GMT']
+      Keep-Alive: ['timeout=5, max=47']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy52
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:50 GMT']
+      Keep-Alive: ['timeout=5, max=46']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy53
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:52 GMT']
+      Keep-Alive: ['timeout=5, max=45']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy54
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:53 GMT']
+      Keep-Alive: ['timeout=5, max=44']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy55
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:55 GMT']
+      Keep-Alive: ['timeout=5, max=43']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy56
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:56 GMT']
+      Keep-Alive: ['timeout=5, max=42']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy57
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:31:59 GMT']
+      Keep-Alive: ['timeout=5, max=41']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy58
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:01 GMT']
+      Keep-Alive: ['timeout=5, max=40']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy59
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:03 GMT']
+      Keep-Alive: ['timeout=5, max=39']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy60
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:04 GMT']
+      Keep-Alive: ['timeout=5, max=38']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy61
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:05 GMT']
+      Keep-Alive: ['timeout=5, max=37']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy62
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:07 GMT']
+      Keep-Alive: ['timeout=5, max=36']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy63
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:09 GMT']
+      Keep-Alive: ['timeout=5, max=35']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy64
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:11 GMT']
+      Keep-Alive: ['timeout=5, max=34']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy65
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:14 GMT']
+      Keep-Alive: ['timeout=5, max=33']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy66
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:16 GMT']
+      Keep-Alive: ['timeout=5, max=32']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy67
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:18 GMT']
+      Keep-Alive: ['timeout=5, max=31']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy68
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:21 GMT']
+      Keep-Alive: ['timeout=5, max=30']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy69
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:23 GMT']
+      Keep-Alive: ['timeout=5, max=29']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy70
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:25 GMT']
+      Keep-Alive: ['timeout=5, max=28']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy71
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:27 GMT']
+      Keep-Alive: ['timeout=5, max=27']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy72
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:28 GMT']
+      Keep-Alive: ['timeout=5, max=26']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy73
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:30 GMT']
+      Keep-Alive: ['timeout=5, max=25']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy74
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:31 GMT']
+      Keep-Alive: ['timeout=5, max=24']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy75
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:34 GMT']
+      Keep-Alive: ['timeout=5, max=23']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy76
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:35 GMT']
+      Keep-Alive: ['timeout=5, max=22']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy77
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:36 GMT']
+      Keep-Alive: ['timeout=5, max=21']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy78
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:37 GMT']
+      Keep-Alive: ['timeout=5, max=20']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy79
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:38 GMT']
+      Keep-Alive: ['timeout=5, max=19']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy80
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:39 GMT']
+      Keep-Alive: ['timeout=5, max=18']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy81
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:40 GMT']
+      Keep-Alive: ['timeout=5, max=17']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy82
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:42 GMT']
+      Keep-Alive: ['timeout=5, max=16']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy83
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:43 GMT']
+      Keep-Alive: ['timeout=5, max=15']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy84
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:45 GMT']
+      Keep-Alive: ['timeout=5, max=14']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy85
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:46 GMT']
+      Keep-Alive: ['timeout=5, max=13']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy86
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:48 GMT']
+      Keep-Alive: ['timeout=5, max=12']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy87
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:49 GMT']
+      Keep-Alive: ['timeout=5, max=11']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy88
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:51 GMT']
+      Keep-Alive: ['timeout=5, max=10']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy89
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:52 GMT']
+      Keep-Alive: ['timeout=5, max=9']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy90
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:54 GMT']
+      Keep-Alive: ['timeout=5, max=8']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy91
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:55 GMT']
+      Keep-Alive: ['timeout=5, max=7']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy92
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:56 GMT']
+      Keep-Alive: ['timeout=5, max=6']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy93
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:32:58 GMT']
+      Keep-Alive: ['timeout=5, max=5']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy94
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:01 GMT']
+      Keep-Alive: ['timeout=5, max=4']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy95
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:03 GMT']
+      Keep-Alive: ['timeout=5, max=3']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy96
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:06 GMT']
+      Keep-Alive: ['timeout=5, max=2']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy97
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:08 GMT']
+      Keep-Alive: ['timeout=5, max=1']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy98
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [close]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:11 GMT']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy99
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:13 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy100
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:15 GMT']
+      Keep-Alive: ['timeout=5, max=99']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy101
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:17 GMT']
+      Keep-Alive: ['timeout=5, max=98']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy102
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:18 GMT']
+      Keep-Alive: ['timeout=5, max=97']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy103
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:20 GMT']
+      Keep-Alive: ['timeout=5, max=96']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy104
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:22 GMT']
+      Keep-Alive: ['timeout=5, max=95']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy105
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:23 GMT']
+      Keep-Alive: ['timeout=5, max=94']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy106
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:25 GMT']
+      Keep-Alive: ['timeout=5, max=93']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy107
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:27 GMT']
+      Keep-Alive: ['timeout=5, max=92']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy108
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:28 GMT']
+      Keep-Alive: ['timeout=5, max=91']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer YzY3YTUxNWZlNDcxYzRiMzlmMWNlODkyN2VhMTViZTM2NDAwMDlhY2IzZjI4ODVjZDY0NGM3NjlmNDI5M2Q0NA]
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      Content-Type: [application/json]
+      Cookie: [BAPID=370tl0laljstskkgqoilucjui5]
+      User-Agent: [python-requests/2.18.4]
+    method: DELETE
+    uri: http://localhost:8080/api/rest/v1/products/PIMmy109
+  response:
+    body: {string: ''}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Mon, 30 Oct 2017 11:33:30 GMT']
+      Keep-Alive: ['timeout=5, max=90']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 204, message: No Content}
+version: 1

@@ -21,7 +21,6 @@ from vcr_unittest import VCRTestCase
 
 import copy
 
-
 class TestClient(VCRTestCase):
     client_id = '1_ovvscbaj0pwwg8sookkgkc8ck4kog8gscg8g44sc88c8w48ww'
     secret = 'rpi0wuiusa8okok4cw8kkkc4s488gc0sggkc0480wskkgkwo0'
@@ -35,6 +34,51 @@ class TestClient(VCRTestCase):
         myvcr.match_on = ['method', 'path', 'query', 'body', 'headers']
         myvcr.record_mode='none'
         return myvcr
+
+    def test_update_list(self):
+        akeneo = Client(self.base_url,
+            self.client_id, self.secret, self.username, self.password)
+
+        items = [{
+            'identifier': 'PIMmy42',
+        }, {
+            'identifier': 'PIMmy43',
+        }]
+
+        statuses = akeneo.products.update_create_list(items)
+        for status in statuses:
+            self.assertEquals(status['status_code'], 201)
+
+        for item in items:
+            r = akeneo.products.delete_item(akeneo.products.get_code(item))
+
+    def test_update_very_long_list(self):
+        """Create more than 100 items at once to hit the maximum allowed.
+        Check that the list is automatically splitted into several chuncks."""
+        akeneo = Client(self.base_url,
+            self.client_id, self.secret, self.username, self.password)
+
+        items = [{
+            'identifier': 'PIMmy{0}'.format(i),
+            'family': 'clothing',
+            "values":{
+                "description":[{
+                    "scope":"ecommerce","locale":"en_US","data":"My amazing"
+                }]
+            }
+        } for i in range(110)]
+
+        statuses = akeneo.products.update_create_list(items)
+
+        logger.debug(statuses)
+        for status in statuses:
+            self.assertIn(status['status_code'], [201, 204])
+
+        logger.debug('Cleaning up products...')
+        # TODO: replace this really long cleaning up
+        # by targeting a new clean database container / PIM instance / whatever
+        for item in items:
+            r = akeneo.products.delete_item(akeneo.products.get_code(item))
 
     def test_family_update(self):
         akeneo = Client(self.base_url,
