@@ -7,14 +7,19 @@ Python client for Akeneo PIM API
 
 A simple Python client to use the `Akeneo PIM API`_.
 
-Dependencies are managed with `pipenv`_.
+Dependencies are managed with `pipenv`_
+(list of dependencies available in `Pipfile`_).
+
+.. _Pipfile: Pipfile
 
 Usage
 -----
 
-A simple example is provided in ``/example.py``:
+A simple example is provided in `example.py`_:
 
 .. literalinclude:: example.py
+
+.. _example.py: docs/example.py
 
 Tests
 -----
