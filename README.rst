@@ -12,6 +12,13 @@ Dependencies are managed with `pipenv`_
 
 .. _Pipfile: Pipfile
 
+You may install them with:
+
+.. code:: bash
+
+        pipenv install --dev
+
+
 Usage
 -----
 
