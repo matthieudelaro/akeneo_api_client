@@ -57,7 +57,8 @@ class Collection:
         final_next_link = None
         next_link = json_data["_links"].get('next')
         if next_link:
-            final_next_link = urllib.parse.unquote(next_link['href'])
+            final_next_link = next_link['href']
+        # TODO : parse count as well (in php, $count = isset($data['items_count']) ? $data['items_count'] : null;)
         return (final_next_link, json_data["_embedded"]["items"])
 
     def __iter__(self):
