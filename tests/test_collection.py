@@ -73,6 +73,38 @@ class TestPoolMock(VCRTestCase):
     valid_product = """{"identifier":"myawesometshirt","enabled":true,"family":"clothing","categories":["master_men_blazers"],"groups":[],"parent":null,"values":{"collection":[{"data":["summer_2017"],"locale":null,"scope":null}],"color":[{"data":"white","locale":null,"scope":null}],"description":[{"data":"Biker jacket","locale":"en_US","scope":"ecommerce"}],"ean":[{"data":"1234567946367","locale":null,"scope":null}],"material":[{"data":"polyester","locale":null,"scope":null}],"name":[{"data":"Biker jacket","locale":null,"scope":null}],"price":[{"data":[{"amount":null,"currency":"EUR"},{"amount":null,"currency":"USD"}],"locale":null,"scope":null}],"size":[{"data":"xl","locale":null,"scope":null}],"variation_name":[{"data":"Biker jacket polyester","locale":"en_US","scope":null}]}}"""
 
 
+class TestCollectionMock2(VCRTestCase):
+    client_id = '1_1zp82k0vluisog4k8scs4o88o4wsow4wkk0wgwwgc4csockwww'
+    secret = '15o1pqvlziyo4gokcss4w4wkw4g8g884wg8gckooww8s4s8ggs'
+    username = 'admin'
+    password = 'admin'
+    base_url = 'http://localhost:8080'
+
+    def _get_vcr(self, **kwargs):
+        logzero.loglevel(logging.INFO)
+        myvcr = super(TestCollectionMock2, self)._get_vcr(**kwargs)
+        myvcr.match_on = ['method', 'path', 'query', 'body', 'headers']
+        myvcr.record_mode='new_episodes'
+        return myvcr
+
+    def test_auto_loading_generator_ending(self):
+        session = requests.Session()
+        session.auth = Auth(self.base_url,
+            self.client_id, self.secret, self.username, self.password)
+        session.headers.update({'Content-Type': 'application/json'})
+        pool = BasicResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'families/'), session)
+        c = pool.fetch_list()
+
+        self.assertEqual(len(c._items), 10)
+        i = 0
+        for item in c.get_generator():
+            i += 1
+        # checking that it did not raise any exception when trying to iterate
+        # after the last element
+        self.assertEqual(len(c._items), 10)
+        self.assertEqual(i, 17)
+
+
 class TestCollectionMock(VCRTestCase):
     client_id = '1_ovvscbaj0pwwg8sookkgkc8ck4kog8gscg8g44sc88c8w48ww'
     secret = 'rpi0wuiusa8okok4cw8kkkc4s488gc0sggkc0480wskkgkwo0'

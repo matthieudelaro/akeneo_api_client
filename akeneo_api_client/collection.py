@@ -75,9 +75,12 @@ class Collection:
         while True:
             for item in items:
                 yield item
-            r = self._session.get(link_next)
-            if r.status_code == 200:
-                (link_next, items) = self._parse_page(json.loads(r.text))
+            if link_next:
+                r = self._session.get(link_next)
+                if r.status_code == 200:
+                    (link_next, items) = self._parse_page(json.loads(r.text))
+            else:
+                break
 
 
 

@@ -1,0 +1,99 @@
+interactions:
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV9vdnZzY2JhajBwd3dnOHNvb2trZ2tjOGNrNGtvZzhnc2NnOGc0NHNjODhjOHc0OHd3OnJwaTB3dWl1c2E4b2tvazRjdzhra2tjNHM0ODhnYzBzZ2drYzA0ODB3c2trZ2t3bzA=]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: ''}
+    headers:
+      Connection: [close]
+      Content-Length: ['0']
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Tue, 31 Oct 2017 09:55:15 GMT']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=d3qa0fiqaan9b3qd3jvsa470hh; path=/; HttpOnly]
+    status: {code: 500, message: Internal Server Error}
+- request:
+    body: '{"grant_type": "password", "username": "admin", "password": "admin"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Basic MV8xenA4Mmswdmx1aXNvZzRrOHNjczRvODhvNHdzb3c0d2trMHdnd3dnYzRjc29ja3d3dzoxNW8xcHF2bHppeW80Z29rY3NzNHc0d2t3NGc4Zzg4NHdnOGdja29vd3c4czRzOGdncw==]
+      Connection: [keep-alive]
+      Content-Length: ['68']
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: POST
+    uri: http://localhost:8080/api/oauth/v1/token
+  response:
+    body: {string: '{"access_token":"Yzc0OGZhY2ZkZTg5NzMzZTM3OTE3MmFkYTY0ODk0ZTFkNjM3MWFjZTBlZDUwYzk0YjY1NjVjOWVhMjg4OWVjMA","expires_in":3600,"token_type":"bearer","scope":null,"refresh_token":"MjI0OTE4ZGMwNzUxY2M5MmEzN2ExYmFiMmJjMmJkYmUyMjEzYTI4NzNkNWZhNzJkODkzZTM0NWE3MTRhOGQ3Ng"}'}
+    headers:
+      Cache-Control: ['no-store, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 31 Oct 2017 10:02:58 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Pragma: [no-cache]
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=a0tkjit1vfbhtgrpelbhlahtol; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer Yzc0OGZhY2ZkZTg5NzMzZTM3OTE3MmFkYTY0ODk0ZTFkNjM3MWFjZTBlZDUwYzk0YjY1NjVjOWVhMjg4OWVjMA]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families?page=1\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families?page=1\u0026limit=10\u0026with_count=false"},"next":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families?page=2\u0026limit=10\u0026with_count=false"}},"current_page":1,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/accessories"}},"code":"accessories","attributes":["brand","collection","color","composition","description","ean","erp_name","image","keywords","material","meta_description","meta_title","name","notice","price","size","sku","supplier","variation_image","variation_name","weight"],"attribute_as_label":"name","attribute_as_image":"image","attribute_requirements":{"ecommerce":["collection","description","ean","image","name","sku","variation_name"],"mobile":["collection","ean","image","name","sku","variation_name"],"print":["collection","ean","image","name","sku","variation_name"]},"labels":{"en_US":"Accessories","fr_FR":"Accessories","de_DE":"Accessories"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/camcorders"}},"code":"camcorders","attributes":["description","image_stabilizer","name","optical_zoom","picture","power_requirements","price","release_date","sensor_type","sku","total_megapixels","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","name","price","sensor_type","sku","total_megapixels"],"mobile":["description","name","price","sensor_type","sku","total_megapixels"],"print":["description","name","price","sensor_type","sku","total_megapixels"]},"labels":{"en_US":"Camcorders","fr_FR":"Cam\u00e9scopes
+        num\u00e9riques","de_DE":"Digitale Videokameras"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/clothing"}},"code":"clothing","attributes":["brand","care_instructions","collection","color","composition","description","ean","erp_name","image","keywords","material","meta_description","meta_title","name","notice","price","size","sku","supplier","variation_image","variation_name","wash_temperature","weight"],"attribute_as_label":"variation_name","attribute_as_image":"variation_image","attribute_requirements":{"ecommerce":["collection","color","description","ean","size","sku","variation_image","variation_name"],"mobile":["collection","color","ean","size","sku","variation_image","variation_name"],"print":["collection","color","ean","size","sku","variation_image","variation_name"]},"labels":{"en_US":"Clothing","fr_FR":"Clothing","de_DE":"Clothing"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/digital_cameras"}},"code":"digital_cameras","attributes":["auto_exposure","auto_focus_assist_beam","auto_focus_lock","auto_focus_modes","auto_focus_points","camera_brand","camera_model_name","camera_type","description","focus","focus_adjustement","image_resolutions","iso_sensitivity","iso_sensitivity_max","iso_sensitivity_min","lens_mount_interface","light_exposure_corrections","light_exposure_modes","light_metering","max_image_resolution","name","optical_zoom","picture","power_requirements","price","release_date","sensor_type","short_description","sku","supported_aspect_ratios","supported_image_format","total_megapixels","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["auto_exposure","auto_focus_assist_beam","auto_focus_lock","auto_focus_modes","auto_focus_points","camera_brand","camera_model_name","camera_type","description","focus","focus_adjustement","image_resolutions","iso_sensitivity","iso_sensitivity_max","iso_sensitivity_min","lens_mount_interface","light_exposure_corrections","light_exposure_modes","light_metering","max_image_resolution","name","price","sensor_type","short_description","sku","supported_aspect_ratios","supported_image_format","total_megapixels"],"mobile":["camera_type","description","name","price","sensor_type","sku","total_megapixels"],"print":["camera_type","description","name","sensor_type","sku","total_megapixels"]},"labels":{"en_US":"Digital
+        cameras","fr_FR":"Cam\u00e9ras digitales","de_DE":"Digitale Kameras"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/headphones"}},"code":"headphones","attributes":["description","headphone_connectivity","name","picture","power_requirements","price","release_date","sku","snr","thd","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","name","price","sku"],"mobile":["description","name","price","sku"],"print":["description","name","price","sku"]},"labels":{"en_US":"Headphones","fr_FR":"Casques
+        audio","de_DE":"Kopfh\u00f6rer"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/laser_led_printers"}},"code":"laser_led_printers","attributes":["description","maximum_print_size","name","picture","power_requirements","price","release_date","sku","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","maximum_print_size","name","price","sku"],"mobile":["description","maximum_print_size","name","price","sku"],"print":["description","maximum_print_size","name","price","sku"]},"labels":{"en_US":"Laser
+        and LED printers","fr_FR":"Imprimantes laser et LED","de_DE":"Laserdrucker"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/led_tvs"}},"code":"led_tvs","attributes":["description","display_diagonal","name","picture","power_requirements","price","release_date","sku","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","display_diagonal","name","sku"],"mobile":["description","display_diagonal","name","sku"],"print":["description","display_diagonal","name","sku"]},"labels":{"en_US":"LED
+        TVs","fr_FR":"TVs LED","de_DE":"TVs LED"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/loudspeakers"}},"code":"loudspeakers","attributes":["description","name","picture","power_requirements","price","release_date","sku","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","name","price","sku"],"mobile":["description","name","price","sku"],"print":["description","name","price","sku"]},"labels":{"en_US":"Loudspeakers","fr_FR":"Hauts-parleurs","de_DE":"Lautsprecher"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/mp3_players"}},"code":"mp3_players","attributes":["description","name","picture","power_requirements","price","release_date","sku","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","name","price","sku"],"mobile":["description","name","price","sku"],"print":["description","name","price","sku"]},"labels":{"en_US":"MP3
+        players","fr_FR":"Lecteurs et enregistreurs MP3","de_DE":"MP3\/MP4 Player"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/mugs"}},"code":"mugs","attributes":["container_material","description","main_color","name","picture","price","secondary_color","sku"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["container_material","description","main_color","name","price","sku"],"mobile":["description","main_color","name","price","sku"],"print":["description","name","price","sku"]},"labels":{"en_US":"Mugs","fr_FR":"Chopes\/Mugs","de_DE":"Tassen"}}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 31 Oct 2017 10:02:59 GMT']
+      Keep-Alive: ['timeout=5, max=100']
+      Server: [Apache/2.4.28 (Unix)]
+      Set-Cookie: [BAPID=21jug2l84t7aqgt8vibt0m96a6; path=/; HttpOnly]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Authorization: [Bearer Yzc0OGZhY2ZkZTg5NzMzZTM3OTE3MmFkYTY0ODk0ZTFkNjM3MWFjZTBlZDUwYzk0YjY1NjVjOWVhMjg4OWVjMA]
+      Connection: [keep-alive]
+      Content-Type: [application/json]
+      Cookie: [BAPID=21jug2l84t7aqgt8vibt0m96a6]
+      User-Agent: [python-requests/2.18.4]
+    method: GET
+    uri: http://localhost:8080/api/rest/v1/families?page=2&limit=10&with_count=false
+  response:
+    body: {string: '{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families?page=2\u0026limit=10\u0026with_count=false"},"first":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families?page=1\u0026limit=10\u0026with_count=false"},"previous":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families?page=1\u0026limit=10\u0026with_count=false"}},"current_page":2,"_embedded":{"items":[{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/multifunctionals"}},"code":"multifunctionals","attributes":["color_scanning","description","maximum_print_size","multifunctional_functions","name","picture","power_requirements","price","release_date","sku","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["color_scanning","description","multifunctional_functions","name","price","sku"],"mobile":["color_scanning","description","multifunctional_functions","name","price","sku"],"print":["color_scanning","description","multifunctional_functions","name","price","sku"]},"labels":{"en_US":"Multifunctionals","fr_FR":"Multifunctions","de_DE":"Multifunktionsger\u00e4te"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/pc_monitors"}},"code":"pc_monitors","attributes":["description","display_color","display_diagonal","display_srgb","name","picture","power_requirements","price","release_date","response_time","sku","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","display_diagonal","name","price","sku"],"mobile":["description","display_diagonal","name","price","sku"],"print":["description","display_diagonal","name","sku"]},"labels":{"en_US":"PC
+        Monitors","fr_FR":"Moniteurs","de_DE":"PC Monitoren"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/scanners"}},"code":"scanners","attributes":["color_scanning","description","maximum_scan_size","name","picture","power_requirements","price","release_date","sku","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["color_scanning","description","name","price","sku"],"mobile":["color_scanning","description","name","price","sku"],"print":["color_scanning","description","name","price","sku"]},"labels":{"en_US":"Scanners","fr_FR":"Scanners","de_DE":"Scanners"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/shoes"}},"code":"shoes","attributes":["brand","collection","color","composition","description","ean","erp_name","eu_shoes_size","image","keywords","material","meta_description","meta_title","name","notice","price","size","sku","sole_composition","supplier","top_composition","variation_image","variation_name","weight"],"attribute_as_label":"name","attribute_as_image":"image","attribute_requirements":{"ecommerce":["collection","description","ean","eu_shoes_size","image","name","sku"],"mobile":["collection","ean","eu_shoes_size","image","name","sku"],"print":["collection","ean","eu_shoes_size","image","name","sku"]},"labels":{"en_US":"Shoes","fr_FR":"Shoes","de_DE":"Shoes"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/tablets"}},"code":"tablets","attributes":["description","name","picture","power_requirements","price","release_date","sku","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","name","price","sku"],"mobile":["description","name","price","sku"],"print":["description","name","sku"]},"labels":{"en_US":"Tablets","fr_FR":"Tablettes","de_DE":"Tablets"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/tshirts"}},"code":"tshirts","attributes":["clothing_size","description","main_color","name","picture","price","secondary_color","sku","tshirt_materials","tshirt_style"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["clothing_size","description","main_color","name","secondary_color","sku","tshirt_materials"],"mobile":["clothing_size","description","main_color","name","price","secondary_color","sku"],"print":["description","name","price","sku"]},"labels":{"en_US":"T-shirts","fr_FR":"T-shirts","de_DE":"T-shirts"}},{"_links":{"self":{"href":"http:\/\/localhost:8080\/api\/rest\/v1\/families\/webcams"}},"code":"webcams","attributes":["description","maximum_frame_rate","maximum_video_resolution","name","picture","power_requirements","price","release_date","sku","total_megapixels","weight"],"attribute_as_label":"name","attribute_as_image":"picture","attribute_requirements":{"ecommerce":["description","maximum_video_resolution","name","price","sku","total_megapixels"],"mobile":["description","maximum_video_resolution","name","price","sku","total_megapixels"],"print":["description","maximum_video_resolution","name","price","sku","total_megapixels"]},"labels":{"en_US":"Webcams","fr_FR":"Webcams","de_DE":"Webcams"}}]}}'}
+    headers:
+      Cache-Control: ['no-cache, private']
+      Connection: [Keep-Alive]
+      Content-Type: [application/json]
+      Date: ['Tue, 31 Oct 2017 10:03:00 GMT']
+      Keep-Alive: ['timeout=5, max=99']
+      Server: [Apache/2.4.28 (Unix)]
+    status: {code: 200, message: OK}
+version: 1
