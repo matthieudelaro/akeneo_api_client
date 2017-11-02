@@ -35,8 +35,8 @@ class Collection:
         if not session:
             raise ValueError("session should be provided")
         self._session = session
-        self._link_first = json_data["_links"]["first"]
-        (self._link_next, self._items) = self._parse_page(json_data)
+        self._link_first = json_data["_links"]["first"]["href"]
+        (self._link_next, self._items) = Collection.parse_page(json_data)
 
     def get_list(self):
         return self._items
@@ -50,16 +50,8 @@ class Collection:
                 raise StopIteration()
             else:
                 json_data = json.loads(r.text)
-                (self._link_next, new_items) = self._parse_page(json_data)
+                (self._link_next, new_items) = Collection.parse_page(json_data)
                 self._items += new_items
-
-    def _parse_page(self, json_data):
-        final_next_link = None
-        next_link = json_data["_links"].get('next')
-        if next_link:
-            final_next_link = next_link['href']
-        # TODO : parse count as well (in php, $count = isset($data['items_count']) ? $data['items_count'] : null;)
-        return (final_next_link, json_data["_embedded"]["items"])
 
     def __iter__(self):
         return CollectionIterator(self)
@@ -71,18 +63,43 @@ class Collection:
         """Iterate over the result pages, in an efficient manner.
         Doesn't store previous pages. Just yield elements one after another,
         while fetching next elements when required."""
-        items = self._items
-        link_next = self._link_next
+        return CollectionGenerator(self._session, self._items, self._link_first, self._link_next)
+
+    @staticmethod
+    def parse_page(json_data):
+        """Returns (next link, retrieved items)"""
+        final_next_link = None
+        next_link = json_data["_links"].get('next')
+        if next_link:
+            final_next_link = next_link['href']
+        # TODO : parse count as well (in php, $count = isset($data['items_count']) ? $data['items_count'] : null;)
+        return (final_next_link, json_data["_embedded"]["items"])
+
+
+class CollectionGenerator(object):
+    def __init__(self, session, current_items, link_self, next_link):
+        self._items = current_items
+        self._link_next = next_link
+        self._link_self = link_self
+        self._session = session
+
+    def __iter__(self):
         while True:
-            for item in items:
+            for item in self._items:
                 yield item
-            if link_next:
-                r = self._session.get(link_next)
+            if self._link_next:
+                r = self._session.get(self._link_next)
                 if r.status_code == 200:
-                    (link_next, items) = self._parse_page(json.loads(r.text))
+                    self._link_self = self._link_next
+                    (self._link_next, self._items) = Collection.parse_page(json.loads(r.text))
             else:
                 break
 
+    def get_next_link(self):
+        return self._link_next
+
+    def get_self_link(self):
+        return self._link_self
 
 
 class CollectionIterator:
