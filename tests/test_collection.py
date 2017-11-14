@@ -97,11 +97,12 @@ class TestCollectionMock2(VCRTestCase):
 
         self.assertEqual(len(c._items), 10)
         i = 0
-        for item in c.get_generator():
+        # for item in c.get_generator():
+        for item in c:
             i += 1
         # checking that it did not raise any exception when trying to iterate
         # after the last element
-        self.assertEqual(len(c._items), 10)
+        self.assertEqual(len(c._items), 7)
         self.assertEqual(i, 17)
 
 
@@ -120,18 +121,18 @@ class TestCollectionMock(VCRTestCase):
         return myvcr
 
     def test_valid_json_text(self):
-        c = Collection(requests.Session(), json_text=self.json_text)
+        c = CollectionGenerator.from_json_text(requests.Session(), json_text=self.json_text)
 
     def test_invalid_json_text(self):
         with self.assertRaises(json.decoder.JSONDecodeError):
-            c = Collection(requests.Session(), json_text=self.invalide_json_text)
+            c = CollectionGenerator.from_json_text(requests.Session(), json_text=self.invalide_json_text)
 
     def test_no_json(self):
-        with self.assertRaises(ValueError):
-            c = Collection(requests.Session())
+        with self.assertRaises(TypeError):
+            c = CollectionGenerator.from_json_text(requests.Session())
 
     def test_loading_json(self):
-        c = Collection(requests.Session(), json_text=self.json_text)
+        c = CollectionGenerator.from_json_text(requests.Session(), json_text=self.json_text)
         self.assertEqual(len(c._items), 10)
         self.assertEqual(c._items[0]['identifier'], 'Biker-jacket-polyester-xl')
 
@@ -171,11 +172,17 @@ class TestCollectionMock(VCRTestCase):
         session.headers.update({'Content-Type': 'application/json'})
         pool = BasicResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
         c = pool.fetch_list()
-        self.assertEqual(len(c._items), 10)
+        firstElement = c.get_page_items()[0]
+        self.assertEqual(len(c.get_page_items()), 10)
         c.fetch_next_page()
-        self.assertEqual(len(c._items), 20)
+        eleventhElement = c.get_page_items()[0]
+        self.assertNotEqual(eleventhElement["identifier"], firstElement["identifier"])
+        self.assertEqual(len(c.get_page_items()), 10)
         c.fetch_next_page()
-        self.assertEqual(len(c._items), 30)
+        twentyonethElement = c.get_page_items()[0]
+        self.assertNotEqual(twentyonethElement["identifier"], firstElement["identifier"])
+        self.assertNotEqual(twentyonethElement["identifier"], eleventhElement["identifier"])
+        self.assertEqual(len(c.get_page_items()), 10)
 
     def test_auto_loading(self):
         session = requests.Session()
@@ -183,16 +190,21 @@ class TestCollectionMock(VCRTestCase):
             self.client_id, self.secret, self.username, self.password)
         session.headers.update({'Content-Type': 'application/json'})
         pool = BasicResourcePool(urljoin(self.base_url, '/api/rest/v1/', 'products/'), session)
+
         c = pool.fetch_list()
-        self.assertEqual(len(c._items), 10)
-        iterator = iter(c)
-        for i in range(15):
-            item = next(iterator)
-        self.assertEqual(len(c._items), 20)
-        iterator = iter(c)
-        for i in range(25):
-            item = next(iterator)
-        self.assertEqual(len(c._items), 30)
+        firstElement = c.get_page_items()[0]
+        self.assertEqual(len(c.get_page_items()), 10)
+        for i in range(12):
+            next(c)
+        eleventhElement = c.get_page_items()[0]
+        self.assertNotEqual(eleventhElement["identifier"], firstElement["identifier"])
+        self.assertEqual(len(c.get_page_items()), 10)
+        for i in range(12):
+            next(c)
+        twentyonethElement = c.get_page_items()[0]
+        self.assertNotEqual(twentyonethElement["identifier"], firstElement["identifier"])
+        self.assertNotEqual(twentyonethElement["identifier"], eleventhElement["identifier"])
+        self.assertEqual(len(c.get_page_items()), 10)
 
     def test_auto_loading_generator(self):
         session = requests.Session()
@@ -204,7 +216,7 @@ class TestCollectionMock(VCRTestCase):
 
         self.assertEqual(len(c._items), 10)
         i = 0
-        generator = c.get_generator()
+        generator = c
         previousLink = generator.get_self_link()
         for item in generator:
             i += 1

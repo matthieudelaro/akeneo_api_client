@@ -108,7 +108,7 @@ class TestClient(VCRTestCase):
             self.client_id, self.secret, self.username, self.password)
         pool = akeneo.products
         items = pool.fetch_list()
-        self.assertEquals(len(items.get_list()), 10)
+        self.assertEquals(len(items.get_page_items()), 10)
 
         items = pool.fetch_list(args={
             "search":{
@@ -122,7 +122,7 @@ class TestClient(VCRTestCase):
                 ]
             }
         })
-        self.assertEquals(len(items.get_list()), 0)
+        self.assertEquals(len(items.get_page_items()), 0)
 
         items = pool.fetch_list(args={
             "search":{
@@ -136,7 +136,7 @@ class TestClient(VCRTestCase):
                 ]
             }, "limit": 5
         })
-        self.assertEquals(len(items.get_list()), 5)
+        self.assertEquals(len(items.get_page_items()), 5)
 
         items = pool.fetch_list(args={
             "search":{
@@ -150,8 +150,8 @@ class TestClient(VCRTestCase):
                 ]
             }
         })
-        self.assertEquals(len(items.get_list()), 10)
-        listA = items.get_list()
+        self.assertEquals(len(items.get_page_items()), 10)
+        listA = items.get_page_items()
 
         items = pool.fetch_list(args={
             "search":{
@@ -166,29 +166,29 @@ class TestClient(VCRTestCase):
             },
             "search_scope": "ecommerce"
         })
-        self.assertEquals(len(items.get_list()), 10)
-        listB = items.get_list()
+        self.assertEquals(len(items.get_page_items()), 10)
+        listB = items.get_page_items()
         self.assertTrue(listA == listB)
 
         items = pool.fetch_list(args={
             "pagination_type": "search_after",
             "limit": 15
         })
-        self.assertEquals(len(items.get_list()), 15)
+        self.assertEquals(len(items.get_page_items()), 15)
         iterator = iter(items)
         for i in range(25):
             item = next(iterator)
-        self.assertEquals(len(items.get_list()), 30)
+        self.assertEquals(len(items.get_page_items()), 15)
 
 
     def test_family_variants(self):
         akeneo = Client(self.base_url,
             self.client_id, self.secret, self.username, self.password)
-        families = akeneo.families.fetch_list().get_list()
+        families = akeneo.families.fetch_list().get_page_items()
         for family in families:
             family_code = akeneo.families.get_code(family)
             variants_pool = akeneo.families.variants(family_code)
-            variants = variants_pool.fetch_list().get_list()
+            variants = variants_pool.fetch_list().get_page_items()
             if family_code == 'clothing':
                 self.assertEquals(len(variants), 5)
             if family_code == 'headphones':
@@ -197,7 +197,7 @@ class TestClient(VCRTestCase):
     def test_attribute_options(self):
         akeneo = Client(self.base_url,
             self.client_id, self.secret, self.username, self.password)
-        attributes = akeneo.attributes.fetch_list().get_list()
+        attributes = akeneo.attributes.fetch_list().get_page_items()
         for attribute in attributes:
             attribute_code = akeneo.attributes.get_code(attribute)
             options_pool = akeneo.attributes.options(attribute_code)
@@ -208,9 +208,9 @@ class TestClient(VCRTestCase):
                 # those don't have any option:
                 # 404, "Attribute \"auto_exposure\" does not support options. Only attributes of type \"pim_catalog_simpleselect\", \"pim_catalog_multiselect\" support options."
                 with self.assertRaises(requests.exceptions.HTTPError):
-                    options = options_pool.fetch_list().get_list()
+                    options = options_pool.fetch_list().get_page_items()
             else:
-                options = options_pool.fetch_list().get_list()
+                options = options_pool.fetch_list().get_page_items()
 
     def test_association_types(self):
         akeneo = Client(self.base_url,
@@ -222,7 +222,7 @@ class TestClient(VCRTestCase):
         akeneo = Client(self.base_url,
             self.client_id, self.secret, self.username, self.password)
         item = akeneo.products.fetch_item('1111111137')
-        items = akeneo.products.fetch_list().get_list()
+        items = akeneo.products.fetch_list().get_page_items()
         self.assertIsNotNone(item)
         self.assertEquals(len(items), 10)
 
@@ -235,7 +235,7 @@ class TestClient(VCRTestCase):
                 # TODO: implement tests against EE API
                 pass
             else:
-                items = pool.fetch_list().get_list()
+                items = pool.fetch_list().get_page_items()
                 self.assertTrue(len(items) > 2)
 
     def test_client_auth_invalid(self):

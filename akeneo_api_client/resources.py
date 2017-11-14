@@ -41,7 +41,8 @@ class ListableResource(ListableResourceInterface):
                 r.status_code,
                 r.text))
 
-        c = Collection(self._session, json_text=r.text)
+        # c = Collection(self._session, json_text=r.text)
+        c = CollectionGenerator.from_json_text(self._session, json_text=r.text)
         return c
 
 
