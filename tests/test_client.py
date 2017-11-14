@@ -50,7 +50,7 @@ class TestClient(VCRTestCase):
             self.assertEquals(status['status_code'], 201)
 
         for item in items:
-            r = akeneo.products.delete_item(akeneo.products.get_code(item))
+            r = akeneo.products.delete_item(item)
 
     def test_update_very_long_list(self):
         """Create more than 100 items at once to hit the maximum allowed.
@@ -229,13 +229,12 @@ class TestClient(VCRTestCase):
     def test_get_resources(self):
         akeneo = Client(self.base_url,
             self.client_id, self.secret, self.username, self.password)
-        for name in akeneo.RESOURCE_NAMES:
-            if name == 'published_products':
+        for pool in akeneo.get_resources():
+            if isinstance(pool, EnterpriseEditionResource):
                 # valid for EE only
                 # TODO: implement tests against EE API
                 pass
             else:
-                pool = getattr(akeneo, name)
                 items = pool.fetch_list().get_list()
                 self.assertTrue(len(items) > 2)
 

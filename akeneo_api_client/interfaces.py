@@ -4,7 +4,7 @@ import abc
 
 class GettableResourceInterface(abc.ABC):
     @abc.abstractmethod
-    def fetch_item(self, code):
+    def fetch_item(self, code_or_item):
         pass
 
 class ListableResourceInterface(abc.ABC):
@@ -29,7 +29,7 @@ class UpdatableListResourceInterface(abc.ABC):
 
 class DeletableResourceInterface(abc.ABC):
     @abc.abstractmethod
-    def delete_item(self, code):
+    def delete_item(self, code_or_item):
         pass
 
 class CodeBasedResourceInterface(abc.ABC):

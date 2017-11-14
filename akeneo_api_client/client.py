@@ -16,21 +16,6 @@ import urllib.parse
 
 class Client:
     BASIC_API_PATH = '/api/rest/v1/'
-    RESOURCE_NAMES = [
-        'association_types',
-        'attributes',
-        'attribute_groups',
-        'categories',
-        'channels',
-        'currencies',
-        'families',
-        'locales',
-        'measure_families',
-        'media_files',
-        'products',
-        'product_models',
-        'published_products'
-    ]
 
     def __init__(self,
         base_url, client_id=None, secret=None, username=None, password=None,
@@ -64,69 +49,74 @@ class Client:
         if auth:
             self._session.auth = auth
         self._session.headers.update({'Content-Type': 'application/json'})
-        self._association_types = AssociationTypesPool(
+        self._resources = {}
+        self._resources['association_types'] = AssociationTypesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'association-types/'), session)
-        self._attributes = AttributesPool(
+        self._resources['attributes'] = AttributesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'attributes/'), session)
-        self._attribute_groups = AttributeGroupsPool(
+        self._resources['attribute_groups'] = AttributeGroupsPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'attribute-groups/'), session)
-        self._categories = CategoriesPool(
+        self._resources['categories'] = CategoriesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'categories/'), session)
-        self._channels = ChannelsPool(
+        self._resources['channels'] = ChannelsPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'channels/'), session)
-        self._currencies = CurrenciesPool(
+        self._resources['currencies'] = CurrenciesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'currencies/'), session)
-        self._families = FamiliesPool(
+        self._resources['families'] = FamiliesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'families/'), session)
-        self._locales = LocalesPool(
+        self._resources['locales'] = LocalesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'locales/'), session)
-        self._measure_families = MeasureFamiliesPool(
+        self._resources['measure_families'] = MeasureFamiliesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'measure-families/'), session)
-        self._media_files = MediaFilesPool(
+        self._resources['media_files'] = MediaFilesPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'media-files/'), session)
-        self._products = ProductsPool(
+        self._resources['products'] = ProductsPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'products/'), session)
-        self._product_models = ProductModelsPool(
+        self._resources['product_models'] = ProductModelsPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'product-models/'), session)
-        self._published_products = ProductModelsPool(
+        self._resources['published_products'] = PublishedProductsPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'published-products/'), session)
+
+    def get_resources(self):
+        """Return all resources as a list of Resources"""
+        return [self._resources[key] for key in self._resources]
 
     @property
     def association_types(self):
-        return self._association_types
+        return self._resources["association_types"]
     @property
     def attributes(self):
-        return self._attributes
+        return self._resources["attributes"]
     @property
     def attribute_groups(self):
-        return self._attribute_groups
+        return self._resources["attribute_groups"]
     @property
     def categories(self):
-        return self._categories
+        return self._resources["categories"]
     @property
     def channels(self):
-        return self._channels
+        return self._resources["channels"]
     @property
     def currencies(self):
-        return self._currencies
+        return self._resources["currencies"]
     @property
     def families(self):
-        return self._families
+        return self._resources["families"]
     @property
     def locales(self):
-        return self._locales
+        return self._resources["locales"]
     @property
     def measure_families(self):
-        return self._measure_families
+        return self._resources["measure_families"]
     @property
     def media_files(self):
-        return self._media_files
+        return self._resources["media_files"]
     @property
     def products(self):
-        return self._products
+        return self._resources["products"]
     @property
     def product_models(self):
-        return self._product_models
+        return self._resources["product_models"]
     @property
     def published_products(self):
-        return self._published_products
+        return self._resources["published_products"]

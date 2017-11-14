@@ -59,8 +59,14 @@ class SearchAfterListableResource(ListableResource):
 
 
 class GettableResource(GettableResourceInterface):
-    def fetch_item(self, code):
-        """Returns a unique item object"""
+    def fetch_item(self, code_or_item):
+        """Returns a unique item object. code_or_item should be a the code
+        of the desired item, or an item with the proper code."""
+        code = code_or_item
+        if not isinstance(code_or_item, str):
+            # if code_or_item is item, then fetch the code
+            code = self.get_code(code_or_item)
+
         logger.debug(self._endpoint)
         url = urljoin(self._endpoint, code)
         logger.debug(url)
@@ -74,7 +80,13 @@ class GettableResource(GettableResourceInterface):
         return json.loads(r.text) # returns item as a dict
 
 class DeletableResource(DeletableResourceInterface):
-    def delete_item(self, code):
+    def delete_item(self, code_or_item):
+        """code_or_item should be a the code
+        of the desired item, or an item with the proper code."""
+        code = code_or_item
+        if not isinstance(code_or_item, str):
+            # if code_or_item is item, then fetch the code
+            code = self.get_code(code_or_item)
         url = urljoin(self._endpoint, code)
         r = self._session.delete(url)
 
@@ -145,6 +157,9 @@ class CodeBasedResource(CodeBasedResourceInterface):
     def get_code(self, item):
         return item['code']
 
+class EnterpriseEditionResource():
+    pass
+
 class ResourcePool():
     def __init__(self, endpoint, session):
         """Initialize the ResourcePool to the given endpoint. Eg: products"""
@@ -176,7 +191,8 @@ class ProductModelsPool(ResourcePool,
 class PublishedProductsPool(ResourcePool,
         IdentifierBasedResource,
         GettableResource,
-        SearchAfterListableResource,):
+        SearchAfterListableResource,
+        EnterpriseEditionResource,):
     """https://api.akeneo.com/api-reference.html#Publishedproducts"""
     pass
 
@@ -253,6 +269,7 @@ class MediaFilesPool(ResourcePool,
     GettableResource,):
     """https://api.akeneo.com/api-reference.html#Mediafiles"""
     def download(self, code):
+        # TODO: implement this method
         raise NotImplementedError()
     pass
 
