@@ -229,7 +229,7 @@ class TestClient(VCRTestCase):
     def test_get_resources(self):
         akeneo = Client(self.base_url,
             self.client_id, self.secret, self.username, self.password)
-        for pool in akeneo.get_resources():
+        for _,pool in akeneo.resources.items():
             if isinstance(pool, EnterpriseEditionResource):
                 # valid for EE only
                 # TODO: implement tests against EE API

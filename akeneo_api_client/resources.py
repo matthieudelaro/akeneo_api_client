@@ -168,6 +168,9 @@ class ResourcePool():
         self._session = session
         pass
 
+    def get_url(self):
+        return self._endpoint
+
 class ProductsPool(ResourcePool,
         IdentifierBasedResource,
         CreatableResource,

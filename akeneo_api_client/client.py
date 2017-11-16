@@ -77,9 +77,10 @@ class Client:
         self._resources['published_products'] = PublishedProductsPool(
             urljoin(self._base_url, self.BASIC_API_PATH, 'published-products/'), session)
 
-    def get_resources(self):
+    @property
+    def resources(self):
         """Return all resources as a list of Resources"""
-        return [self._resources[key] for key in self._resources]
+        return self._resources
 
     @property
     def association_types(self):

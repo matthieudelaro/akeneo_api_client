@@ -11,6 +11,22 @@ from logzero import logger
 
 import urllib.parse
 
+
+# class Collection:
+#     """Holds the result of a search. It can be iterated through as a list,
+#     as an iterator, or as a generator. Note that only one iteration should be
+#     used on a given Collection object.
+#     Search results are paginated: https://api.akeneo.com/documentation/pagination.html
+
+#     Using Collection.get_iterator(), the next page will be loaded once the user
+#     iterated over the whole current page. The content of the new page will be
+#     appended at the end of the current list of items.
+
+#     Using Collection.get_generator(), the next page will be loaded once the user
+#     iterated over the whole current page. But items of previous pages will
+#     be forgotten."""
+
+
 class CollectionGenerator(object):
     """Holds the result of a search. It can be iterated through as a list,
     as an iterator, or as a generator. Note that only one iteration should be
@@ -56,11 +72,30 @@ class CollectionGenerator(object):
             if r.status_code == 200:
                 (self._link_first, self._link_self, self._link_next, self._items, self._count) = CollectionGenerator.parse_page(json.loads(r.text))
                 self._page_iterator = iter(self._items)
-            self._reached_the_end = False
-            return True
+                self._reached_the_end = False
+            else:
+                self._reached_the_end = True
         else:
             self._reached_the_end = True
-            return False
+        return not self._reached_the_end
+
+    # def fetch_next_page(self):
+    #     """Return True if a next page exists. Returns False otherwise."""
+    #     if self._link_next:
+    #         r = self._session.get(self._link_next)
+    #         if r.status_code == 200:
+    #             (self._link_first, self._link_self, self._link_next, self._items, self._count) = CollectionGenerator.parse_page(json.loads(r.text))
+    #             # self._page_iterator = iter(self._items)
+    #             self._reached_the_end = False
+    #         else:
+    #             self._reached_the_end = True
+    #             self._items = []
+    #     else:
+    #         self._reached_the_end = True
+    #         self._items = []
+
+    #     self._page_iterator = iter(self._items)
+    #     return not self._reached_the_end
 
     def get_count(self):
         return self._count

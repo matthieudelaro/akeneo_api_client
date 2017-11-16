@@ -1,5 +1,7 @@
 .env
 .DS_Store
+docs/extract/
+.idea
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
