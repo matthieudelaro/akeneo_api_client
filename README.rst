@@ -35,12 +35,13 @@ A simple example is provided in `example.py`_:
 
 .. _example.py: https://raw.githubusercontent.com/matthieudelaro/akeneo_api_client/master/docs/example.py
 
-To extract all information from your PIM, you may use the `docs/example_extractor.py`_:
+To export the data from your PIM, you may use the `docs/example_exporter.py`_:
+
 .. code:: bash
         cd docs
         pipenv run python3 example_exporter.py
 
-.. _docs/example_extractor.py: https://raw.githubusercontent.com/matthieudelaro/akeneo_api_client/master/docs/example_extractor.py
+.. _docs/example_exporter.py: https://raw.githubusercontent.com/matthieudelaro/akeneo_api_client/master/docs/example_exporter.py
 
 Tests
 -----
