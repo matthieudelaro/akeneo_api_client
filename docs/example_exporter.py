@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Will extract data from the PIM and pickle it to files."""
+"""Will export the data from a PIM and pickle it to files."""
 
 # Reduce the amount of logs:
 import logging
@@ -28,12 +28,12 @@ AKENEO_PASSWORD = os.environ.get("AKENEO_PASSWORD")
 AKENEO_BASE_URL = os.environ.get("AKENEO_BASE_URL")
 
 
-class Extractor(object):
+class Exporter(object):
     @staticmethod
     def extract_all_resources(client, directory, request_limit=100, chunk_size=10000):
         for name, pool in client.resources.items():
-            Extractor.extract_resource(pool, os.path.join(directory, name),
-                                       request_limit=request_limit, chunk_size=chunk_size)
+            Exporter.extract_resource(pool, os.path.join(directory, name),
+                                      request_limit=request_limit, chunk_size=chunk_size)
 
     @staticmethod
     def extract_resource(pool, directory, request_limit=100, chunk_size=10000):
@@ -89,4 +89,4 @@ class Extractor(object):
 if __name__ == '__main__':
     client = Client(AKENEO_BASE_URL, AKENEO_CLIENT_ID,
                     AKENEO_SECRET, AKENEO_USERNAME, AKENEO_PASSWORD)
-    Extractor.extract_all_resources(client, 'extract')
+    Exporter.extract_all_resources(client, 'extract')

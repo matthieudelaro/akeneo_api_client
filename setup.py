@@ -23,7 +23,7 @@ packages = ['akeneo_api_client']
 #                               stdout=subprocess.PIPE).stdout.decode('utf-8')
 requires = [
     'requests',
-    'logzero',
+    'logzero', 'dotenv',
 ]
 test_requirements = [
     'nose',
