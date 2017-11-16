@@ -1,11 +1,5 @@
 from collections import namedtuple
-import requests
-from functools import reduce
 import json
-
-import logging
-import logzero
-from logzero import logger
 
 
 def urljoin(*args):
@@ -15,6 +9,7 @@ def urljoin(*args):
     https://stackoverflow.com/a/11326230
     """
     return "/".join(map(lambda x: str(x).strip('/').rstrip('/'), args))
+
 
 def _json_object_hook(data):
     '''https://stackoverflow.com/a/15882054'''
@@ -27,6 +22,7 @@ def _json_object_hook(data):
     except KeyError as e:
         pass
     return namedtuple('X', data.keys(), rename=False)(*data.values())
+
 
 def json2object(data):
     '''https://stackoverflow.com/a/15882054'''

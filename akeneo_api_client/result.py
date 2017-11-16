@@ -3,7 +3,7 @@
 import json
 
 
-class CollectionGenerator(object):
+class Result(object):
     """Holds the result of a search. It can be iterated through as a list,
     as an iterator, or as a generator. Note that only one iteration should be
     used on a given Collection object.
@@ -46,7 +46,7 @@ class CollectionGenerator(object):
         if self._link_next:
             r = self._session.get(self._link_next)
             if r.status_code == 200:
-                (self._link_first, self._link_self, self._link_next, self._items, self._count) = CollectionGenerator.parse_page(json.loads(r.text))
+                (self._link_first, self._link_self, self._link_next, self._items, self._count) = Result.parse_page(json.loads(r.text))
                 self._page_iterator = iter(self._items)
                 self._reached_the_end = False
             else:
@@ -85,5 +85,5 @@ class CollectionGenerator(object):
     @staticmethod
     def from_json_text(session, json_text):
         json_data = json.loads(json_text)
-        parsed = CollectionGenerator.parse_page(json_data)
-        return CollectionGenerator(session, parsed[4], parsed[3], parsed[0], parsed[2], parsed[1])
+        parsed = Result.parse_page(json_data)
+        return Result(session, parsed[4], parsed[3], parsed[0], parsed[2], parsed[1])

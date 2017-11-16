@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from akeneo_api_client.collection import *
+from akeneo_api_client.result import *
 from akeneo_api_client.resources import *
 from akeneo_api_client.auth import Auth
 from akeneo_api_client.utils import urljoin

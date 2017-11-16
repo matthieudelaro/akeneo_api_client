@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from akeneo_api_client.collection import *
+from akeneo_api_client.result import *
 from akeneo_api_client.resources import *
 from akeneo_api_client.auth import Auth
 from akeneo_api_client.utils import urljoin
@@ -121,18 +121,18 @@ class TestCollectionMock(VCRTestCase):
         return myvcr
 
     def test_valid_json_text(self):
-        c = CollectionGenerator.from_json_text(requests.Session(), json_text=self.json_text)
+        c = Result.from_json_text(requests.Session(), json_text=self.json_text)
 
     def test_invalid_json_text(self):
         with self.assertRaises(json.decoder.JSONDecodeError):
-            c = CollectionGenerator.from_json_text(requests.Session(), json_text=self.invalide_json_text)
+            c = Result.from_json_text(requests.Session(), json_text=self.invalide_json_text)
 
     def test_no_json(self):
         with self.assertRaises(TypeError):
-            c = CollectionGenerator.from_json_text(requests.Session())
+            c = Result.from_json_text(requests.Session())
 
     def test_loading_json(self):
-        c = CollectionGenerator.from_json_text(requests.Session(), json_text=self.json_text)
+        c = Result.from_json_text(requests.Session(), json_text=self.json_text)
         self.assertEqual(len(c._items), 10)
         self.assertEqual(c._items[0]['identifier'], 'Biker-jacket-polyester-xl')
 

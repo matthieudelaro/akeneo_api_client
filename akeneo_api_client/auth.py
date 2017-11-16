@@ -1,14 +1,12 @@
 import requests
 from requests.auth import AuthBase
 from akeneo_api_client.utils import urljoin
-import unittest
 import base64
 import json
 from time import time
 
-import logging
-import logzero
 from logzero import logger
+
 
 class Auth(AuthBase):
     TOKEN_PATH = "api/oauth/v1/token"
@@ -53,7 +51,7 @@ class Auth(AuthBase):
             })
         else:
             raise ValueError('grant_type parameter is expected to be either ' +
-                '"password" or "refresh_token". {0} provided'.format(grant_type))
+                             '"password" or "refresh_token". {0} provided'.format(grant_type))
         logger.debug(data)
         url = urljoin(self._base_url, self.TOKEN_PATH)
         r = requests.post(url, data=data, headers=headers)
@@ -71,21 +69,20 @@ class Auth(AuthBase):
         try:
             self._token = json_data['access_token']
             self._refresh_token = json_data['refresh_token']
-        except KeyError as e:
+        except KeyError:
             raise SyntaxError("The server did not return expected tokens: {0}"
-                .format(json_data))
+                              .format(json_data))
 
         try:
             self._expiry_date = time() + float(json_data['expires_in'])
-        except KeyError as e:
+        except KeyError:
             self._expiry_date = None
-        except ValueError as e:
+        except ValueError:
             raise SyntaxError("The server did not return a valid expires_in: {0}"
                 .format(json_data))
         logger.debug(self.authorization)
         logger.debug(self._refresh_token)
         logger.debug(self._expiry_date)
-
 
     def _should_refresh_token(self):
         """Returns True if the token is expired / about to expire"""
@@ -94,11 +91,9 @@ class Auth(AuthBase):
         else:
             return time() > self._expiry_date - self.TOKEN_EXPIRY_SECURITY
 
-
     def _refresh_the_token(self):
         """Requests a new token based on refresh token."""
         return self._request_a_token(grant_type='refresh_token')
-
 
     def __call__(self, r):
         

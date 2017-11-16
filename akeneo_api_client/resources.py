@@ -2,7 +2,7 @@
 
 from akeneo_api_client.utils import *
 from akeneo_api_client.interfaces import *
-from akeneo_api_client.collection import *
+from akeneo_api_client.result import *
 import requests
 import json
 
@@ -41,7 +41,7 @@ class ListableResource(ListableResourceInterface):
                 r.text))
 
         # c = Collection(self._session, json_text=r.text)
-        c = CollectionGenerator.from_json_text(self._session, json_text=r.text)
+        c = Result.from_json_text(self._session, json_text=r.text)
         return c
 
 

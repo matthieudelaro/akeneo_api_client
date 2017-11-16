@@ -18,8 +18,8 @@ class Client:
     BASIC_API_PATH = '/api/rest/v1/'
 
     def __init__(self,
-        base_url, client_id=None, secret=None, username=None, password=None,
-        session=None, auth=None):
+                 base_url, client_id=None, secret=None, username=None, password=None,
+                 session=None, auth=None):
         """Expect credential
         1) as auth, or
         2) as client_id+secret+username+password, or
@@ -49,33 +49,34 @@ class Client:
         if auth:
             self._session.auth = auth
         self._session.headers.update({'Content-Type': 'application/json'})
-        self._resources = {}
-        self._resources['association_types'] = AssociationTypesPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'association-types/'), session)
-        self._resources['attributes'] = AttributesPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'attributes/'), session)
-        self._resources['attribute_groups'] = AttributeGroupsPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'attribute-groups/'), session)
-        self._resources['categories'] = CategoriesPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'categories/'), session)
-        self._resources['channels'] = ChannelsPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'channels/'), session)
-        self._resources['currencies'] = CurrenciesPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'currencies/'), session)
-        self._resources['families'] = FamiliesPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'families/'), session)
-        self._resources['locales'] = LocalesPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'locales/'), session)
-        self._resources['measure_families'] = MeasureFamiliesPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'measure-families/'), session)
-        self._resources['media_files'] = MediaFilesPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'media-files/'), session)
-        self._resources['products'] = ProductsPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'products/'), session)
-        self._resources['product_models'] = ProductModelsPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'product-models/'), session)
-        self._resources['published_products'] = PublishedProductsPool(
-            urljoin(self._base_url, self.BASIC_API_PATH, 'published-products/'), session)
+        self._resources = {
+            'association_types': AssociationTypesPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'association-types/'), session),
+            'attributes': AttributesPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'attributes/'), session),
+            'attribute_groups': AttributeGroupsPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'attribute-groups/'), session),
+            'categories': CategoriesPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'categories/'), session),
+            'channels': ChannelsPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'channels/'), session),
+            'currencies': CurrenciesPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'currencies/'), session),
+            'families': FamiliesPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'families/'), session),
+            'locales': LocalesPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'locales/'), session),
+            'measure_families': MeasureFamiliesPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'measure-families/'), session),
+            'media_files': MediaFilesPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'media-files/'), session),
+            'products': ProductsPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'products/'), session),
+            'product_models': ProductModelsPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'product-models/'), session),
+            'published_products': PublishedProductsPool(
+                urljoin(self._base_url, self.BASIC_API_PATH, 'published-products/'), session)
+        }
 
     @property
     def resources(self):
@@ -85,39 +86,51 @@ class Client:
     @property
     def association_types(self):
         return self._resources["association_types"]
+
     @property
     def attributes(self):
         return self._resources["attributes"]
+
     @property
     def attribute_groups(self):
         return self._resources["attribute_groups"]
+
     @property
     def categories(self):
         return self._resources["categories"]
+
     @property
     def channels(self):
         return self._resources["channels"]
+
     @property
     def currencies(self):
         return self._resources["currencies"]
+
     @property
     def families(self):
         return self._resources["families"]
+
     @property
     def locales(self):
         return self._resources["locales"]
+
     @property
     def measure_families(self):
         return self._resources["measure_families"]
+
     @property
     def media_files(self):
         return self._resources["media_files"]
+
     @property
     def products(self):
         return self._resources["products"]
+
     @property
     def product_models(self):
         return self._resources["product_models"]
+
     @property
     def published_products(self):
         return self._resources["published_products"]
