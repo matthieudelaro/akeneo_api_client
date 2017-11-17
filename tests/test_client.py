@@ -59,6 +59,7 @@ class TestClient(VCRTestCase):
         if sys.version_info[0] == 3 and sys.version_info[1] < 6:
             logger.warning("Disabling test test_update_very_long_list because of body"
                            "matching issue with VCR with Python <3.6")
+            return
         akeneo = Client(self.base_url,
             self.client_id, self.secret, self.username, self.password)
 
