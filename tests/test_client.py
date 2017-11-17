@@ -57,7 +57,7 @@ class TestClient(VCRTestCase):
         """Create more than 100 items at once to hit the maximum allowed.
         Check that the list is automatically splitted into several chuncks."""
         if sys.version_info[0] == 3 and sys.version_info[1] < 6:
-            logger.warning("Disabling test test_get_resources because of body"
+            logger.warning("Disabling test test_update_very_long_list because of body"
                            "matching issue with VCR with Python <3.6")
         akeneo = Client(self.base_url,
             self.client_id, self.secret, self.username, self.password)
@@ -109,7 +109,7 @@ class TestClient(VCRTestCase):
 
     def test_product_search(self):
         if sys.version_info[0] == 3 and sys.version_info[1] < 6:
-            logger.warning("Disabling test test_get_resources because of body"
+            logger.warning("Disabling test test_product_search because of body"
                            "matching issue with VCR with Python <3.6")
             return
         akeneo = Client(self.base_url,
