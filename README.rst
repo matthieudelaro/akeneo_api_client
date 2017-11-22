@@ -36,10 +36,12 @@ A simple example is provided in `docs/example.py`_.
 To export the data from your PIM, you may use the `docs/example_exporter.py`_.
 
 If you experience issues when importing modules, run the examples as follow:
+
 .. code:: bash
 
         cd docs
         pipenv run python3 example_exporter.py
+        
 
 .. _docs/example_exporter.py: https://raw.githubusercontent.com/matthieudelaro/akeneo_api_client/master/docs/example_exporter.py
 
