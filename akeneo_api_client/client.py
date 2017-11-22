@@ -1,17 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from akeneo_api_client.utils import *
-from akeneo_api_client.interfaces import *
 from akeneo_api_client.auth import *
 from akeneo_api_client.resources import *
-import requests
-import json
-
-import logging
-import logzero
-from logzero import logger
-
-import urllib.parse
 
 
 class Client:

@@ -12,7 +12,7 @@ def urljoin(*args):
 
 
 def _json_object_hook(data):
-    '''https://stackoverflow.com/a/15882054'''
+    """https://stackoverflow.com/a/15882054"""
     try:
         data['links'] = data.pop('_links')
     except KeyError as e:
@@ -25,5 +25,5 @@ def _json_object_hook(data):
 
 
 def json2object(data):
-    '''https://stackoverflow.com/a/15882054'''
+    """https://stackoverflow.com/a/15882054"""
     return json.loads(data, object_hook=_json_object_hook)

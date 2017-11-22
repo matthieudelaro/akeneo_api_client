@@ -127,7 +127,7 @@ class UpdatableListResource(UpdatableResourceInterface):
             # Request Entity Too Large
             # There are too many resources to process (max 100)
             # =>>>>> or the line of JSON is too long (max 1 000 000 characters)
-            # split the list in several chuncks
+            # split the list in several chunks
             num = 100
             n = math.ceil(len(items) / num)
 

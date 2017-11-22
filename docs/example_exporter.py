@@ -6,17 +6,29 @@ import logging
 import logzero
 from logzero import logger
 
-import sys
 import pickle
 import os
+
+# import Akeneo API Client
+try:
+    from akeneo_api_client.client import Client
+except ModuleNotFoundError as e:
+    import sys
+    sys.path.append("..")
+    from akeneo_api_client.client import Client
 
 # Import your API keys from environment variables
 # which may be inflated from a .env file for example
 # See https://github.com/theskumar/python-dotenv
-from dotenv import load_dotenv, find_dotenv
-
-sys.path.append("..")
-from akeneo_api_client.client import Client
+try:
+    from dotenv import load_dotenv, find_dotenv
+    load_dotenv(find_dotenv())
+except ModuleNotFoundError as e:
+    print("dotenv is unavailable. So make sure you provided "
+          "AKENEO_CLIENT_ID, AKENEO_SECRET, AKENEO_USERNAME, "
+          "AKENEO_PASSWORD, and AKENEO_BASE_URL "
+          "as environment variables.")
+logzero.loglevel(logging.INFO)
 
 load_dotenv(find_dotenv())
 logzero.loglevel(logging.INFO)
