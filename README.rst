@@ -29,13 +29,11 @@ The easiest is to use pipenv in your new project:
 Usage
 -----
 
-A simple example is provided in `example.py`_:
+A simple example is provided in `docs/example.py`_.
 
-.. literalinclude:: example.py
+.. _docs/example.py: https://raw.githubusercontent.com/matthieudelaro/akeneo_api_client/master/docs/example.py
 
-.. _example.py: https://raw.githubusercontent.com/matthieudelaro/akeneo_api_client/master/docs/example.py
-
-To export the data from your PIM, you may use the `docs/example_exporter.py`_:
+To export the data from your PIM, you may use the `docs/example_exporter.py`_.
 
 .. code:: bash
         cd docs
