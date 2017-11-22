@@ -55,7 +55,7 @@ setup(
     license=about['__license__'],
     zip_safe=False,
     classifiers=(
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3',
     ),
     tests_require=test_requirements,
 )

@@ -124,7 +124,8 @@ class TestCollectionMock(VCRTestCase):
         c = Result.from_json_text(requests.Session(), json_text=self.json_text)
 
     def test_invalid_json_text(self):
-        with self.assertRaises(json.decoder.JSONDecodeError):
+        # json.decoder.JSONDecodeError or ValueError, depending on Python 3.X version
+        with self.assertRaises(Exception):
             c = Result.from_json_text(requests.Session(), json_text=self.invalide_json_text)
 
     def test_no_json(self):
