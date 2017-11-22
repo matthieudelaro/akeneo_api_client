@@ -9,7 +9,6 @@ name = "pypi"
 
 requests = "*"
 logzero = "*"
-python-dotenv = "*"
 
 
 [dev-packages]
