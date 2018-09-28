@@ -7,8 +7,8 @@ name = "pypi"
 
 [packages]
 
-requests = "==2.18.*"
-logzero = "==1.*"
+requests = "<2.19"
+logzero = "*"
 
 
 [dev-packages]
