@@ -53,6 +53,13 @@ Run tests as follow:
 .. code:: bash
 
         pipenv run nosetests
+        
+If tests don't pass in your environment, please check that dependencies match those described in Pipfile. One way to do it is to ensure that pipenv runs commands in a dedicated virtualenv by setting environment variable as follow:
+
+.. code:: bash
+
+        export PIPENV_IGNORE_VIRTUALENVS=1
+        pipenv install --dev  # (re)run installation of dependencies
 
 Or even emulate Travis in Docker:
 
