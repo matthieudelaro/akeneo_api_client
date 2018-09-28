@@ -54,6 +54,17 @@ Run tests as follow:
 
         pipenv run nosetests
 
+Or even emulate Travis in Docker:
+
+.. code:: bash
+
+        # This will: 
+        # - copy the current directory into a temporary directory, which will be mounted in (and modified by) a docker container
+        # - run the container of Travis as explained here: https://stackoverflow.com/a/49019950
+        # - run the steps of Travis thanks to wwtd: https://github.com/grosser/wwtd
+        rm -rf /tmp/localTravis; cp -R . /tmp/localTravis; INSTANCE="travisci/ci-garnet:packer-1512502276-986baf0"; BUILDID="build-$RANDOM"; docker run --name $BUILDID -dit -v /tmp/localTravis:/home/travis/matthieudelaro/akeneo_api_client $INSTANCE /sbin/init; docker exec -it --user travis $BUILDID bash -lc "whoami; cd /home/travis/matthieudelaro/akeneo_api_client; gem install wwtd; source ~/virtualenv/python3.6/bin/activate; wwtd -u before_install -u install -u before_script -u language -u python; history; bash"
+
+
 Tests are provided with mocks, recorded with `VCR.py`_. In case you need
 to (re)run tests, you should install the dataset in you PIM instance as
 follow:
