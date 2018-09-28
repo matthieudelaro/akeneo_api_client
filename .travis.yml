@@ -8,5 +8,6 @@ install:
   - "export PIPENV_IGNORE_VIRTUALENVS=1"
   - "pip install pipenv==8.2.7"
   - "pipenv install --dev"
+  - "pipenv run pip list --format=freeze"
 script:
   - pipenv run nosetests
