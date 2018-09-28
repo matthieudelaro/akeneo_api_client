@@ -3,9 +3,10 @@ python:
   - "3.6"
   - "3.4"
   - "3.5"
+env:
+  - PIPENV_IGNORE_VIRTUALENVS=1
 # command to install dependencies
 install:
-  - "export PIPENV_IGNORE_VIRTUALENVS=1"
   - "pip install pipenv==8.2.7"
   - "pipenv install --dev"
   - "pipenv run pip list --format=freeze"
