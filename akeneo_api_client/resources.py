@@ -338,3 +338,13 @@ class AssociationTypesPool(ResourcePool,
                            UpdatableResource, ):
     """https://api.akeneo.com/api-reference.html#Associationtypes"""
     pass
+
+class ReferenceEntityPool(ResourcePool,
+                           CodeBasedResource,
+                           ListableResource,
+                           CreatableResource,
+                           UpdatableListResource,
+                           GettableResource,
+                           UpdatableResource, ):
+    """https://api.akeneo.com/api-reference.html#Referenceentities"""
+    pass
