@@ -15,7 +15,8 @@ class CreatableResource(CreatableResourceInterface):
     def create_item(self, item):
         url = self._endpoint
         logger.debug(json.dumps(item, separators=(',', ':')))
-        r = self._session.post(url, data=json.dumps(item, separators=(',', ':')))
+        r = self._session.post(
+            url, data=json.dumps(item, separators=(',', ':')))
 
         if r.status_code != 201:
             raise requests.HTTPError("Status code: {0}. Content: {1}".format(
@@ -67,16 +68,14 @@ class GettableResource(GettableResourceInterface):
             # if code_or_item is item, then fetch the code
             code = self.get_code(code_or_item)
 
-        logger.debug(self._endpoint)
         url = urljoin(self._endpoint, code)
-        logger.debug(url)
+
         r = self._session.get(url)
 
         if r.status_code != 200:
-            raise requests.HTTPError("The item {0} doesn't exit: {1}".format(code, r.status_code))
+            raise requests.HTTPError(
+                "The item {0} doesn't exit: {1}".format(code, r.status_code))
 
-        logger.debug(r.status_code)
-        logger.debug(r.text)
         return json.loads(r.text)  # returns item as a dict
 
 
@@ -103,8 +102,9 @@ class UpdatableResource(UpdatableResourceInterface):
             code = self.get_code(item_values)
 
         url = urljoin(self._endpoint, code)
-        logger.debug(json.dumps(item_values, separators=(',', ':')))
-        r = self._session.patch(url, data=json.dumps(item_values, separators=(',', ':')))
+        # logger.debug(json.dumps(item_values, separators=(',', ':')))
+        r = self._session.patch(url, data=json.dumps(
+            item_values, separators=(',', ':')))
 
         if r.status_code not in [201, 204]:
             raise requests.HTTPError("Status code: {0}. Content: {1}".format(
@@ -120,7 +120,8 @@ class UpdatableListResource(UpdatableResourceInterface):
         data = ""
         for item in items:
             data += json.dumps(item, separators=(',', ':')) + '\n'
-        r = self._session.patch(url, data=data, headers={'Content-type': 'application/vnd.akeneo.collection+json'})
+        r = self._session.patch(url, data=data, headers={
+                                'Content-type': 'application/vnd.akeneo.collection+json'})
 
         if r.status_code == 413:
             # TODO handle 413
@@ -189,11 +190,13 @@ class ProductsPool(ResourcePool,
 
 
 class ProductModelsPool(ResourcePool,
-                        IdentifierBasedResource,
+                        CodeBasedResource,
                         CreatableResource,
+                        DeletableResource,
                         GettableResource,
                         SearchAfterListableResource,
-                        UpdatableResource, ):
+                        UpdatableResource,
+                        UpdatableListResource):
     """https://api.akeneo.com/api-reference.html#Productmodels"""
     pass
 
