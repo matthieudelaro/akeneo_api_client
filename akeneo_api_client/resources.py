@@ -338,3 +338,26 @@ class AssociationTypesPool(ResourcePool,
                            UpdatableResource, ):
     """https://api.akeneo.com/api-reference.html#Associationtypes"""
     pass
+
+
+class AssetsPool(ResourcePool,
+                 CodeBasedResource,
+                 GettableResource,
+                 ListableResource,
+                 UpdatableResource,
+                 UpdatableListResource,
+                 DeletableResource,):
+    pass
+
+
+class AssetFamilyPool(ResourcePool,
+                      CodeBasedResource,
+                      GettableResource,
+                      ListableResource,
+                      UpdatableResource,):
+
+    def assets(self, code):
+        return AssetsPool(
+            urljoin(self._endpoint, code, 'assets/'),
+            self._session
+        )
