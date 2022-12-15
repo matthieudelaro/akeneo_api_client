@@ -1,24 +1,17 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [packages]
-
-requests = "<2.19"
+requests = "*"
 logzero = "*"
 
-
 [dev-packages]
-
 nose = "*"
 vcrpy-unittest = "==0.1.*"
 sphinx = "==1.6.5"
 vcrpy = "*"
 
-
 [requires]
-
 python_version = "3"
