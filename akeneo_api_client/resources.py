@@ -361,3 +361,27 @@ class AssetFamilyPool(ResourcePool,
             urljoin(self._endpoint, code, 'assets/'),
             self._session
         )
+
+
+class ReferenceEntityRecordPool(
+    ResourcePool,
+    CodeBasedResource,
+    GettableResource,
+    ListableResource,
+    UpdatableResource,
+    UpdatableListResource,
+):
+    pass
+
+
+class ReferenceEntityPool(
+    ResourcePool,
+    CodeBasedResource,
+    GettableResource,
+    ListableResource,
+    UpdatableResource,
+):
+    def records(self, entity_code):
+        return ReferenceEntityRecordPool(
+            urljoin(self._endpoint, entity_code, "records/"), self._session
+        )
